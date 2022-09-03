@@ -1,0 +1,42 @@
+{
+  "name": "vue3-md-blog",
+  "version": "3.1.9",
+  "description": "Minimal Vue3 + Markdown blog engine",
+  "author": "JQ (https://github.com/yeikiu)",
+  "keywords": [
+    "vuejs",
+    "markdown",
+    "github"
+  ],
+  "license": "CC0-1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yeikiu/vue3-md-blog.git"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build --base=/vue3-md-blog/",
+    "preview": "vite preview",
+    "generate:index": "npx ts-node ./scripts/generate_index.ts"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3",
+    "github-markdown-css": "^4.0.0",
+    "markdown-it": "^13.0.1",
+    "markdown-it-emoji": "^2.0.2",
+    "redaxios": "^0.5.0",
+    "vue": "^3.2.37",
+    "vue-router": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.3",
+    "@vitejs/plugin-vue": "^2.3.3",
+    "markdown-to-text": "^0.1.1",
+    "moment": "^2.29.4",
+    "ts-node": "^10.8.2",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.14",
+    "vue-tsc": "^0.38.3"
+  }
+}
