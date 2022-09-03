@@ -9,7 +9,7 @@
     </router-link>
     <p class="m-0 p-0 footer-text">
       Created by <a
-        href="https://github.com/yeikiu/"
+        href="https://forgefire.dev"
         target="_blank"
         class="text-reset"
       >Forge Fire 🔥 Software Engineering</a> © {{ new Date().toDateString().slice(-4) }}
