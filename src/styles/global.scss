@@ -1,0 +1,9 @@
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-title;
+  color: $font-color-title;
+}
+
+p, a, li {
+  font-family: $font-body;
+  color: $font-color-body;
+}

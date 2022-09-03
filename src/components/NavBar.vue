@@ -1,7 +1,6 @@
 <template>
   <nav
-    class="navbar navbar-expand-md navbar-light mb-0"
-    :style="`background-color: ${VUE_APP_NAVBAR_BG_CSS_COLOR}; color: ${VUE_APP_NAVBAR_TEXT_CSS_COLOR};`"
+    class="navbar navbar-expand-md navbar-light mb-0 background"
   >
     <router-link
       class="navbar-brand"
@@ -66,6 +65,7 @@
 
 <script language="ts">
 import { defineComponent, ref } from 'vue'
+import '../styles/navbar.scss'
 
 const { VUE_APP_NAVBAR_BG_CSS_COLOR = 'black', VUE_APP_NAVBAR_TEXT_CSS_COLOR = 'white' } = {}
 

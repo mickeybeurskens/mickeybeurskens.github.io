@@ -1,7 +1,7 @@
 <template>
   <PatchMeta />
   <NavBar
-    :title="'📝 vue3-md-blog'"
+    :title="'Mickey.Coffee'"
     :sections="blogSections"
   />
   <Suspense>
@@ -23,6 +23,8 @@ import NavBar from './components/NavBar.vue'
 import Footer from './components/Footer.vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'github-markdown-css/github-markdown.css'
+import './styles/global.scss'
+
 
 export default defineComponent({
   components: {

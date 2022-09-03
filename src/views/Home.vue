@@ -1,5 +1,5 @@
 <template>
-  <PatchMeta :title="section ? section : 'Minimal Vue3 + Markdown blog engine'" />
+  <PatchMeta :title="section ? section : 'Post about everything in specific.'" />
 
   <div :style="`background-color: ${VUE_APP_MAIN_BG_CSS_COLOR}; color: ${VUE_APP_MAIN_TEXT_CSS_COLOR};`">
     <!-- HEADER -->

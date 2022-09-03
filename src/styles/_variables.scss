@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+$font-title: "Merriweather";
+$font-body: "Source Sans Pro";
+
+/* Colors */
+$space-cadet: #2d3142ff;
+$black-coral: #4f5d75ff;
+$silver: #bfc0c0ff;
+$white: #ffffffff;
+$mandarin: #ef8354ff;
+$bittersweet: #ff6c6cff;
+
+$accent-dark: $black-coral;
+$accent-light: $silver;
+$main-dark: $space-cadet;
+$main-light: $white;
+$font-color-body: $space-cadet;
+$font-color-title: $bittersweet;
