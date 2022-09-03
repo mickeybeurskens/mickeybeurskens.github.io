@@ -7,13 +7,14 @@
     />
     <button
       type="button"
-      class="border btn mt-4"
+      class="border btn mt-4 post-button"
       @click="hasHistory() ? router.go(-1) : router.push('/')"
     >
       &laquo; Back
     </button>
   </div>
 </template>
+
 <script lang='ts'>
 import { defineComponent, inject } from 'vue'
 import { onBeforeRouteUpdate } from 'vue-router'
@@ -24,6 +25,7 @@ import emoji from 'markdown-it-emoji'
 import { PostIndex } from '../types/PostIndex'
 import PatchMeta from '../components/PatchMeta.vue'
 import blogConfig from '../blog_config'
+import '../styles/post.scss'
 
 const { VUE_APP_MAIN_BG_CSS_COLOR, VUE_APP_MAIN_TEXT_CSS_COLOR } = blogConfig
 const markDownIt = new MarkdownIt({ html: true }).use(emoji)
