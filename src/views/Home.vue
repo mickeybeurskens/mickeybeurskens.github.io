@@ -4,7 +4,7 @@
   />
 
   <div class="d-flex justify-content-center">
-    <Profile />
+    <!-- <Profile /> -->
     <!-- HEADER -->
     <div>
       <BlogHeader class="mb-5 p-3 p-md-4" />
@@ -94,8 +94,6 @@ import blogConfig from "../blog_config";
 
 const {
   VUE_APP_POSTS_PER_PAGE,
-  VUE_APP_MAIN_BG_CSS_COLOR,
-  VUE_APP_MAIN_TEXT_CSS_COLOR,
 } = blogConfig;
 
 export default defineComponent({
