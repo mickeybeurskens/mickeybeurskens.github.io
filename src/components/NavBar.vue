@@ -1,12 +1,6 @@
 <template>
-  <nav
-    class="navbar navbar-expand-md navbar-light mb-0 background"
-  >
-    <router-link
-      class="navbar-brand"
-      :to="'/'"
-      :style="`color: ${VUE_APP_NAVBAR_TEXT_CSS_COLOR};`"
-    >
+  <nav class="navbar navbar-expand-md navbar-light mb-0 navbar-text-color">
+    <router-link class="navbar-brand" :to="'/'">
       {{ title }}
     </router-link>
     <button
@@ -19,10 +13,7 @@
       aria-label="Toggle navigation"
       @click="collapseMenu = !collapseMenu"
     >
-      <span
-        class="navbar-toggler-icon"
-        :style="`background-color: ${VUE_APP_NAVBAR_TEXT_CSS_COLOR};`"
-      />
+      <span class="navbar-toggler-icon" />
     </button>
 
     <div
@@ -33,8 +24,7 @@
         <li :class="`nav-item dropleft dropdown ${showDropdown ? 'show' : ''}`">
           <a
             id="navbarDropdownMenuLink"
-            :style="`color: ${VUE_APP_NAVBAR_TEXT_CSS_COLOR};`"
-            class="nav-link dropdown-toggle"
+            class=" dropdown-toggle navbar-text-color"
             role="button"
             data-toggle="dropdown"
             aria-haspopup="true"
@@ -45,14 +35,14 @@
           </a>
           <div
             :class="`dropdown-menu ${showDropdown ? 'show' : ''}`"
-            style="max-height: 200px; overflow: scroll;"
+            style="max-height: 200px; overflow: scroll"
           >
             <router-link
               v-for="(count, section) of sections"
               :key="section"
               class="dropdown-item text-capitalize"
               :to="section === 'all' ? '/' : `/${section}`"
-              @click="showDropdown=false"
+              @click="showDropdown = false"
             >
               {{ section }} ({{ count }})
             </router-link>
@@ -61,35 +51,32 @@
       </ul>
     </div>
   </nav>
+  <div class="navbar-border" />
 </template>
 
 <script language="ts">
-import { defineComponent, ref } from 'vue'
-import '../styles/navbar.scss'
-
-const { VUE_APP_NAVBAR_BG_CSS_COLOR = 'black', VUE_APP_NAVBAR_TEXT_CSS_COLOR = 'white' } = {}
+import { defineComponent, ref } from "vue";
+import "../styles/navbar.scss";
 
 export default defineComponent({
   props: {
     title: {
       type: String,
-      default: ''
+      default: "",
     },
     sections: {
       type: Object,
-      default: () => ({})
-    }
+      default: () => ({}),
+    },
   },
-  setup () {
-    const showDropdown = ref(false)
-    const collapseMenu = ref(true)
+  setup() {
+    const showDropdown = ref(false);
+    const collapseMenu = ref(true);
 
     return {
       showDropdown,
       collapseMenu,
-      VUE_APP_NAVBAR_BG_CSS_COLOR,
-      VUE_APP_NAVBAR_TEXT_CSS_COLOR
-    }
-  }
-})
+    };
+  },
+});
 </script>

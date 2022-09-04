@@ -7,3 +7,8 @@ p, a, li, span {
   font-family: $font-body;
   color: $font-color-body;
 }
+
+a:hover {
+  text-decoration: none;
+  color: $accent-light-2;
+}
