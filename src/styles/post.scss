@@ -6,3 +6,12 @@
 .post-button {
   color: $font-color-body;
 }
+
+.markdown-body p {
+  color: $font-color-body;
+  font-weight: 400;
+}
+
+.markdown-body blockquote {
+  font-style: italic;
+}
