@@ -12,3 +12,10 @@ a:hover {
   text-decoration: none;
   color: $accent-light-2;
 }
+
+/* Custom bootstrap */
+$theme-colors: (
+  "primary": $accent-light-2,
+);
+
+@import '../../node_modules/bootstrap/scss/bootstrap.scss'

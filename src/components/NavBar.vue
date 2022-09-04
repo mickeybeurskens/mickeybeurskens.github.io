@@ -40,7 +40,7 @@
             <router-link
               v-for="(count, section) of sections"
               :key="section"
-              class="dropdown-item text-capitalize"
+              class="dropdown-item text-capitalize navbar-click-color"
               :to="section === 'all' ? '/' : `/${section}`"
               @click="showDropdown = false"
             >

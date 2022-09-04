@@ -18,3 +18,8 @@
     color: $accent-light-2;
     text-decoration: none;
 }
+
+.navbar-click-color:active {
+    background-color: red;
+    width: 100%;
+}
