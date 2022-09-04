@@ -4,18 +4,9 @@
   />
 
   <div class="d-flex justify-content-center">
-    <div class="d-flex my-5 align-items-start justify-content-left">
-      <div class="px-auto mr-3 text-center">
-        <img
-          src="https://media-exp1.licdn.com/dms/image/C4D03AQEFZ31daHci1g/profile-displayphoto-shrink_800_800/0/1549903900250?e=1668038400&v=beta&t=5ZiT5xWlNA7Ayfpz2IoQPwU8exW0ps3KYfeY4Z0MBR0"
-          class="rounded-circle profile-image"
-        />
-        <h3 class="mt-3">Mickey Beurskens</h3>
-        <h6 class="profile-sub-header">Software Engineer & Entrepreneur</h6>
-      </div>
-      <!-- HEADER -->
-      <div>
-
+    <Profile />
+    <!-- HEADER -->
+    <div>
       <BlogHeader class="mb-5 p-3 p-md-4" />
 
       <hr v-if="section" />
@@ -88,7 +79,6 @@
           <a class="page-link">{{ pageStatus.endPage }}</a>
         </li>
       </ul>
-      </div>
     </div>
   </div>
 </template>
@@ -96,6 +86,7 @@
 <script lang="ts">
 import { defineComponent, reactive, toRefs, computed, inject } from "vue";
 import BlogHeader from "../components/BlogHeader.vue";
+import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
 import paginate from "../utils/paginate";
 import { PostIndex } from "../types/PostIndex";
@@ -111,6 +102,7 @@ export default defineComponent({
   components: {
     PatchMeta,
     BlogHeader,
+    Profile,
   },
   props: {
     section: {
