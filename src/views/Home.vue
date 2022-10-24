@@ -7,9 +7,28 @@
     <!-- <Profile /> -->
     <!-- HEADER -->
     <div>
-      <BlogHeader class="mb-5 p-3 p-md-4" />
+      <BlogHeader class="mb-5 px-3 px-md-4 pt-5" />
+      <div class="container px-3 px-3 px-md-4 about">
+        <div class="about-text px-5">
+          <p>
+            Hello there internet traveller, welcome to my blog! You will find
+            all kinds of content here ranging from technical to philosophical,
+            mixed and pure as can be, for your reading pleasure.
+          </p>
 
-      <hr v-if="section" />
+          <p>
+            My name is Mickey and I enjoy writing. It helps me think through
+            challenging topics. I share this in the hopes that it helps you, the
+            esteemed reader, too.
+          </p>
+
+          <p>Enjoy!</p>
+
+          <p class="sign">Mickey</p>
+        </div>
+      </div>
+
+      <hr />
       <p v-if="section" class="text-center display-4 text-capitalize my-5">
         {{ section }}
       </p>
@@ -92,9 +111,7 @@ import paginate from "../utils/paginate";
 import { PostIndex } from "../types/PostIndex";
 import blogConfig from "../blog_config";
 
-const {
-  VUE_APP_POSTS_PER_PAGE,
-} = blogConfig;
+const { VUE_APP_POSTS_PER_PAGE } = blogConfig;
 
 export default defineComponent({
   components: {
@@ -147,3 +164,14 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.about {
+  font-family: $font-body;
+}
+
+.sign {
+  font-style: italic;
+  font-weight: 700;
+}
+</style>
