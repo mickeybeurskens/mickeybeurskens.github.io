@@ -1,22 +1,22 @@
 {
-  "name": "vue3-md-blog",
-  "version": "3.1.9",
-  "description": "Minimal Vue3 + Markdown blog engine",
-  "author": "JQ (https://github.com/yeikiu)",
+  "name": "mickeycoffee",
+  "version": "1.0.0",
+  "description": "Mickey.Coffee blog",
+  "author": "https://github.com/mickeybeurskens",
   "keywords": [
     "vuejs",
     "markdown",
     "github"
   ],
-  "license": "CC0-1.0",
+  "license": "Proprietary",
   "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/yeikiu/vue3-md-blog.git"
+    "url": "https://github.com/mickeybeurskens/mickey.coffee"
   },
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build --base=/vue3-md-blog/",
+    "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "generate:index": "npx ts-node ./scripts/generate_index.ts"
   },
