@@ -13,11 +13,11 @@
           <p>
             Hello there internet traveller, welcome to my blog! You will find
             all kinds of content here ranging from technical to philosophical,
-            mixed and pure as can be, for your reading pleasure.
+            both mixed and pure as can be, for your reading pleasure.
           </p>
 
           <p>
-            My name is Mickey and I enjoy writing. It helps me think through
+            My name is Mickey Beurskens and I enjoy writing. It helps me think through
             challenging topics. I share this in the hopes that it helps you, the
             esteemed reader, too.
           </p>
