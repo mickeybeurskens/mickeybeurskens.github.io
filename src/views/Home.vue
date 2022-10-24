@@ -143,8 +143,6 @@ export default defineComponent({
     return {
       ...toRefs(state),
       pageStatus,
-      VUE_APP_MAIN_BG_CSS_COLOR,
-      VUE_APP_MAIN_TEXT_CSS_COLOR,
     };
   },
 });
