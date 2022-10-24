@@ -25,7 +25,6 @@ import emoji from 'markdown-it-emoji'
 import { PostIndex } from '../types/PostIndex'
 import PatchMeta from '../components/PatchMeta.vue'
 import blogConfig from '../blog_config'
-import '../styles/post.scss'
 
 const { VUE_APP_MAIN_BG_CSS_COLOR, VUE_APP_MAIN_TEXT_CSS_COLOR } = blogConfig
 const markDownIt = new MarkdownIt({ html: true }).use(emoji)
@@ -73,3 +72,23 @@ export default defineComponent({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.markdown-body p {
+  color: $font-color-body;
+  font-family: $font-body;
+}
+
+.post-button {
+  color: $font-color-body;
+}
+
+.markdown-body p {
+  color: $font-color-body;
+  font-weight: 400;
+}
+
+.markdown-body blockquote {
+  font-style: italic;
+}
+</style>

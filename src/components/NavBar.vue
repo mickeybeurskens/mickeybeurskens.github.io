@@ -56,7 +56,6 @@
 
 <script language="ts">
 import { defineComponent, ref } from "vue";
-import "../styles/navbar.scss";
 
 export default defineComponent({
   props: {
@@ -80,3 +79,29 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss" scoped>
+.navbar-border {
+    background-color: $main-light;
+    border-width: 0px;
+    border-bottom-width: 1px;
+    border-color: $accent-light;
+    border-style: solid;
+    width: 97vw;
+    margin: auto;
+    border-radius: 3px;
+}
+
+.navbar-text-color {
+    color: $font-color-body;
+}
+
+.navbar-text-color:hover {
+    color: $accent-light-2;
+    text-decoration: none;
+}
+
+.navbar-click-color:active {
+    width: 100%;
+}
+</style>

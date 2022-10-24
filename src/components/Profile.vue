@@ -21,8 +21,32 @@
       </div>
 </template>
 
-<style lang="sass">
-@import '../styles/_variables.scss'
-@import '../styles/profile.scss'
+<style lang="scss" scoped>
+@import '../styles/_variables.scss';
+.profile-image {
+  max-width: 14rem;
+  box-shadow: 0px 10px 10px -8px;
+}
+
+.profile-sub-header {
+  color: $font-color-body;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.profile-links a {
+  color: $font-color-body;
+  margin: 0;
+  padding: 0;
+}
+
+.profile-links a:hover {
+  text-decoration: none;
+  color: $accent-light-2;
+}
+
+.profile-links p {
+  margin: 0;
+}
 </style>
 

@@ -1,5 +1,4 @@
 <template>
-
   <div class="text-center d-flex align-items-center justify-content-left">
     <router-link :to="'/'" class="text-reset">
       <img alt="Vue logo" src="../assets/logo.svg" class="blog_image" />
@@ -11,8 +10,16 @@
   </div>
 </template>
 
-<style lang="sass">
-@import '../styles/_variables.scss'
-@import '../styles/blog_header.scss'
+<style scoped lang="scss">
+@import "../styles/_variables.scss";
+
+.blog_image {
+  width: 5rem;
+  margin-right: 1rem;
+}
+
+.subtitle {
+  font-style: italic;
+}
 </style>
 
