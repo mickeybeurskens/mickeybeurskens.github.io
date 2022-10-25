@@ -1,6 +1,6 @@
 <template>
   <PatchMeta
-    :title="section ? section : 'Post about everything in specific.'"
+    :title="section ? section : 'The home page!.'"
   />
 
   <div class="d-flex justify-content-center">
