@@ -1,11 +1,11 @@
 [
-    {
+       {
         "id": "digit-recognition",
         "section": "artificial intelligence",
         "date": "June 20, 2022",
         "title": "Custom Models And Loss Functions In FastAI",
         "description": "Learn how to recognize handwritten digits, using a custom PyTorch model and loss function.",
-        "url": "blog_store/posts/digit_recognition.md"
+        "url": "blog_store/posts/artificial_intelligence/digit_recognition.md"
     },
     {
         "id": "fruit-recognition",
@@ -13,6 +13,6 @@
         "date": "June 07, 2022",
         "title": "Detecting fruit using FastAI",
         "description": "If you've ever wanted your own photo based scanning device, you're on the right blog.",
-        "url": "blog_store/posts/fruit_recognition.md"
+        "url": "blog_store/posts/artificial_intelligence/fruit_recognition.md"
     }
 ]
