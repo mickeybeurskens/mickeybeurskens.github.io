@@ -3,6 +3,7 @@ import App from './App.vue'
 import router from './router'
 import axios from 'redaxios'
 import { PostIndex } from './types/PostIndex'
+import VueGtag from "vue-gtag";
 
 const dataPath = 'blog_store/posts_index.json'
 
@@ -12,6 +13,9 @@ const loadApp = async () => {
 
   createApp(App)
     .use(router)
+    .use(VueGtag, {
+      config: { id: "G-ECHT80E8PH" }
+    })
     .provide<PostIndex[]>('postsIndex', postsIndex)
     .provide<Record<string, number>>('blogSections', blogSections)
     .mount('#app')

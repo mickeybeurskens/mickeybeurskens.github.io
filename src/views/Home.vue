@@ -1,6 +1,6 @@
 <template>
   <PatchMeta
-    :title="section ? section : 'The home page!.'"
+    :title="section ? section : 'The home page!'"
   />
 
   <div class="d-flex justify-content-center">
