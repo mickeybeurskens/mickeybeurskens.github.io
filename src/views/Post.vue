@@ -45,7 +45,7 @@ const markDownIt = new MarkdownIt({
       macros: { "\\RR": "\\mathbb{R}" }, 
       strict: false,
       newLineInDisplayMode: true,
-      output: 'mathml'
+      output: 'mathml',
     },
   });
 
@@ -96,15 +96,11 @@ export default defineComponent({
   display: block;
   max-width: 900px;
   margin: auto; 
-  font-weight: 500;
-  font-size: 18px;
 }
 
 .markdown-body p {
   color: $font-color-body;
   font-family: $font-body;
-  font-weight: 500;
-  font-size: 18px;
 }
 
 .post-button {
@@ -122,6 +118,6 @@ export default defineComponent({
 }
 
 .katex {
-  margin: 0 0.7rem;
+  margin: 0 0.3rem;
 }
 </style>

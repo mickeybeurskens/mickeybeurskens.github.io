@@ -44,19 +44,23 @@ Earning more and spending less would all be for naught if the difference is not 
 
 Barring extreme circumstances I think that, based [European inflation number](https://www.inflation.eu/en/inflation-rates/europe/historic-inflation/hicp-inflation-europe.aspx) over the pas 40 years, an average inflation of 2% is quite reasonable. Let's assume that stays fixed for our example.
 
-Each year, your buying power would decrease by an inflation rate `i` at 2%. That is roughly the same as saying that your "money becomes worth less" over that period by 2%. Say your starting amount is denoted `S` as 100 euros. In a year `y`, the value would then decline by:
+Each year, your buying power would decrease by an inflation rate $i$ at 2%. That is roughly the same as saying that your "money becomes worth less" over that period by 2%. Say your starting amount is denoted $S$ as 100 euros. In a year $y$, the value would then decline by:
 $$
+\begin{split}
 S*(1-i)^y = S_{y} \\
-100*(1-0.02)^1 = 98\\
+100*(1-0.02)^1 = 98 
+\end{split}
 $$
-That does not seem too bad perhaps, but these effects tend to add up. It would perhaps be more insightful to see how much time it takes for the value of your money to be halved. Risking being slightly too technical, we can rewrite the equation and solve for the number of years `y`:
+That does not seem too bad perhaps, but these effects tend to add up. It would perhaps be more insightful to see how much time it takes for the value of your money to be halved. Risking being slightly too technical, we can rewrite the equation and solve for the number of years $y$:
 $$
+\begin{split}
 S*(1-i)^y = S_y \\
 (1-i)^y = \frac{S_y}{S} \\
 y*\log(1-i) = \log{\frac{S_y}{S}} \\
 y = \frac{\log{S_y} - \log{S}}{\log(1-i)}
+\end{split}
 $$
-Now we can fill in the same variables as last time, but instead of the number of years `y` we fill in the ending amount `Sy` at 50:
+Now we can fill in the same variables as last time, but instead of the number of years $y$ we fill in the ending amount $S_y$ at 50:
 $$
 \frac{\log{50} - \log{100}}{\log(0.98)} \approx 34 \\
 $$
@@ -64,7 +68,7 @@ So in 34 years your money will buy you half the stuff it used to. Still not part
 $$
 \frac{\log{50} - \log{100}}{\log(0.90)} \approx 6.5 \\
 $$
-Holy cricket! That's not a lot of time until my capital vanishes in thin air! Depending on the amount you have saved versus the amount you are earning, you might work full-time and **still lose money**. That is the terrible power of inflation. Luckily though, this power also applies to an increase in value! Time to see how we can combat the eery effect of inflation, and with a bit of skill and luck earn more than we lose!
+Holy cricket! That's not a lot of time until my capital vanishes in thin air! Depending on the amount you have saved versus the amount you are earning, you might work full-time and still lose money. That is the terrible power of inflation. Luckily though, this power also applies to an increase in value! Time to see how we can combat the eery effect of inflation, and with a bit of skill and luck earn more than we lose!
 
 ## Putting Money To Work
 
@@ -79,7 +83,7 @@ Covering even one of those could fill a small library, so let me just say that t
 
 As opposed to the effect of inflation, which "devalues" money, gaining interest has the potential to grow your wealth. There is an effect that we can use to maximize the rate at which we earn: Making use of compound interest. Compounding is simple in principle, but enormously powerful. You take the revenue generated from your investments and use it to invest more. Since people generally think linearly it's hard to get a feeling for the power of compounding from just the description. An example is in order.
 
-We'll compare a similar non-compounding and compounding investment. The initial investment `S` equals 100 euros. We have done our research, and have found an investment that will yield a yearly return `i` of 4% every year. We will leave the money invested for 3, 10, 25 and 50 years, denoted by `y`. The only difference will be that for the compounding style of investing we will re-invest all the earnings back into the investment. We'll look at the different outcomes `Sy` over time.
+We'll compare a similar non-compounding and compounding investment. The initial investment $S$ equals 100 euros. We have done our research, and have found an investment that will yield a yearly return $i$ of 4% every year. We will leave the money invested for 3, 10, 25 and 50 years, denoted by $y$. The only difference will be that for the compounding style of investing we will re-invest all the earnings back into the investment. We'll look at the different outcomes $S_y$ over time.
 
 First the formula for compounding investments. It is actually the same as the inflation equation presented earlier, but the interest is now positive:
 $$
@@ -87,20 +91,24 @@ S(1+i)^y = S_{y}
 $$
 For those of you that are interested, you can derive this formula using the sequence of steps below. Every year the gains get added to the starting amount of last year:
 $$
+\begin{split}
 S_1 = S + Si \\
 S_2 = S_1 + S_1i = S + Si + Si + Si^2 = S + 2Si + Si^2 \\
 S_y = S + ySi + (y-1)Si^2 + ... + Si^y \\
 S_y = S(1 + i)^{y}
+\end{split}
 $$
 For non-compounding interest the formula looks like this:
 $$
+\begin{split}
 S_1 = S + Si \\
 S_2 = S + Si + Si = S + 2Si = S(1+2i) \\
 S_y = S(1+yi)
+\end{split}
 $$
 Since we have a number of scenarios I'll fill a table with the results:
 
-|      | non-compound | Compound |
+|      | Non-Compound | Compound |
 | ---- | ------------ | -------- |
 | y=3  | 112          | 112.49   |
 | y=10 | 140          | 148.02   |
@@ -109,7 +117,7 @@ Since we have a number of scenarios I'll fill a table with the results:
 
 Compounding makes a huge difference when your time horizon is long! In this example you would have doubled your money by re-investing the proceeds. The trick here is that this also works when the initial investment is high. Say we start with 50,000 instead of 100 euros. That would look like this:
 
-|      | non-compound | Compound |
+|      | Non-Compound | Compound |
 | ---- | ------------ | -------- |
 | y=3  | 56,000       | 56,100   |
 | y=10 | 70,000       | 74,000   |
