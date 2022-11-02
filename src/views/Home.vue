@@ -173,4 +173,8 @@ export default defineComponent({
   font-style: italic;
   font-weight: 700;
 }
+
+h3 {
+  text-transform: capitalize;
+}
 </style>

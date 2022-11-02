@@ -1,4 +1,4 @@
-# Financial Independence - A Primer
+# A Primer on Financial Independence
 
 The dream of Financial Independence. No longer the exclusive realm of rulers, aristocracy or the elite, the common man can now also enjoy the benefits of being free of daily financial burden! No longer do we have to worry about food, shelter, clothing and the schooling of our children! Finally we have the means to spend time on the truly meaningful things in life, like pottery and sustainable gardening! At least, that seems to be the message when diving into the world of the independent and the early retired.  
 
@@ -118,7 +118,7 @@ Compounding makes a huge difference when your time horizon is long! In this exam
 
 Compounding can be a powerful ally in your fight to become financially independent. We have not yet looked at the scenario where would regularly invest more money, and I think I shall leave that for another day. 
 
-If you have been inspired by the concept, I think you will also enjoy reading "Rich Dad, Poor Dad" by Robert Kiyosaki and "What I Learned Losing A Million Dollars" by Jim Paul. For my Dutch readers: Check out [Jong Beleggen, de podcast](https://jongbeleggendepodcast.nl/) for a great introduction on investing! You'll probably also find [the Boglehead movement](https://www.bogleheads.org/wiki/Getting_started) to be of interest. They use passive investing and compounding as the central force of their ideas on wealth management.  
+If you have been inspired by the concept, I think you will also enjoy reading "Rich Dad, Poor Dad" by Robert Kiyosaki and "What I Learned Losing A Million Dollars" by Jim Paul. For my Dutch readers: Check out [Jong Beleggen, de podcast](https://jongbeleggendepodcast.nl/) for a great introduction to investing! You'll probably also find [the Boglehead movement](https://www.bogleheads.org/wiki/Getting_started) to be of interest. They use passive investing and compounding as the central force of their ideas on wealth management.  
 
 I hope this has given you insight into why compounding matters. Used correctly it can serve as the basis of your financial independence! If your investment is high enough and fortune smiles, you could live off of your investments indefinitely! This is especially true if you have mastered the art of frugal living. It can free your time so you can do what is important, not merely urgent. I hope this post has given you some food for thought, and some leads to follow up on them! Best of luck, see you next post.
 

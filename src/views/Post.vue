@@ -91,27 +91,37 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
+.markdown-body {
+  display: block;
+  max-width: 900px;
+  margin: auto; 
+  font-weight: 500;
+  font-size: 18px;
+}
+
 .markdown-body p {
   color: $font-color-body;
   font-family: $font-body;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 .post-button {
   color: $font-color-body;
 }
 
-.markdown-body p {
-  color: $font-color-body;
-  font-weight: 400;
-}
-
 .markdown-body blockquote {
   font-style: italic;
+  width: 90%;
+  margin: 0.7rem auto;
+}
+
+.markdown-body h1 {
+  text-transform: capitalize;
 }
 
 .katex {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin: 0 0.7rem;
 }
 </style>
