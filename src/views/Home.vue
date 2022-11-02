@@ -109,9 +109,8 @@ import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
 import paginate from "../utils/paginate";
 import { PostIndex } from "../types/PostIndex";
-import blogConfig from "../blog_config";
 
-const { VUE_APP_POSTS_PER_PAGE } = blogConfig;
+const VUE_APP_POSTS_PER_PAGE  = 5;
 
 export default defineComponent({
   components: {
