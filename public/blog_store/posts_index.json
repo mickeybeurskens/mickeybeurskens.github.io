@@ -1,4 +1,12 @@
 [
+    {
+        "id": "financial-independence-primer",
+        "section": "finance",
+        "date": "November 1, 2022",
+        "title": "A primer on financial independence",
+        "description": "My thoughts on Financial Independence, and a quick primer into the subject.",
+        "url": "blog_store/posts/finance/financial_independence_primer.md"
+    },
        {
         "id": "digit-recognition",
         "section": "artificial intelligence",
