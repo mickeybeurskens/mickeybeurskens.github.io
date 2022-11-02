@@ -24,10 +24,19 @@ import MarkdownIt from 'markdown-it'
 import emoji from 'markdown-it-emoji'
 import { PostIndex } from '../types/PostIndex'
 import PatchMeta from '../components/PatchMeta.vue'
-import blogConfig from '../blog_config'
+import hljs from 'highlight.js'
 
-const { VUE_APP_MAIN_BG_CSS_COLOR, VUE_APP_MAIN_TEXT_CSS_COLOR } = blogConfig
-const markDownIt = new MarkdownIt({ html: true }).use(emoji)
+const markDownIt = new MarkdownIt({ 
+  highlight: function (str: string, lang: string) {
+    if (lang && hljs.getLanguage(lang)) {
+      try {
+        return hljs.highlight(str, { language: lang }).value;
+      } catch (__) {}
+    }
+
+    return '';
+  }
+}).use(emoji)
 
 export default defineComponent({
   components: {
@@ -66,8 +75,6 @@ export default defineComponent({
       postHtml,
       router,
       title,
-      VUE_APP_MAIN_BG_CSS_COLOR,
-      VUE_APP_MAIN_TEXT_CSS_COLOR
     }
   }
 })
