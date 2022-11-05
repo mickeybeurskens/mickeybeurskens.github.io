@@ -3,7 +3,7 @@
     <router-link class="navbar-brand" :to="'/'">
       {{ title }}
     </router-link>
-    
+
     <button
       :class="`navbar-toggler ${collapseMenu ? 'collapsed' : ''}`"
       type="button"
@@ -17,13 +17,11 @@
       <span class="navbar-toggler-icon" />
     </button>
 
+    <SubscribeButton class="mx-1" />
     <div
       id="navbarNavDropdown"
       :class="`navbar-collapse collapse ${collapseMenu ? '' : 'show'}`"
     >
-
-
-      <SubscribeButton class="mx-1"/>
       <ul class="ml-auto mr-5 pr-5 navbar-nav">
         <li :class="`nav-item dropleft dropdown ${showDropdown ? 'show' : ''}`">
           <a
@@ -60,7 +58,7 @@
 
 <script language="ts">
 import { defineComponent, ref } from "vue";
-import SubscribeButton from './SubscribeButton.vue'
+import SubscribeButton from "./SubscribeButton.vue";
 
 export default defineComponent({
   components: {
