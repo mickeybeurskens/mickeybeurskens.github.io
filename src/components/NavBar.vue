@@ -3,6 +3,7 @@
     <router-link class="navbar-brand" :to="'/'">
       {{ title }}
     </router-link>
+    
     <button
       :class="`navbar-toggler ${collapseMenu ? 'collapsed' : ''}`"
       type="button"
@@ -20,11 +21,14 @@
       id="navbarNavDropdown"
       :class="`navbar-collapse collapse ${collapseMenu ? '' : 'show'}`"
     >
+
+
+      <SubscribeButton class="mx-1"/>
       <ul class="ml-auto mr-5 pr-5 navbar-nav">
         <li :class="`nav-item dropleft dropdown ${showDropdown ? 'show' : ''}`">
           <a
             id="navbarDropdownMenuLink"
-            class=" dropdown-toggle navbar-text-color"
+            class="dropdown-toggle navbar-text-color"
             role="button"
             data-toggle="dropdown"
             aria-haspopup="true"
@@ -56,8 +60,12 @@
 
 <script language="ts">
 import { defineComponent, ref } from "vue";
+import SubscribeButton from './SubscribeButton.vue'
 
 export default defineComponent({
+  components: {
+    SubscribeButton,
+  },
   props: {
     title: {
       type: String,
@@ -82,26 +90,26 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .navbar-border {
-    background-color: $main-light;
-    border-width: 0px;
-    border-bottom-width: 1px;
-    border-color: $accent-light;
-    border-style: solid;
-    width: 97vw;
-    margin: auto;
-    border-radius: 3px;
+  background-color: $main-light;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  border-color: $accent-light;
+  border-style: solid;
+  width: 97vw;
+  margin: auto;
+  border-radius: 3px;
 }
 
 .navbar-text-color {
-    color: $font-color-body;
+  color: $font-color-body;
 }
 
 .navbar-text-color:hover {
-    color: $accent-light-2;
-    text-decoration: none;
+  color: $accent-light-2;
+  text-decoration: none;
 }
 
 .navbar-click-color:active {
-    width: 100%;
+  width: 100%;
 }
 </style>

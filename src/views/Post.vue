@@ -22,8 +22,8 @@ import emoji from "markdown-it-emoji";
 import { PostIndex } from "../types/PostIndex";
 import PatchMeta from "../components/PatchMeta.vue";
 import Highlight from "highlight.js";
-import MarkdownItTexmath from 'markdown-it-texmath';
-import katex from 'katex';
+import MarkdownItTexmath from "markdown-it-texmath";
+import katex from "katex";
 
 const markDownIt = new MarkdownIt({
   html: true,
@@ -42,10 +42,10 @@ const markDownIt = new MarkdownIt({
     engine: katex,
     delimiters: "dollars",
     katexOptions: {
-      macros: { "\\RR": "\\mathbb{R}" }, 
+      macros: { "\\RR": "\\mathbb{R}" },
       strict: false,
       newLineInDisplayMode: true,
-      output: 'mathml',
+      output: "mathml",
     },
   });
 
@@ -95,7 +95,7 @@ export default defineComponent({
 .markdown-body {
   display: block;
   max-width: 900px;
-  margin: auto; 
+  margin: auto;
 }
 
 .markdown-body p {
