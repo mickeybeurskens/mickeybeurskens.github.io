@@ -10,7 +10,8 @@ const defaultMetas = {
   title: 'Mickey.Coffee by Mickey Beurskens',
   description: 'A highly specific blog about things in general, including technology, artificial intelligence and philosophy. Written by Mickey Beurskens.',
   previewUrl: 'https://mickey.coffee/assets/logo.c29fffec.svg',
-  shareUrl: 'https://mickey.coffee'
+  shareUrl: 'https://mickey.coffee',
+  author: "Mickey Beurskens"
 }
 
 const patchMeta = ({
@@ -18,7 +19,8 @@ const patchMeta = ({
   title = defaultMetas.title,
   description = defaultMetas.description,
   previewUrl = defaultMetas.previewUrl,
-  shareUrl = defaultMetas.shareUrl
+  shareUrl = defaultMetas.shareUrl,
+  author = defaultMetas.author
 }) => {
   // Patch title
   const [titleEl] = document.getElementsByTagName('title')
@@ -31,6 +33,7 @@ const patchMeta = ({
       <meta class="APP_META" property="og:image" content="${previewUrl}">
       <meta class="APP_META" property="og:url" content="${shareUrl}">
       <meta class="APP_META" name="twitter:card" content="summary_large_image">
+      <meta class="APP_META" name="author" content="${author}">
       <meta class="APP_META" property="og:site_name" content="${siteName}">`
   const [headEl] = document.getElementsByTagName('head')
   if (!headEl) return
