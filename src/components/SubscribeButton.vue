@@ -1,6 +1,6 @@
 <template>
   <div class="button_container">
-    <a href="http://eepurl.com/ic1xGn">Subscribe!</a>
+    <a href="http://eepurl.com/ic1xGn">Subscribe</a>
   </div>
 </template>
 
