@@ -1,5 +1,13 @@
 [
     {
+        "id": "meditations-on-tinkering",
+        "section": "entrepreneurship",
+        "date": "November 20, 2022",
+        "title": "Meditations On Tinkering",
+        "description": "On the power of taking into consideration that which you do not know about.",
+        "url": "blog_store/posts/entrepreneurship/meditations_on_tinkering.md"
+    },
+    {
         "id": "financial-independence-primer",
         "section": "finance",
         "date": "November 1, 2022",
