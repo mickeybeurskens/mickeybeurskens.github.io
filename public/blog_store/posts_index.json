@@ -1,5 +1,13 @@
 [
     {
+        "id": "chatgpt-interview-generative-ai",
+        "section": "artificial intelligence",
+        "date": "March 3, 2023",
+        "title": "Generative AI - A Conversation With ChatGPT",
+        "description": "I've been getting a lot of questions about ChatGPT and generative AI, mainly the impact the technology will have. I decided to ask ChatGPT for some answers.",
+        "url": "blog_store/posts/artificial_intelligence/chatgpt_interview.md"
+    },
+    {
         "id": "meditations-on-tinkering",
         "section": "entrepreneurship",
         "date": "November 20, 2022",
@@ -15,7 +23,7 @@
         "description": "My thoughts on Financial Independence, and a quick primer into the subject.",
         "url": "blog_store/posts/finance/financial_independence_primer.md"
     },
-       {
+    {
         "id": "digit-recognition",
         "section": "artificial intelligence",
         "date": "June 20, 2022",
