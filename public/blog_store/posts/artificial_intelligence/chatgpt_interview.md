@@ -6,6 +6,8 @@ ahem.
 
 Good questions of course, and since this is quite difficult and I have been outsourcing most of my work to ChatGPT anyway, I figured we might as well have a chat on this topic as well. So let us dive in to a nice conversation with ChatGPT, or Chatty for friends, on the topic of how this technology will change the world. Enjoy.
 
+## Interview
+
 > Hi there ChatGPT! Mind if I call you Chatty for short? I was wondering if you'd like to have a conversation on the impact of generative AI technology with me. Do you have some time available?
 
 Hello! Of course, you can call me Chatty, and I would be happy to  discuss the impact of generative AI technology with you. I have plenty  of time available, so feel free to ask me anything you want to know or  share your thoughts on the topic.
@@ -73,5 +75,7 @@ And, of course, there is also the satisfaction of having saved the land from the
 Thank you for the kind words! It was a pleasure to create that scenario  for you. As for a closing statement, I would like to remind everyone  that while AI technology has the potential to revolutionize many aspects of our lives, it is ultimately up to us to determine how we use it. By  embracing its possibilities while also being aware of its limitations,  we can create a future that is both innovative and sustainable. And who  knows, maybe one day I'll even be able to write a bestselling novel! But until then, keep dreaming big and always keep your sense of humor close at hand.
 
 > Lovely, we'll leave it at that!
+
+## Some Closing Words
 
 And there you have it dear readers. A conversation with ChatGPT. I'm sure you are all baffled, amazed and possibly even a bit scared. I know I am. I will not pretend that I know where this is going in the next few years, but I will say this: The potential of generative AI models has barely been unlocked. There are still huge strides to be made, and although we should be careful in handing control to there algorithms, we can be sure that they can be amazingly useful as well. I hope this was as fun to you as it was to me. And dear readers, I hope to see you next time as well. Cheers!
