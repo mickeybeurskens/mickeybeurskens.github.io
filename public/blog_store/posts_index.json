@@ -1,5 +1,13 @@
 [
     {
+        "id": "master-conversationalist",
+        "section": "artificial intelligence",
+        "date": "March 15, 2023",
+        "title": "GPT-4 - What Changed?",
+        "description": "Today we'll play around with both GPT-3 and GPT-4, comparing them as we go, to see what all the fuss is really about. I'll also show you that making this algorithm resistant to divulging unauthorized information is quite hard by tricking it into sharing some information it probably should not.",
+        "url": "blog_store/posts/artificial_intelligence/master_conversationalist.md"
+    },
+    {
         "id": "chatgpt-interview-generative-ai",
         "section": "artificial intelligence",
         "date": "March 3, 2023",
