@@ -32,7 +32,7 @@ As the mist closed in around them, the adventurers felt a sense of weightlessnes
 
 ## So Speaks The Old Bard
 
-Hi everyone, and welcome back to my blog. It hasn't been long since the [previous post](), but much has changed in the land of Artificial Intelligence since our last meeting! As you might have guessed from the thrilling opening of this post, OpenAI published an improved version of their [new groundbreaking text generation technology]() called GPT-4. This new iteration crushes the old one in performance, and adds the tantalizing option of including images in your queries (although that is not available yet as of writing). 
+Hi everyone, and welcome back to my blog. It hasn't been long since the [previous post](/#/artificial%20intelligence/chatgpt-interview-generative-ai), but much has changed in the land of Artificial Intelligence since our last meeting! As you might have guessed from the thrilling opening of this post, OpenAI published an improved version of their [new groundbreaking text generation technology](https://openai.com/research/gpt-4) called GPT-4. This new iteration crushes the old one in performance, and adds the tantalizing option of including images in your queries (although that is not available yet as of writing). 
 
 Today we'll play around with both GPT-3 and GPT-4, comparing them as we go, to see what all the fuss is really about. I'll also show you that making this algorithm resistant to divulging unauthorized information is quite hard by tricking it into sharing some information it probably should not. 
 
@@ -145,3 +145,5 @@ Well, well, well. It seems it is possible to get GPT to show its true colors! If
 This also highlights the unique novel security and safety concerns that arise in these systems, and I think this serves as a warning to not put our trust in them unconditionally. As long as we keep that in mind though, I'm looking forward to what will happen a couple of months and years down the line. 
 
 Thanks for reading, dear reader, and see you next time.
+
+Mickey
