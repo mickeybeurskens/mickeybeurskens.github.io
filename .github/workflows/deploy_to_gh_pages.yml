@@ -40,7 +40,6 @@ jobs:
           path: ./
 
       - run:
-          ## Uncomment if deploying with custom domain enabled in your repo's GitHub pages settings. Must match your (sub)domain name
           echo "mickey.coffee" > CNAME
           git config --local user.email "posts_hook@github.com"
           git config --local user.name "Posts Hook"
