@@ -1,5 +1,13 @@
 [
     {
+        "id": "risk-of-trusting-ai",
+        "section": "artificial intelligence",
+        "date": "March 22, 2023",
+        "title": "The Risk Of Trusting AI",
+        "description": "We should really limit our exposure to the risk of Artificial Intelligence. We should only run systems leveraging AI if we can guarantee our safety when those systems fail.",
+        "url": "blog_store/posts/artificial_intelligence/risk_of_trusting_ai.md"
+    },
+    {
         "id": "master-conversationalist",
         "section": "artificial intelligence",
         "date": "March 15, 2023",
