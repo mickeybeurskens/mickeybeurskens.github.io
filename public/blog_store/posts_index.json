@@ -1,5 +1,13 @@
 [
     {
+        "id": "language-model-risk-field-guide",
+        "section": "artificial intelligence",
+        "date": "July 12, 2023",
+        "title": "The Language Model Risk Field Guide",
+        "description": "Join Carlo Lepelaars and myself as we explore the risks we think you should know about in the world of large language models and generative AI.",
+        "url": "blog_store/posts/artificial_intelligence/language_model_risk_field_guide.md"
+    },
+    {
         "id": "risk-of-trusting-ai",
         "section": "artificial intelligence",
         "date": "March 22, 2023",
