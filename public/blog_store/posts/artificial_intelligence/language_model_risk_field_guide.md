@@ -86,7 +86,7 @@ First the risk perspective. There is no end to the amount of media articles comp
 
 One of the main worries, as far as we understand the topic, is the scenario of an AI Singularity. In this scenario an AI is built that is able to rapidly improve itself. The worry is that we will not be able to steer such an AI sufficiently to keep us safe, and even that we will not see it coming if it happens.
 
-A common critique on Yudkowski is that his approach is alarmist and deeply pessimistic. In contrast, this interview with [Lex Friedman and Max Tegmark](https://www.youtube.com/watch?v=VcVfceTsD0A) gives a more positive perspective while retaining the view that AI can cause significant existential risk.
+A common critique on Yudkowski is that his approach is alarmist and deeply pessimistic. In contrast, this interview with [Lex Fridman and Max Tegmark](https://www.youtube.com/watch?v=VcVfceTsD0A) gives a more positive perspective while retaining the view that AI can cause significant existential risk.
 
 On the other hand there are many prominent people in the field that find the view of existential risk either absurd, or perhaps so low as to not be worth the fuss. Many focus on the immense promise of AI in solving some of our greatest challenges. [Yann Lecun](https://twitter.com/ylecun/status/1651458069187133441) has been especially vocal about this topic. So have [Marc Andreessen](https://a16z.com/2023/06/06/ai-will-save-the-world/) and [Andrew Ng](https://www.linkedin.com/posts/andrewyng_the-call-for-a-6-month-moratorium-on-making-activity-7046909992645394432-s7_X/). 
 
