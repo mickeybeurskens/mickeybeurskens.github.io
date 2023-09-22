@@ -12,19 +12,25 @@
         <div class="about-text px-5">
           <p>
             Hello there internet traveller, welcome to my blog! You will find
-            all kinds of content here ranging from technical to philosophical,
-            both mixed and pure as can be, for your reading pleasure.
+            all kinds of content here that I find interesting and/or useful. 
+            The writing helps me think through challenging topics. I share this in the hopes that might help you too.
           </p>
 
           <p>
-            My name is Mickey Beurskens and I enjoy writing. It helps me think through
-            challenging topics. I share this in the hopes that it helps you, the
-            esteemed reader, too.
+            In my working life I am an AI Engineer at my own company, <a href="https://www.forgefire.dev/">Forge Fire</a>, and like to write on the topic both technically and philosophically. 
+            I'm particularly interested in autonomous agents and AI safety.
+          </p>
+          <p>
+            Outside of that I enjoy philosophy, psychology, finance, and the occasional bit of fiction.
           </p>
 
-          <p>Enjoy!</p>
+          <p>
+            You can reach me through twitter <a href="https://twitter.com/mickeybeurskens">@mickeybeurskens</a>, or even <a href="https://www.linkedin.com/in/mickey-beurskens/">LinkedIn</a> . I'm always happy to chat.
+          </p>
 
-          <p class="sign">Mickey</p>
+          <p>Enjoy the read.</p>
+
+          <p class="sign">Mickey Beurskens</p>
         </div>
       </div>
 
