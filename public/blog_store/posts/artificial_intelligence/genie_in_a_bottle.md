@@ -2,7 +2,7 @@
 
 Say you had a genie, firmly trapped in a bottle and awaiting your command. Perhaps you found it in some sandy, long forgotten cave. Maybe it was always in your attic, camouflaged by a protective layer of dust. Whatever the reason, you now have the ability to *“have granted thy wishes three”*. This information was conveniently streamed into your mind the moment you touched the bottle. You also know that it is absolutely impossible to wish for more wishes. If the resulting wish grants you the ability to wish again, the bottle will vanish in a sigh of disappointment, leaving you not only without any further wishes, but with a sizable feeling of embarrassment. What would you do?
 
-The genie is not omnipotent. It has to go out into the world and actually *make your wish happen* As such it is impossible to wish for things nature does not allow, and granting your wish takes time. It is about a strong as a human adult and can fly. Some wishes may take impractically long, so as a bonus feature the bottle can give you a rough estimate of how long a wish might take to fulfill.
+The genie is not omnipotent. It has to go out into the world and actually *make your wish happen*. As such it is impossible to wish for things nature does not allow, and granting your wish takes time. It is about a strong as a human adult and can fly. Some wishes may take impractically long, so as a bonus feature the bottle can give you a rough estimate of how long a wish might take to fulfill.
 
 Luckily the genie is not entirely bound by human standards! It is about as smart as the smartest human and it thinks about 100 times faster. It does not need sleep. It can possess other bottles and make temporary copies of itself that disappear after a day, and it can read peoples minds to predict their emotions and read their past. At least that justifies the effort of securing the damn bottle.
 
@@ -22,7 +22,7 @@ The genie proceeds to influence the necessary government officials to bomb the p
 
 *You: “…”*
 
-Shudders run up and down your spine as you think about it. Maybe you could try to think about this a bit more carefully, you think. You want to wish responsibly after all, and it would be great if humanity also benefited from this opportunity! It’s likely that you missed some essential aspects of wish wishing that would result in a similar failure. Anything without an upper bound is out! No “richest” or “smartest” or “most powerful” types of wishes that just invite elimination of others at some point. No unrealistic upper bounds either, like wishing for personal assets equivalent to the gross national product of an entire country, which is simply the same type of wish expressed in different words. 
+You catch yourself shuddering. Perhaps you could try to think about this a bit more carefully. You want to wish responsibly after all. It’s likely that you missed some essential aspects of wish wishing that would result in a similar failure. Anything without an upper bound is out! No “richest” or “smartest” or “most powerful” types of wishes that just invite elimination of others at some point. No unrealistic upper bounds either, like wishing for personal assets equivalent to the gross national product of an entire country, which is simply the same type of wish expressed in different words. 
 
 How about using the first wish to be able to make much better wishes? Now *that* should be wise, right? You’ll be taking a risk considering it might take some serious time to fulfill that wish and accidents happen, but it’s better than bombing the world or unleashing some kind of horrible plague as a side effect.  
 
@@ -58,14 +58,14 @@ Fine. You start daydreaming and channel your inner skeptic:
 
 *You: “…”*
 
-You silently curse to yourself as you wake up from your daydream. Damn it, this is hard! But you vow you will make this work! There must be a way. You sit down and ponder, angrily. 
+You silently curse as the daydream fades. Damn it, this is hard! But you vow you will make this work! There must be a way. You sit down and ponder, angrily. 
 
-Every reasonable goal that you think *could be done*, and which is simple enough to *understand*, you could simply go do yourself or pay someone to do without wasting a precious wish. For wishes that do something *you do not know* how to do yourself, you realize you cannot fully predict the *consequences* because you do not understand *the path that will get you there*.
+Every reasonable goal that you think *could be done*, and which is simple enough to *understand*, you could simply go do yourself or pay someone to do without wasting a precious wish. Wishing for somethings that *you do not know* how to do yourself, you realize, means not being able fully predict the *consequences*, because you do not understand *the path that will get you there*.
 
 So to ask the genie to do something that you cannot do yourself is to trust that the genie will adequately understand your *intentions*, something you’d rather not gamble the fate of the world upon. Besides, what if the wish turns out to be impossible after all? The genie is smarter, but it is not ultimately smart. Could it make a mistake? Would it stop if it realizes the result is not what was intended halfway through, or simply execute the wish as stated?
 
 Of course there is also the possibility that the intentions of wishes are properly understood and executed, but there is certainly no guarantee. You found the bottle in some random cave during a desert hike and you really don’t know what the genie is intending to do, now that you think about it. Sure, it *looks* human enough, but is it? Would it destroy the world if I wished it? Can I be sure it understands human psychology sufficiently to fulfill wishes. Would it even *want to?* 
 
-Yea, this is harder than you thought. Sure, there are problems to be solved right now. Terrible and horrible problems. There always are. Perhaps better to bury the bottle in the garden for now though, learn more about this “wishing” business and try again later. You decide to follow some of the wisdom of the ancients: *“Primum non nocere”. “First, do no harm”.* 
+Yea, this is harder than you thought. Sure, there are problems to be solved right now. Terrible and horrible problems. But perhaps better to bury the bottle in the garden for now, learn more about this “wishing” business and try again later. You decide to follow some of the wisdom of the ancients: *“Primum non nocere”. “First, do no harm”.* 
 
-You consider wishing the bottle buried, so it cannot be accidentally found. A moment passes. Then you get up, walk to the shed and grab a shovel.
+You consider wishing the bottle secured in a secret vault, so it cannot be accidentally found. A moment passes. Then you get up, walk to the shed and grab a shovel.
