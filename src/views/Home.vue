@@ -175,6 +175,5 @@ h3 {
 .tag-item {
   margin-top: 2px;
   margin-left: 0.5rem; 
-
 }
 </style>
