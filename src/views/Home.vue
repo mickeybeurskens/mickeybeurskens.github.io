@@ -1,7 +1,5 @@
 <template>
-  <PatchMeta
-    :title="section ? section : 'The home page!'"
-  />
+  <PatchMeta :title="section ? section : 'The home page!'" />
 
   <div class="d-flex justify-content-center">
     <!-- <Profile /> -->
@@ -12,12 +10,13 @@
         <div class="about-text px-5">
           <p>
             Hello there internet traveller, welcome to my blog! You will find
-            all kinds of content here that I find interesting and/or useful. 
+            all kinds of content here that I find interesting and/or useful.
             The writing helps me think through challenging topics. I share this in the hopes that might help you too.
           </p>
 
           <p>
-            In my working life I am an AI Engineer at my own company, <a href="https://www.forgefire.dev/">Forge Fire</a>, and like to write on the topic both technically and philosophically. 
+            In my working life I am an AI Engineer at my own company, <a href="https://www.forgefire.dev/">Forge Fire</a>,
+            and like to write on the topic both technically and philosophically.
             I'm particularly interested in autonomous agents and AI safety.
           </p>
           <p>
@@ -25,7 +24,8 @@
           </p>
 
           <p>
-            You can reach me through twitter <a href="https://twitter.com/mickeybeurskens">@mickeybeurskens</a>, or even <a href="https://www.linkedin.com/in/mickey-beurskens/">LinkedIn</a> . I'm always happy to chat.
+            You can reach me through twitter <a href="https://twitter.com/mickeybeurskens">@mickeybeurskens</a>, or even
+            <a href="https://www.linkedin.com/in/mickey-beurskens/">LinkedIn</a> . I'm always happy to chat.
           </p>
 
           <p>Enjoy the read.</p>
@@ -39,11 +39,7 @@
         {{ section }}
       </p>
 
-      <div
-        v-for="entry in pageStatus.visiblePosts"
-        :key="entry.id"
-        class="container markdown-body p-3 p-md-4"
-      >
+      <div v-for="entry in pageStatus.visiblePosts" :key="entry.id" class="container markdown-body p-3 p-md-4">
         <!-- TITLE -->
         <router-link :to="`/${entry.section}/${entry.id}`" class="text-reset">
           <h3 class="text-left m-0 p-0">
@@ -52,22 +48,18 @@
         </router-link>
 
         <!-- POST DETAILS -->
-        <p
-          class="font-weight-light font-italic m-0 p-0"
-          :class="!section ? 'text-right' : 'mb-3'"
-        >
+        <p class="font-weight-light font-italic m-0 p-0" :class="!section ? 'text-right' : 'mb-3'">
           {{ entry.date }}
         </p>
-        <router-link
-          v-if="!section"
-          :to="`/${entry.section}`"
-          class="text-reset"
-        >
-          <h6 class="m-0 p-0 text-right font-weight-bold">
-            #{{ entry.section }}
-          </h6>
-        </router-link>
-
+        
+        <div v-if="!section && Array.isArray(entry.section)" class="tag-container">
+          <router-link v-for="(sec, index) in entry.section" :key="index" :to="`/${sec}`" class="text-reset tag-item">
+            <h6 class="m-0 p-0 text-right font-weight-bold">
+              #{{ sec }}
+            </h6>
+          </router-link>
+        </div>
+        
         <!-- POST INTRO -->
         <p class="font-weight-light mt-1">
           {{ entry.description }}
@@ -75,32 +67,18 @@
       </div>
 
       <!-- PAGINATION -->
-      <ul
-        v-if="pageStatus.endPage > pageStatus.startPage"
-        class="pagination justify-content-center mb-5 pb-5"
-        style="cursor: pointer"
-      >
-        <li
-          class="page-item"
-          :class="currentPage == pageStatus.startPage ? 'active' : ''"
-          @click="currentPage = pageStatus.startPage"
-        >
+      <ul v-if="pageStatus.endPage > pageStatus.startPage" class="pagination justify-content-center mb-5 pb-5"
+        style="cursor: pointer">
+        <li class="page-item" :class="currentPage == pageStatus.startPage ? 'active' : ''"
+          @click="currentPage = pageStatus.startPage">
           <a class="page-link"> {{ pageStatus.startPage }}</a>
         </li>
-        <li
-          v-for="(page, index) in pageStatus.midPages"
-          :key="index"
-          class="page-item"
-          :class="currentPage == page ? 'active' : ''"
-          @click="currentPage = page"
-        >
+        <li v-for="(page, index) in pageStatus.midPages" :key="index" class="page-item"
+          :class="currentPage == page ? 'active' : ''" @click="currentPage = page">
           <a class="page-link">{{ page }}</a>
         </li>
-        <li
-          class="page-item"
-          :class="currentPage == pageStatus.endPage ? 'active' : ''"
-          @click="currentPage = pageStatus.endPage"
-        >
+        <li class="page-item" :class="currentPage == pageStatus.endPage ? 'active' : ''"
+          @click="currentPage = pageStatus.endPage">
           <a class="page-link">{{ pageStatus.endPage }}</a>
         </li>
       </ul>
@@ -116,7 +94,7 @@ import PatchMeta from "../components/PatchMeta.vue";
 import paginate from "../utils/paginate";
 import { PostIndex } from "../types/PostIndex";
 
-const VUE_APP_POSTS_PER_PAGE  = 5;
+const VUE_APP_POSTS_PER_PAGE = 5;
 
 export default defineComponent({
   components: {
@@ -137,14 +115,17 @@ export default defineComponent({
     });
 
     const pageStatus = computed(() => {
+      // Update the filter logic to accommodate posts that might belong to multiple sections
       const categoryPosts = props.section
-        ? postsIndex.filter(({ section }) => section === props.section)
+        ? postsIndex.filter(({ section }) => section.includes(props.section))
         : postsIndex;
+
       const { startPage, endPage, startIndex, endIndex } = paginate(
         categoryPosts.length,
         state.currentPage,
         VUE_APP_POSTS_PER_PAGE
       );
+
       const prev =
         state.currentPage - 1 >= startPage ? state.currentPage - 1 : 0;
       const next = state.currentPage + 1 <= endPage ? state.currentPage + 1 : 0;
@@ -168,6 +149,7 @@ export default defineComponent({
     };
   },
 });
+
 </script>
 
 <style lang="scss" scoped>
@@ -182,5 +164,17 @@ export default defineComponent({
 
 h3 {
   text-transform: capitalize;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.tag-item {
+  margin-top: 2px;
+  margin-left: 0.5rem; 
+
 }
 </style>
