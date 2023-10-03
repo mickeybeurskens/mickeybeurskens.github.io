@@ -7,7 +7,7 @@
     <div>
       <BlogHeader class="mb-5 px-3 px-md-4 pt-5" />
       <div class="container px-3 px-3 px-md-4 about">
-        <div class="about-text px-5">
+        <div class="about-text">
           <p>
             Hello there internet traveller, welcome to my blog! You will find
             all kinds of content here that I find interesting and/or useful.
@@ -35,53 +35,45 @@
       </div>
 
       <hr />
-      <p v-if="section" class="text-center display-4 text-capitalize my-5">
-        {{ section }}
-      </p>
+      <div class="posts-container ">
+        <div class="posts-title pl-3 pl-md-4 pt-3 pl-md-4">
+          <h1>Recent Posts</h1>
+          <p class="">A selection of recent posts.</p>
 
-      <div v-for="entry in pageStatus.visiblePosts" :key="entry.id" class="container markdown-body p-3 p-md-4">
-        <!-- TITLE -->
-        <router-link :to="`/${entry.section}/${entry.id}`" class="text-reset">
-          <h3 class="text-left m-0 p-0">
-            {{ entry.title }}
-          </h3>
-        </router-link>
+        </div>
+        <div v-for="entry in pageStatus.visiblePosts" :key="entry.id" class="container markdown-body p-3 p-md-4">
+          <!-- TITLE -->
+          <router-link :to="`/${entry.id}`" class="text-reset">
+            <h3 class="text-left m-0 p-0">
+              {{ entry.title }}
+            </h3>
+          </router-link>
 
-        <!-- POST DETAILS -->
-        <p class="font-weight-light font-italic m-0 p-0" :class="!section ? 'text-right' : 'mb-3'">
-          {{ entry.date }}
-        </p>
-        
-        <div v-if="!section && Array.isArray(entry.section)" class="tag-container">
-          <router-link v-for="(sec, index) in entry.section" :key="index" :to="`/${sec}`" class="text-reset tag-item">
-            <h6 class="m-0 p-0 text-right font-weight-bold">
-              #{{ sec }}
-            </h6>
+          <!-- POST DETAILS -->
+          <p class="font-weight-light font-italic m-0 p-0" :class="!section ? 'text-right' : 'mb-3'">
+            {{ entry.date }}
+          </p>
+
+          <div v-if="!section && Array.isArray(entry.section)" class="tag-container">
+            <router-link v-for="(sec, index) in entry.section" :key="index" :to="`/blog/${sec}`"
+              class="text-reset tag-item">
+              <h6 class="m-0 p-0 text-right font-weight-bold">
+                #{{ sec }}
+              </h6>
+            </router-link>
+          </div>
+
+          <!-- POST INTRO -->
+          <p class="font-weight-light mt-1">
+            {{ entry.description }}
+          </p>
+        </div>
+        <div class="posts-footer">
+          <router-link :to="`/blog`">
+            <a class="btn btn-primary btn-md btn-block">See all posts</a>
           </router-link>
         </div>
-        
-        <!-- POST INTRO -->
-        <p class="font-weight-light mt-1">
-          {{ entry.description }}
-        </p>
       </div>
-
-      <!-- PAGINATION -->
-      <ul v-if="pageStatus.endPage > pageStatus.startPage" class="pagination justify-content-center mb-5 pb-5"
-        style="cursor: pointer">
-        <li class="page-item" :class="currentPage == pageStatus.startPage ? 'active' : ''"
-          @click="currentPage = pageStatus.startPage">
-          <a class="page-link"> {{ pageStatus.startPage }}</a>
-        </li>
-        <li v-for="(page, index) in pageStatus.midPages" :key="index" class="page-item"
-          :class="currentPage == page ? 'active' : ''" @click="currentPage = page">
-          <a class="page-link">{{ page }}</a>
-        </li>
-        <li class="page-item" :class="currentPage == pageStatus.endPage ? 'active' : ''"
-          @click="currentPage = pageStatus.endPage">
-          <a class="page-link">{{ pageStatus.endPage }}</a>
-        </li>
-      </ul>
     </div>
   </div>
 </template>
@@ -91,10 +83,9 @@ import { defineComponent, reactive, toRefs, computed, inject } from "vue";
 import BlogHeader from "../components/BlogHeader.vue";
 import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
-import paginate from "../utils/paginate";
 import { PostIndex } from "../types/PostIndex";
 
-const VUE_APP_POSTS_PER_PAGE = 5;
+const VUE_APP_RECENT_POSTS = 3;
 
 export default defineComponent({
   components: {
@@ -115,30 +106,15 @@ export default defineComponent({
     });
 
     const pageStatus = computed(() => {
-      // Update the filter logic to accommodate posts that might belong to multiple sections
-      const categoryPosts = props.section
-        ? postsIndex.filter(({ section }) => section.includes(props.section))
-        : postsIndex;
+      // Sort posts by date in descending order
+      const sortedPosts = postsIndex.sort((a, b) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      });
 
-      const { startPage, endPage, startIndex, endIndex } = paginate(
-        categoryPosts.length,
-        state.currentPage,
-        VUE_APP_POSTS_PER_PAGE
-      );
-
-      const prev =
-        state.currentPage - 1 >= startPage ? state.currentPage - 1 : 0;
-      const next = state.currentPage + 1 <= endPage ? state.currentPage + 1 : 0;
-      const midPages = [prev, state.currentPage, next].filter(
-        (p) => p > startPage && p < endPage
-      );
-
-      const visiblePosts = categoryPosts.slice(startIndex, endIndex + 1);
+      // Take only the 3 most recent posts
+      const visiblePosts = sortedPosts.slice(0, VUE_APP_RECENT_POSTS);
 
       return {
-        startPage,
-        midPages,
-        endPage,
         visiblePosts,
       };
     });
@@ -155,6 +131,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .about {
   font-family: $font-body;
+  max-width: 700px;
 }
 
 .sign {
@@ -174,6 +151,18 @@ h3 {
 
 .tag-item {
   margin-top: 2px;
-  margin-left: 0.5rem; 
+  margin-left: 0.5rem;
+}
+
+.posts-container {
+  margin: auto;
+  max-width: 600px;
+}
+
+.posts-footer {
+  margin-top: 1rem;
+  max-width: 40%;
+  margin: auto;
+  font-weight: 700;
 }
 </style>

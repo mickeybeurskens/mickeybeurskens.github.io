@@ -43,7 +43,7 @@
               v-for="(count, section) of sections"
               :key="section"
               class="dropdown-item text-capitalize navbar-click-color"
-              :to="section === 'all' ? '/' : `/${section}`"
+              :to="section === 'all' ? '/blog' : `/blog/${section}`"
               @click="showDropdown = false"
             >
               {{ section }} ({{ count }})
