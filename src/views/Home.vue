@@ -200,11 +200,6 @@ h3 {
   display: flex;
 }
 
-@media (max-width: 900px) {
-  .posts-container {
-    flex-wrap: wrap;
-  }
-}
 
 .posts-footer {
   margin-top: 1rem;
@@ -212,6 +207,17 @@ h3 {
 
 .higlight-post {
   flex-grow: 1;
+  max-width: 50%;
+}
+
+@media (max-width: 900px) {
+  .posts-container {
+    flex-wrap: wrap;
+  }
+
+  .higlight-post {
+    max-width: 100%;
+  }
 }
 
 .recent-posts {
