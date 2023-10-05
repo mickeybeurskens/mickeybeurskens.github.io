@@ -36,7 +36,7 @@
 
       <hr />
       <div class="posts-container ">
-        <div class="higlight-post pl-3 pl-md-4 pt-3 pl-md-4">
+        <div class="higlight-post px-3 px-md-4 pt-3 pl-md-4">
           <h1>{{ pageStatus.highlightPost.title }}</h1>
           <p class="font-weight-light font-italic m-0 p-0 text-left">
             {{ pageStatus.highlightPost.date }}
@@ -58,14 +58,14 @@
           </div>
         </div>
 
-        <div class="recent-posts">
+        <div class="recent-posts px-3 px-md-4 pt-3 pl-md-4">
 
-          <div class="posts-title pl-3 pl-md-4 pt-3 pl-md-4">
+          <div class="posts-title">
             <h1>Recent Posts</h1>
 
             <p>A selection of recent posts. You can also find older posts on the blog page.</p>
           </div>
-          <div v-for="entry in pageStatus.summaryPosts" :key="entry.id" class="container markdown-body p-3 p-md-4">
+          <div v-for="entry in pageStatus.summaryPosts" :key="entry.id" class="markdown-body mt-4">
             <!-- TITLE -->
             <router-link :to="`/${entry.id}`" class="text-reset">
               <h3 class="text-left m-0 p-0">
@@ -92,7 +92,7 @@
               {{ entry.description }}
             </p>
           </div>
-          <div class="posts-footer pl-3 pl-md-4">
+          <div class="posts-footer">
             <SubscribeButton :url="'/blog'" buttonText="All Blog Posts" />
           </div>
         </div>
@@ -196,19 +196,22 @@ h3 {
 }
 
 .posts-container {
-  max-width: 900px;
+  max-width: 1200px;
   display: flex;
+}
+
+@media (max-width: 900px) {
+  .posts-container {
+    flex-wrap: wrap;
+  }
 }
 
 .posts-footer {
   margin-top: 1rem;
-  max-width: 40%;
 }
 
 .higlight-post {
-  // max-width: 300px;
   flex-grow: 1;
-
 }
 
 .recent-posts {
