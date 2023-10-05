@@ -38,8 +38,8 @@
       <div class="posts-container ">
         <div class="posts-title pl-3 pl-md-4 pt-3 pl-md-4">
           <h1>Recent Posts</h1>
-          <p class="">A selection of recent posts.</p>
 
+          <p>A selection of recent posts. You can also find older posts on the blog page.</p>
         </div>
         <div v-for="entry in pageStatus.visiblePosts" :key="entry.id" class="container markdown-body p-3 p-md-4">
           <!-- TITLE -->
@@ -68,10 +68,8 @@
             {{ entry.description }}
           </p>
         </div>
-        <div class="posts-footer">
-          <router-link :to="`/blog`">
-            <a class="btn btn-primary btn-md btn-block">See all posts</a>
-          </router-link>
+        <div class="posts-footer pl-3 pl-md-4">
+          <SubscribeButton :url="'/blog'" buttonText="Read Blog" />
         </div>
       </div>
     </div>
@@ -83,6 +81,7 @@ import { defineComponent, reactive, toRefs, computed, inject } from "vue";
 import BlogHeader from "../components/BlogHeader.vue";
 import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
+import SubscribeButton from "../components/SubscribeButton.vue";
 import { PostIndex } from "../types/PostIndex";
 
 const VUE_APP_RECENT_POSTS = 3;
@@ -92,6 +91,7 @@ export default defineComponent({
     PatchMeta,
     BlogHeader,
     Profile,
+    SubscribeButton,
   },
   props: {
     section: {
@@ -162,7 +162,6 @@ h3 {
 .posts-footer {
   margin-top: 1rem;
   max-width: 40%;
-  margin: auto;
-  font-weight: 700;
+  // margin: auto;
 }
 </style>

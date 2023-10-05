@@ -17,7 +17,7 @@
       <span class="navbar-toggler-icon" />
     </button>
 
-    <SubscribeButton class="mx-1" />
+    <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" class="mx-1" />
     <div
       id="navbarNavDropdown"
       :class="`navbar-collapse collapse ${collapseMenu ? '' : 'show'}`"

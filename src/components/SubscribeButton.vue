@@ -1,22 +1,44 @@
 <template>
-  <div class="button_container">
-    <a href="http://eepurl.com/ic1xGn">Subscribe</a>
+  <div @click="navigate" class="button-container btn btn-primary">
+    {{ buttonText }}
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    url: {
+      type: String,
+      required: true
+    },
+    isExternal: {
+      type: Boolean,
+      default: false
+    },
+    buttonText: {
+      type: String,
+      default: 'Click Me'
+    }
+  },
+  methods: {
+    navigate() {
+      if (this.isExternal) {
+        window.location.href = this.url;
+      } else {
+        this.$router.push(this.url);
+      }
+    }
+  }
+};
+</script>
 
 <style scoped lang="scss">
 @import "../styles/_variables.scss";
 
-.button_container {
-  background-color: $accent_light-2;
-  border-radius: 10px;
-  padding: 0.3rem 0.5rem;
-}
-
-.button_container a {
+.button-container {
   color: $main-light;
-  font-family: $font-title;
-  font-weight: 700;
+  font-family: $font-body;
+  font-weight: 600;
 }
 
 </style>
