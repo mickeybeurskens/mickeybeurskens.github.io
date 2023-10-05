@@ -49,6 +49,15 @@ const markDownIt = new MarkdownIt({
     },
   });
 
+  async function loadPostData(postsIndex: PostIndex[], id: string) {
+  const { url = "" } = postsIndex.find(({ id: postId }) => postId === id) || {};
+  const { data: markDownSource } = await axios.get(url);
+  const postHtml = markDownIt.render(markDownSource);
+  const [, title] = markDownSource.split("#");
+
+  return { postHtml, title };
+}
+
 export default defineComponent({
   components: {
     PatchMeta,
@@ -64,19 +73,14 @@ export default defineComponent({
     },
   },
   async setup(props) {
-    /* Hacky navigation when a href link is clicked within the compiled html Post */
+    // Hacky navigation
     onBeforeRouteUpdate(() => {
       location.reload();
     });
 
     // Fetch Post markdown and compile it to html
     const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
-    const { url = "" } = postsIndex.find(({ id }) => id === props.id) || {};
-    const { data: markDownSource } = await axios.get(url);
-    const postHtml = markDownIt.render(markDownSource);
-
-    // Patch page title
-    const [, title] = markDownSource.split("#");
+    const { postHtml, title } = await loadPostData(postsIndex, props.id);
 
     // Back button helper
     const hasHistory = () => window.history?.length > 2;

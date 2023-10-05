@@ -36,40 +36,47 @@
 
       <hr />
       <div class="posts-container ">
-        <div class="posts-title pl-3 pl-md-4 pt-3 pl-md-4">
-          <h1>Recent Posts</h1>
-
-          <p>A selection of recent posts. You can also find older posts on the blog page.</p>
+        <div class="higlight-post pl-3 pl-md-4 pt-3 pl-md-4">
+          <h1>{{pageStatus.highlightPost.title}}</h1>
+          <p>{{pageStatus.highlightPost.description}}</p>
         </div>
-        <div v-for="entry in pageStatus.visiblePosts" :key="entry.id" class="container markdown-body p-3 p-md-4">
-          <!-- TITLE -->
-          <router-link :to="`/${entry.id}`" class="text-reset">
-            <h3 class="text-left m-0 p-0">
-              {{ entry.title }}
-            </h3>
-          </router-link>
+        <div class="recent-posts">
 
-          <!-- POST DETAILS -->
-          <p class="font-weight-light font-italic m-0 p-0" :class="!section ? 'text-right' : 'mb-3'">
-            {{ entry.date }}
-          </p>
+          <div class="posts-title pl-3 pl-md-4 pt-3 pl-md-4">
+            <h1>Recent Posts</h1>
 
-          <div v-if="!section && Array.isArray(entry.section)" class="tag-container">
-            <router-link v-for="(sec, index) in entry.section" :key="index" :to="`/blog/${sec}`"
-              class="text-reset tag-item">
-              <h6 class="m-0 p-0 text-right font-weight-bold">
-                #{{ sec }}
-              </h6>
-            </router-link>
+            <p>A selection of recent posts. You can also find older posts on the blog page.</p>
           </div>
+          <div v-for="entry in pageStatus.summaryPosts" :key="entry.id" class="container markdown-body p-3 p-md-4">
+            <!-- TITLE -->
+            <router-link :to="`/${entry.id}`" class="text-reset">
+              <h3 class="text-left m-0 p-0">
+                {{ entry.title }}
+              </h3>
+            </router-link>
 
-          <!-- POST INTRO -->
-          <p class="font-weight-light mt-1">
-            {{ entry.description }}
-          </p>
-        </div>
-        <div class="posts-footer pl-3 pl-md-4">
-          <SubscribeButton :url="'/blog'" buttonText="Read Blog" />
+            <!-- POST DETAILS -->
+            <p class="font-weight-light font-italic m-0 p-0" :class="!section ? 'text-right' : 'mb-3'">
+              {{ entry.date }}
+            </p>
+
+            <div v-if="!section && Array.isArray(entry.section)" class="tag-container">
+              <router-link v-for="(sec, index) in entry.section" :key="index" :to="`/blog/${sec}`"
+                class="text-reset tag-item">
+                <h6 class="m-0 p-0 text-right font-weight-bold">
+                  #{{ sec }}
+                </h6>
+              </router-link>
+            </div>
+
+            <!-- POST INTRO -->
+            <p class="font-weight-light mt-1">
+              {{ entry.description }}
+            </p>
+          </div>
+          <div class="posts-footer pl-3 pl-md-4">
+            <SubscribeButton :url="'/blog'" buttonText="Read Blog" />
+          </div>
         </div>
       </div>
     </div>
@@ -112,10 +119,12 @@ export default defineComponent({
       });
 
       // Take only the 3 most recent posts
-      const visiblePosts = sortedPosts.slice(0, VUE_APP_RECENT_POSTS);
+      const highlightPost = sortedPosts[0];
+      const summaryPosts = sortedPosts.slice(1, VUE_APP_RECENT_POSTS + 1);
 
       return {
-        visiblePosts,
+        highlightPost: highlightPost,
+        summaryPosts: summaryPosts,
       };
     });
 
@@ -156,12 +165,21 @@ h3 {
 
 .posts-container {
   margin: auto;
-  max-width: 600px;
+  max-width: 900px;
+  display: flex;
 }
 
 .posts-footer {
   margin-top: 1rem;
   max-width: 40%;
-  // margin: auto;
+}
+
+.higlight-post {
+  flex-basis: 1;
+
+}
+
+.recent-posts {
+  flex-basis: 1;
 }
 </style>
