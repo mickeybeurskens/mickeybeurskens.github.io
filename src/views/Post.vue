@@ -17,7 +17,6 @@ import PatchMeta from "../components/PatchMeta.vue";
 import { loadPostData } from "../utils/loadPosts";
 
 
-
 export default defineComponent({
   components: {
     PatchMeta,

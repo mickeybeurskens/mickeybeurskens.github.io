@@ -37,9 +37,27 @@
       <hr />
       <div class="posts-container ">
         <div class="higlight-post pl-3 pl-md-4 pt-3 pl-md-4">
-          <h1>{{pageStatus.highlightPost.title}}</h1>
-          <p>{{pageStatus.highlightPost.description}}</p>
+          <h1>{{ pageStatus.highlightPost.title }}</h1>
+          <p class="font-weight-light font-italic m-0 p-0 text-left">
+            {{ pageStatus.highlightPost.date }}
+          </p>
+
+          <div v-if="!section && Array.isArray(pageStatus.highlightPost.section)" class="tag-container-left mt-1 markdown-body">
+            <router-link v-for="(sec, index) in pageStatus.highlightPost.section" :key="index" :to="`/blog/${sec}`"
+              class="text-reset tag-item ml-0 mr-1">
+              <h6 class="m-0 p-0 text-left font-weight-bold">
+                #{{ sec }}
+              </h6>
+            </router-link>
+          </div>
+
+          <div class="highlight-post-content mt-3">
+            <span class="markdown-body" v-html="highlightPostContent" />
+            <p>...</p>
+            <SubscribeButton :url="'/' + highlightPostUrl" buttonText="Continue Reading" />
+          </div>
         </div>
+
         <div class="recent-posts">
 
           <div class="posts-title pl-3 pl-md-4 pt-3 pl-md-4">
@@ -75,7 +93,7 @@
             </p>
           </div>
           <div class="posts-footer pl-3 pl-md-4">
-            <SubscribeButton :url="'/blog'" buttonText="Read Blog" />
+            <SubscribeButton :url="'/blog'" buttonText="All Blog Posts" />
           </div>
         </div>
       </div>
@@ -90,6 +108,7 @@ import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
 import SubscribeButton from "../components/SubscribeButton.vue";
 import { PostIndex } from "../types/PostIndex";
+import { loadPostData } from "../utils/loadPosts";
 
 const VUE_APP_RECENT_POSTS = 3;
 
@@ -106,27 +125,36 @@ export default defineComponent({
       default: "",
     },
   },
-  setup(props) {
+  async setup(props) {
     const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
     const state = reactive({
       currentPage: 1,
+      highlightPostContent: '',
+      highlightPostTitle: '',
+      highlightPostUrl: '',
     });
 
     const pageStatus = computed(() => {
-      // Sort posts by date in descending order
-      const sortedPosts = postsIndex.sort((a, b) => {
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
-      });
-
-      // Take only the 3 most recent posts
+      const sortedPosts = postsIndex.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
       const highlightPost = sortedPosts[0];
       const summaryPosts = sortedPosts.slice(1, VUE_APP_RECENT_POSTS + 1);
-
       return {
         highlightPost: highlightPost,
         summaryPosts: summaryPosts,
       };
     });
+
+    // Load the highlight post content
+    const charLimit = 1200;
+    const { postHtml, title } = await loadPostData(postsIndex, pageStatus.value.highlightPost.id, charLimit);
+    // Filter first h1
+    const h1Index = postHtml.indexOf('<h1');
+    const h1EndIndex = postHtml.indexOf('</h1>');
+    const h1 = postHtml.slice(h1Index, h1EndIndex + 5);
+    const postHtmlNoTitle = postHtml.replace(h1, '');
+    state.highlightPostContent = postHtmlNoTitle;
+    state.highlightPostTitle = title;
+    state.highlightPostUrl = pageStatus.value.highlightPost.id;
 
     return {
       ...toRefs(state),
@@ -134,8 +162,8 @@ export default defineComponent({
     };
   },
 });
-
 </script>
+
 
 <style lang="scss" scoped>
 .about {
@@ -152,19 +180,22 @@ h3 {
   text-transform: capitalize;
 }
 
-.tag-container {
+.tag-container, .tag-container-left {
   display: flex;
   flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
+.tag-container{
   justify-content: flex-end;
 }
 
 .tag-item {
-  margin-top: 2px;
   margin-left: 0.5rem;
 }
 
 .posts-container {
-  margin: auto;
   max-width: 900px;
   display: flex;
 }
@@ -175,11 +206,12 @@ h3 {
 }
 
 .higlight-post {
-  flex-basis: 1;
+  // max-width: 300px;
+  flex-grow: 1;
 
 }
 
 .recent-posts {
-  flex-basis: 1;
+  flex-grow: 1;
 }
 </style>
