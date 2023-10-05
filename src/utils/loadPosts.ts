@@ -32,11 +32,14 @@ const markDownIt = new MarkdownIt({
     },
   });
 
-export async function loadPostData(postsIndex: PostIndex[], id: string) {
-  const { url = "" } = postsIndex.find(({ id: postId }) => postId === id) || {};
-  const { data: markDownSource } = await axios.get(url);
-  const postHtml = markDownIt.render(markDownSource);
-  const [, title] = markDownSource.split("#");
-
-  return { postHtml, title };
-}
+  export async function loadPostData(postsIndex: PostIndex[], id: string, charLimit: number | null = null) {
+    const { url = "" } = postsIndex.find(({ id: postId }) => postId === id) || {};
+    const { data: fullMarkDownSource } = await axios.get(url);
+  
+    const markDownSource = (charLimit !== null) ? fullMarkDownSource.substring(0, charLimit) : fullMarkDownSource;
+  
+    const postHtml = markDownIt.render(markDownSource);
+    const [, title] = fullMarkDownSource.split("#"); 
+    
+    return { postHtml, title };
+  }
