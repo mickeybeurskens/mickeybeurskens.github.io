@@ -2,11 +2,7 @@
   <PatchMeta :title="title" />
   <div class="container my-4 my-md-5">
     <span class="markdown-body" v-html="postHtml" />
-    <button
-      type="button"
-      class="border btn mt-4 post-button"
-      @click="hasHistory() ? router.go(-1) : router.push('/')"
-    >
+    <button type="button" class="border btn mt-4 post-button" @click="hasHistory() ? router.go(-1) : router.push('/')">
       &laquo; Back
     </button>
   </div>
@@ -16,47 +12,11 @@
 import { defineComponent, inject } from "vue";
 import { onBeforeRouteUpdate } from "vue-router";
 import router from "../router";
-import axios from "redaxios";
-import MarkdownIt from "markdown-it";
-import emoji from "markdown-it-emoji";
 import { PostIndex } from "../types/PostIndex";
 import PatchMeta from "../components/PatchMeta.vue";
-import Highlight from "highlight.js";
-import MarkdownItTexmath from "markdown-it-texmath";
-import katex from "katex";
+import { loadPostData } from "../utils/loadPosts";
 
-const markDownIt = new MarkdownIt({
-  html: true,
-  highlight: function (str: string, lang: string) {
-    if (lang && Highlight.getLanguage(lang)) {
-      try {
-        return Highlight.highlight(str, { language: lang }).value;
-      } catch (__) {}
-    }
 
-    return "";
-  },
-})
-  .use(emoji)
-  .use(MarkdownItTexmath, {
-    engine: katex,
-    delimiters: "dollars",
-    katexOptions: {
-      macros: { "\\RR": "\\mathbb{R}" },
-      strict: false,
-      newLineInDisplayMode: true,
-      output: "mathml",
-    },
-  });
-
-  async function loadPostData(postsIndex: PostIndex[], id: string) {
-  const { url = "" } = postsIndex.find(({ id: postId }) => postId === id) || {};
-  const { data: markDownSource } = await axios.get(url);
-  const postHtml = markDownIt.render(markDownSource);
-  const [, title] = markDownSource.split("#");
-
-  return { postHtml, title };
-}
 
 export default defineComponent({
   components: {
