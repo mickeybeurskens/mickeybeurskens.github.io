@@ -1,6 +1,5 @@
 <template>
   <PatchMeta :title="section ? section : 'Blog posts'" />
-
   <div class="d-flex justify-content-center">
     <div>
       <BlogHeader class="mb-5 px-3 px-md-4 pt-5" />
@@ -10,31 +9,7 @@
         {{ section }}
       </p>
 
-      <div v-for="entry in pageStatus.visiblePosts" :key="entry.id"
-        class="entry-container container markdown-body p-2 p-md-2">
-        <!-- TITLE -->
-        <div class="left-side">
-          <router-link :to="`/${entry.id}`" class="text-reset">
-            <h5 class="text-left blog-title m-0 p-0">
-              {{ entry.title }}
-            </h5>
-          </router-link>
-        </div>
-        
-        <!-- DATE and TAGS -->
-        <div class="right-side">
-          <p class="font-weight-light blog-date font-italic ml-4 m-0 p-0">
-            {{ entry.date }}
-          </p>
-          <div v-if="!section && Array.isArray(entry.section)" class="tag-container m-0 p-0 ml-2">
-            <router-link v-for="(sec, index) in entry.section" :key="index" :to="`/${sec}`" class="text-reset tag-item">
-              <h6 class="m-0 p-0 ml-1 text-right blog-tag font-weight-bold">
-                #{{ sec }}
-              </h6>
-            </router-link>
-          </div>
-        </div>
-      </div>
+      <BlogPostList :visiblePosts="pageStatus.visiblePosts" :section="section" />
 
       <!-- PAGINATION -->
       <ul v-if="pageStatus.endPage > pageStatus.startPage" class="pagination justify-content-center mb-5 pb-5"
@@ -61,6 +36,8 @@ import { defineComponent, reactive, toRefs, computed, inject } from "vue";
 import BlogHeader from "../components/BlogHeader.vue";
 import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
+import BlogPostList from "../components/BlogPostList.vue";
+
 import paginate from "../utils/paginate";
 import { PostIndex } from "../types/PostIndex";
 
@@ -71,6 +48,7 @@ export default defineComponent({
     PatchMeta,
     BlogHeader,
     Profile,
+    BlogPostList,
   },
   props: {
     section: {
