@@ -40,10 +40,6 @@ export default defineComponent({
       type: String,
       default: "",
     },
-    allBlogSections: {
-      type: Array as PropType<string[]>,
-      default: () => [],
-    },
   },
 });
 </script>

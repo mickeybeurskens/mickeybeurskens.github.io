@@ -1,41 +1,47 @@
 <template>
   <PatchMeta :title="section ? section : 'Blog posts'" />
-  <div class="d-flex justify-content-center">
-    <div>
-      <BlogHeader class="mb-5 px-3 px-md-4 pt-5" />
-      <h3>Blog Posts</h3>
-      <hr />
-      <p v-if="section" class="text-center display-4 text-capitalize my-5">
-        {{ section }}
-      </p>
+  <div class="mb-5 px-3 px-md-4 pt-5 justify-content-center container">
+    <BlogHeader />
+    <h3 class="pt-5">Blog Posts</h3>
+    <p>
+      A chronological overview of all blog posts. You can filter on topic by clicking on
+      the section names or by using the dropdown menu.
+    </p>
+    <BlogSectionsDropdown :sections="allBlogSections" :showDropdown="showDropdown"
+      @toggleDropdown="showDropdown = !showDropdown" />
 
-      <BlogPostList :visiblePosts="pageStatus.visiblePosts" :section="section" :allBlogSections="allBlogSections" />
+    <hr />
+    <p v-if="section" class="text-center display-4 text-capitalize my-5">
+      {{ section }}
+    </p>
 
-      <!-- PAGINATION -->
-      <ul v-if="pageStatus.endPage > pageStatus.startPage" class="pagination justify-content-center mb-5 pb-5"
-        style="cursor: pointer">
-        <li class="page-item" :class="currentPage == pageStatus.startPage ? 'active' : ''"
-          @click="currentPage = pageStatus.startPage">
-          <a class="page-link"> {{ pageStatus.startPage }}</a>
-        </li>
-        <li v-for="(page, index) in pageStatus.midPages" :key="index" class="page-item"
-          :class="currentPage == page ? 'active' : ''" @click="currentPage = page">
-          <a class="page-link">{{ page }}</a>
-        </li>
-        <li class="page-item" :class="currentPage == pageStatus.endPage ? 'active' : ''"
-          @click="currentPage = pageStatus.endPage">
-          <a class="page-link">{{ pageStatus.endPage }}</a>
-        </li>
-      </ul>
-    </div>
+    <BlogPostList :visiblePosts="pageStatus.visiblePosts" :section="section" :allBlogSections="allBlogSections" />
+
+    <!-- PAGINATION -->
+    <ul v-if="pageStatus.endPage > pageStatus.startPage" class="pagination justify-content-center mb-5 pb-5"
+      style="cursor: pointer">
+      <li class="page-item" :class="currentPage == pageStatus.startPage ? 'active' : ''"
+        @click="currentPage = pageStatus.startPage">
+        <a class="page-link"> {{ pageStatus.startPage }}</a>
+      </li>
+      <li v-for="(page, index) in pageStatus.midPages" :key="index" class="page-item"
+        :class="currentPage == page ? 'active' : ''" @click="currentPage = page">
+        <a class="page-link">{{ page }}</a>
+      </li>
+      <li class="page-item" :class="currentPage == pageStatus.endPage ? 'active' : ''"
+        @click="currentPage = pageStatus.endPage">
+        <a class="page-link">{{ pageStatus.endPage }}</a>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, computed, inject, PropType } from "vue";
+import { defineComponent, reactive, toRefs, computed, inject, PropType, ref } from "vue";
 import BlogHeader from "../components/BlogHeader.vue";
 import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
+import BlogSectionsDropdown from "../components/BlogSectionsDropdown.vue";
 import BlogPostList from "../components/BlogPostList.vue";
 
 import paginate from "../utils/paginate";
@@ -49,6 +55,7 @@ export default defineComponent({
     BlogHeader,
     Profile,
     BlogPostList,
+    BlogSectionsDropdown
   },
   props: {
     section: {
@@ -95,9 +102,12 @@ export default defineComponent({
       };
     });
 
+    const showDropdown = ref(false);
+
     return {
       ...toRefs(state),
       pageStatus,
+      showDropdown,
     };
   },
 });
@@ -109,41 +119,7 @@ export default defineComponent({
   font-family: $font-body;
 }
 
-.blog-title {
-  text-transform: capitalize;
-}
-
-.tag-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.tag-item {
-  font-size: 0.8rem;
-}
-
-.blog-date {
-  font-size: 0.8rem;
-}
-
-.blog-tag {
-  font-size: 0.6rem;
-}
-
-.entry-container {
-  display: flex;
-  align-items: baseline;
-}
-
-.entry-container .right-side {
+.container {
   margin-left: auto;
-  display: flex;
-  align-items: baseline;
 }
-
-.left-side {
-  display: flex;
-}
-
 </style>

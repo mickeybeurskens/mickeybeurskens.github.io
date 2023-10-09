@@ -18,7 +18,9 @@
     </button>
 
     <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" class="mx-1" />
-    <BlogSectionsDropdown :sections="sections" :showDropdown="showDropdown" @toggleDropdown="showDropdown = !showDropdown" />
+    <div id="navbarNavDropdown">
+      
+    </div>
   </nav>
   <div class="navbar-border" />
 </template>

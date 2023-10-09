@@ -1,39 +1,17 @@
 <template>
-  <div
-    id="navbarNavDropdown"
-    :class="`navbar-collapse collapse ${showDropdown ? '' : 'show'}`"
-  >
-    <ul class="ml-auto mr-5 pr-5 navbar-nav">
-      <li :class="`nav-item dropleft dropdown ${showDropdown ? 'show' : ''}`">
-        <a
-            id="navbarDropdownMenuLink"
-            class="dropdown-toggle navbar-text-color"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            :aria-expanded="showDropdown"
-            @click.prevent="toggleDropdown"
-          >
-            Sections
-          </a>
-          <div
-            :class="`dropdown-menu ${showDropdown ? 'show' : ''}`"
-            style="max-height: 200px; overflow: scroll"
-          >
-            <router-link
-              v-for="(count, section) of sections"
-              :key="section"
-              class="dropdown-item text-capitalize navbar-click-color"
-              :to="section === 'all' ? '/blog' : `/blog/${section}`"
-              @click="toggleDropdown"
-            >
-              {{ section }} ({{ count }})
-            </router-link>
-          </div>
-      </li>
-    </ul>
+  <div class="container" @click.prevent="toggleDropdown">
+    <a class="btn btn-primary text-fat">Sections</a>
+    <transition name="fade">
+      <div v-if="showDropdown" class="dropdown-content mt-2">
+        <router-link class="menu-item mt-1" v-for="(count, section) of sections" :key="section"
+          :to="section === 'all' ? '/blog' : `/blog/${section}`" @click="toggleDropdown">
+          {{ section }} ({{ count }})
+        </router-link>
+      </div>
+    </transition>
   </div>
 </template>
+
 
 <script lang="ts">
 import { defineComponent } from 'vue';
@@ -64,5 +42,26 @@ export default defineComponent({
 
 
 <style lang="scss" scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .3s ease;
+}
 
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.container {
+  display: "flex";
+}
+
+.menu-item {
+  display: block;
+}
+
+.dropdown-content {
+  max-height: 200px;
+  overflow-y: auto;
+}
 </style>

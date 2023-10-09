@@ -6,7 +6,7 @@
     <!-- HEADER -->
     <div>
       <BlogHeader class="mb-5 px-3 px-md-4 pt-5" />
-      <div class="container px-3 px-3 px-md-4 about">
+      <div class="container pb-4 px-3 px-3 px-md-4 about">
         <div class="about-text">
           <p>
             Hello there internet traveller, welcome to my blog! You will find
@@ -35,7 +35,7 @@
       </div>
 
       <hr />
-      <div class="posts-container ">
+      <div class="posts-container mt-5">
         <div class="higlight-post px-3 px-md-4 pt-3 pl-md-4">
           <h1>{{ pageStatus.highlightPost.title }}</h1>
           <p class="font-weight-light font-italic m-0 p-0 text-left">
@@ -54,7 +54,7 @@
           <div class="highlight-post-content mt-3">
             <span class="markdown-body" v-html="highlightPostContent" />
             <p>...</p>
-            <SubscribeButton :url="'/' + highlightPostUrl" buttonText="Continue Reading" />
+            <SubscribeButton class="mt-2" :url="'/' + highlightPostUrl" buttonText="Continue Reading" />
           </div>
         </div>
 
@@ -93,7 +93,7 @@
             </p>
           </div>
           <div class="posts-footer">
-            <SubscribeButton :url="'/blog'" buttonText="All Blog Posts" />
+            <SubscribeButton class="mt-2" :url="'/blog'" buttonText="All Blog Posts" />
           </div>
         </div>
       </div>
