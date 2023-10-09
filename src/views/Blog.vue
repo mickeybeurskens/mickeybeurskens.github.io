@@ -7,7 +7,7 @@
       A chronological overview of all blog posts. You can filter on topic by clicking on
       the section names or by using the dropdown menu.
     </p>
-    <BlogSectionsDropdown :sections="allBlogSections" :showDropdown="showDropdown"
+    <BlogSectionsDropdown class="my-4" :sections="allBlogSections" :showDropdown="showDropdown"
       @toggleDropdown="showDropdown = !showDropdown" />
 
     <hr />
