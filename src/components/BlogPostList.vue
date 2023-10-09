@@ -14,7 +14,7 @@
       <p class="font-weight-light blog-date font-italic ml-4 m-0 p-0">
         {{ entry.date }}
       </p>
-      <div v-if="!section && Array.isArray(entry.section)" class="tag-container m-0 p-0 ml-2">
+      <div v-if="Array.isArray(entry.section)" class="tag-container m-0 p-0 ml-2">
         <router-link v-for="(sec, index) in entry.section" :key="index" :to="`/blog/${sec}`" class="text-reset tag-item">
           <h6 class="m-0 p-0 ml-1 text-right blog-tag font-weight-bold">
             #{{ sec }}
@@ -40,7 +40,10 @@ export default defineComponent({
       type: String,
       default: "",
     },
-    // Add more props if needed for pagination or other functionality
+    allBlogSections: {
+      type: Array as PropType<string[]>,
+      default: () => [],
+    },
   },
 });
 </script>

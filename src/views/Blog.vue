@@ -9,7 +9,7 @@
         {{ section }}
       </p>
 
-      <BlogPostList :visiblePosts="pageStatus.visiblePosts" :section="section" />
+      <BlogPostList :visiblePosts="pageStatus.visiblePosts" :section="section" :allBlogSections="allBlogSections" />
 
       <!-- PAGINATION -->
       <ul v-if="pageStatus.endPage > pageStatus.startPage" class="pagination justify-content-center mb-5 pb-5"
@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, computed, inject } from "vue";
+import { defineComponent, reactive, toRefs, computed, inject, PropType } from "vue";
 import BlogHeader from "../components/BlogHeader.vue";
 import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
@@ -54,6 +54,10 @@ export default defineComponent({
     section: {
       type: String,
       default: "",
+    },
+    allBlogSections: {
+      type: Array as PropType<string[]>,
+      default: () => [],
     },
   },
   setup(props) {

@@ -6,7 +6,9 @@
   />
   <Suspense>
     <template #default>
-      <router-view />
+      <router-view 
+      :allBlogSections="blogSections"
+    />
     </template>
     <template #fallback>
       <Loader />
