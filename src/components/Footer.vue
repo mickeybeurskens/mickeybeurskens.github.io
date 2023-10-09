@@ -38,5 +38,6 @@ export default defineComponent({
 
 .footer-text {
   color: $font-color-body;
+  font-size: 0.8rem;
 }
 </style>
