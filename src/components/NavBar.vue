@@ -18,39 +18,8 @@
     </button>
 
     <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" class="mx-1" />
-    <div
-      id="navbarNavDropdown"
-      :class="`navbar-collapse collapse ${collapseMenu ? '' : 'show'}`"
-    >
-      <ul class="ml-auto mr-5 pr-5 navbar-nav">
-        <li :class="`nav-item dropleft dropdown ${showDropdown ? 'show' : ''}`">
-          <a
-            id="navbarDropdownMenuLink"
-            class="dropdown-toggle navbar-text-color"
-            role="button"
-            data-toggle="dropdown"
-            aria-haspopup="true"
-            :aria-expanded="showDropdown"
-            @click.prevent="showDropdown = !showDropdown"
-          >
-            Sections
-          </a>
-          <div
-            :class="`dropdown-menu ${showDropdown ? 'show' : ''}`"
-            style="max-height: 200px; overflow: scroll"
-          >
-            <router-link
-              v-for="(count, section) of sections"
-              :key="section"
-              class="dropdown-item text-capitalize navbar-click-color"
-              :to="section === 'all' ? '/blog' : `/blog/${section}`"
-              @click="showDropdown = false"
-            >
-              {{ section }} ({{ count }})
-            </router-link>
-          </div>
-        </li>
-      </ul>
+    <div id="navbarNavDropdown">
+      
     </div>
   </nav>
   <div class="navbar-border" />
@@ -59,11 +28,13 @@
 <script language="ts">
 import { defineComponent, ref } from "vue";
 import SubscribeButton from "./SubscribeButton.vue";
+import BlogSectionsDropdown from "./BlogSectionsDropdown.vue";
 
 export default defineComponent({
   components: {
     SubscribeButton,
-  },
+    BlogSectionsDropdown
+},
   props: {
     title: {
       type: String,

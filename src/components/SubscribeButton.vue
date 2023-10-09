@@ -38,7 +38,6 @@ export default {
 .button-container {
   color: $main-light;
   font-family: $font-body;
-  font-weight: 600;
 }
 
 </style>
