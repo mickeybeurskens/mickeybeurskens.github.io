@@ -2,7 +2,7 @@
   <PatchMeta :title="section ? section : 'Blog posts'" />
   <div class="mb-5 px-3 px-md-4 pt-5 justify-content-center container">
     <BlogHeader />
-    <h3 class="pt-5">Blog Posts</h3>
+    <h3 class="pt-5 button-text">Blog Posts</h3>
     <p>
       A chronological overview of all blog posts. You can filter on topic by clicking on
       the section names or by using the dropdown menu.

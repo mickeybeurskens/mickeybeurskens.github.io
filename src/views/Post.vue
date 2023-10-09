@@ -1,10 +1,15 @@
 <template>
   <PatchMeta :title="title" />
-  <div class="container my-4 my-md-5">
+  <div class="container mt-4 mt-md-5">
     <span class="markdown-body" v-html="postHtml" />
     <button type="button" class="border btn mt-4 post-button" @click="hasHistory() ? router.go(-1) : router.push('/')">
       &laquo; Back
     </button>
+    <hr />
+  </div>
+  <p class="subscribe-text mt-5">If you enjoyed this post, consider subscribing. You'll receive an update whenever new posts are published.</p>
+  <div class="center-button mt-2">
+    <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" class="mx-1" />
   </div>
 </template>
 
@@ -14,12 +19,15 @@ import { onBeforeRouteUpdate } from "vue-router";
 import router from "../router";
 import { PostIndex } from "../types/PostIndex";
 import PatchMeta from "../components/PatchMeta.vue";
+import SubscribeButton from "../components/SubscribeButton.vue";
 import { loadPostData } from "../utils/loadPosts";
+
 
 
 export default defineComponent({
   components: {
     PatchMeta,
+    SubscribeButton,
   },
   props: {
     section: {
@@ -82,5 +90,21 @@ export default defineComponent({
 
 .katex {
   margin: 0 0.3rem;
+}
+
+.subscribe-text {
+  font-family: $font-body;
+  font-size: 0.8rem;
+  color: $font-color-body;
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+  color: $accent-dark;
+}
+
+.center-button {
+  display: flex;
+  width: fit-content;
+  margin: auto;
 }
 </style>

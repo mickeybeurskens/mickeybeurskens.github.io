@@ -1,6 +1,6 @@
 <template>
   <div class="container" @click.prevent="toggleDropdown">
-    <a class="btn btn-primary text-fat">Sections</a>
+    <SubscribeButton buttonText="Sections"/>
     <transition name="fade">
       <div v-if="showDropdown" class="dropdown-content mt-2">
         <router-link class="menu-item mt-1" v-for="(count, section) of sections" :key="section"
@@ -15,8 +15,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import SubscribeButton from './SubscribeButton.vue';
 
 export default defineComponent({
+  components: {
+    SubscribeButton,
+  },
   props: {
     sections: {
       type: Object,
