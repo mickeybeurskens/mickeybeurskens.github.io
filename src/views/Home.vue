@@ -196,7 +196,7 @@ h3 {
 }
 
 .posts-container {
-  max-width: 1200px;
+  max-width: $max-content-width;
   display: flex;
 }
 
