@@ -99,5 +99,7 @@ export default defineComponent({
 
 .navbar-collapse.show {
   display: block;
+  justify-content: flex-end;
 }
+
 </style>
