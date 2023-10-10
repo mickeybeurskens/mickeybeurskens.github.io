@@ -1,6 +1,6 @@
 <template>
   <PatchMeta :title="title" />
-  <div class="container mt-4 mt-md-5">
+  <div class="container mt-4 mt-md-5 post-container">
     <span class="markdown-body" v-html="postHtml" />
     <button type="button" class="border btn mt-4 post-button" @click="hasHistory() ? router.go(-1) : router.push('/')">
       &laquo; Back
@@ -63,9 +63,13 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+.post-container {
+  max-width: $max-reading-content-width;
+}
+
 .markdown-body {
   display: block;
-  max-width: 900px;
+  max-width: $max-reading-content-width;
   margin: auto;
 }
 

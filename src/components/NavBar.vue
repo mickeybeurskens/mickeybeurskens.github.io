@@ -1,25 +1,24 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-light mb-0 navbar-text-color">
+  <nav class="navbar navbar-expand-md navbar-light mb-0 navbar-text-color nav-container">
     <router-link class="navbar-brand" :to="'/'">
       {{ title }}
     </router-link>
 
-    <button
-      :class="`navbar-toggler ${collapseMenu ? 'collapsed' : ''}`"
-      type="button"
-      data-toggle="collapse"
-      data-target="#navbarNavDropdown"
-      aria-controls="navbarNavDropdown"
-      :aria-expanded="!collapseMenu"
-      aria-label="Toggle navigation"
-      @click="collapseMenu = !collapseMenu"
-    >
+    <button :class="`navbar-toggler ${collapseMenu ? 'collapsed' : ''}`" type="button" aria-controls="navbarNavDropdown"
+      :aria-expanded="!collapseMenu" aria-label="Toggle navigation" @click="collapseMenu = !collapseMenu">
       <span class="navbar-toggler-icon" />
     </button>
 
-    <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" class="mx-1" />
-    <div id="navbarNavDropdown">
-      
+    <div :class="`navbar-collapse ${collapseMenu ? '' : 'show'}`" id="navbarNavDropdown">
+
+      <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" />
+      <div class="navbar-nav ml-auto">
+        <div v-for="(route, name) in navItems" :key="name" class="nav-item ">
+          <router-link :class="`nav-link ${collapseMenu ? 'collapsed' : ''}`" :to="route" @click="collapseMenu = true">
+            {{ name }}
+          </router-link>
+        </div>
+      </div>
     </div>
   </nav>
   <div class="navbar-border" />
@@ -34,7 +33,7 @@ export default defineComponent({
   components: {
     SubscribeButton,
     BlogSectionsDropdown
-},
+  },
   props: {
     title: {
       type: String,
@@ -48,10 +47,17 @@ export default defineComponent({
   setup() {
     const showDropdown = ref(false);
     const collapseMenu = ref(true);
+    const navItems = {
+      "Home": "/",
+      "Blog": "/blog",
+      // "Projects": "/projects",
+      // "About": "/about",
+    }
 
     return {
       showDropdown,
       collapseMenu,
+      navItems,
     };
   },
 });
@@ -81,4 +87,19 @@ export default defineComponent({
 .navbar-click-color:active {
   width: 100%;
 }
+
+.nav-container {
+  max-width: $max-content-width;
+  margin: auto;
+}
+
+.navbar-collapse {
+  display: none;
+}
+
+.navbar-collapse.show {
+  display: block;
+  justify-content: flex-end;
+}
+
 </style>
