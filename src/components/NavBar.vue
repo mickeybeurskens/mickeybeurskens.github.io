@@ -10,9 +10,10 @@
     </button>
 
     <div :class="`navbar-collapse ${collapseMenu ? '' : 'show'}`" id="navbarNavDropdown">
-      <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" class="mx-1 " />
+
+      <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" />
       <div class="navbar-nav ml-auto">
-        <div v-for="(route, name) in navItems" :key="name" class="nav-item ml-auto">
+        <div v-for="(route, name) in navItems" :key="name" class="nav-item ">
           <router-link :class="`nav-link ${collapseMenu ? 'collapsed' : ''}`" :to="route" @click="collapseMenu = true">
             {{ name }}
           </router-link>
@@ -90,5 +91,13 @@ export default defineComponent({
 .nav-container {
   max-width: $max-content-width;
   margin: auto;
+}
+
+.navbar-collapse {
+  display: none;
+}
+
+.navbar-collapse.show {
+  display: block;
 }
 </style>
