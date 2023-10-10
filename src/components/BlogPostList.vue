@@ -1,5 +1,5 @@
 <template>
-  <div v-for="entry in visiblePosts" :key="entry.id" class="entry-container container markdown-body p-2 p-md-2">
+  <div v-for="entry in visiblePosts" :key="entry.id" class="entry-container container px-0 markdown-body py-2 py-md-2">
     <!-- TITLE -->
     <div class="left-side">
       <router-link :to="`/${entry.id}`" class="text-reset">

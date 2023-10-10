@@ -121,5 +121,6 @@ export default defineComponent({
 
 .container {
   margin-left: auto;
+  max-width: $max-reading-content-width;
 }
 </style>

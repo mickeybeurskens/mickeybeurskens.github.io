@@ -5,8 +5,8 @@
     <!-- <Profile /> -->
     <!-- HEADER -->
     <div>
-      <BlogHeader class="mb-5 px-3 px-md-4 pt-5" />
       <div class="container pb-4 px-3 px-3 px-md-4 about">
+        <BlogHeader class="mb-5 pt-5" />
         <div class="about-text">
           <p>
             Hello there internet traveller, welcome to my blog! You will find
@@ -168,7 +168,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .about {
   font-family: $font-body;
-  max-width: 700px;
+  max-width: $max-reading-content-width;
 }
 
 .sign {

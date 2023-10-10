@@ -4,18 +4,19 @@
       {{ title }}
     </router-link>
 
-    <button :class="`navbar-toggler ${collapseMenu ? 'collapsed' : ''}`" type="button" data-toggle="collapse"
-      data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" :aria-expanded="!collapseMenu"
-      aria-label="Toggle navigation" @click="collapseMenu = !collapseMenu">
+    <button :class="`navbar-toggler ${collapseMenu ? 'collapsed' : ''}`" type="button" aria-controls="navbarNavDropdown"
+      :aria-expanded="!collapseMenu" aria-label="Toggle navigation" @click="collapseMenu = !collapseMenu">
       <span class="navbar-toggler-icon" />
     </button>
 
-    <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" class="mx-1" />
-    <div id="navbarNavDropdown" class="navbar-nav ml-auto">
-      <div v-for="(route, name) in navItems" :key="name" class="nav-item">
-        <router-link :class="`nav-link ${collapseMenu ? 'collapsed' : ''}`" :to="route" @click="collapseMenu = true">
-          {{ name }}
-        </router-link>
+    <div :class="`navbar-collapse ${collapseMenu ? '' : 'show'}`" id="navbarNavDropdown">
+      <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" class="mx-1 " />
+      <div class="navbar-nav ml-auto">
+        <div v-for="(route, name) in navItems" :key="name" class="nav-item ml-auto">
+          <router-link :class="`nav-link ${collapseMenu ? 'collapsed' : ''}`" :to="route" @click="collapseMenu = true">
+            {{ name }}
+          </router-link>
+        </div>
       </div>
     </div>
   </nav>
@@ -48,8 +49,8 @@ export default defineComponent({
     const navItems = {
       "Home": "/",
       "Blog": "/blog",
-      "About": "/about",
-      "Projects": "/projects",
+      // "Projects": "/projects",
+      // "About": "/about",
     }
 
     return {
