@@ -9,9 +9,9 @@
       <span class="navbar-toggler-icon" />
     </button>
 
+    <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" />
     <div :class="`navbar-collapse ${collapseMenu ? '' : 'show'}`" id="navbarNavDropdown">
 
-      <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" />
       <div class="navbar-nav ml-auto">
         <div v-for="(route, name) in navItems" :key="name" class="nav-item ">
           <router-link :class="`nav-link ${collapseMenu ? 'collapsed' : ''}`" :to="route" @click="collapseMenu = true">
@@ -99,7 +99,6 @@ export default defineComponent({
 
 .navbar-collapse.show {
   display: block;
-  justify-content: flex-end;
 }
 
 </style>
