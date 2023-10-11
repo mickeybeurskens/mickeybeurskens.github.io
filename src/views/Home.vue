@@ -37,7 +37,9 @@
       <hr />
       <div class="posts-container mt-5">
         <div class="higlight-post px-3 px-md-4 pt-3 pl-md-4">
-          <h1>{{ pageStatus.highlightPost.title }}</h1>
+          <router-link :to="`/${pageStatus.highlightPost.id}`">
+            <h1>{{ pageStatus.highlightPost.title }}</h1>
+          </router-link>
           <p class="font-weight-light font-italic m-0 p-0 text-left">
             {{ pageStatus.highlightPost.date }}
           </p>
