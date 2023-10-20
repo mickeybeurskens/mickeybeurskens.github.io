@@ -1,5 +1,14 @@
 [
     {
+        "id": "booting-up-alignment-research-1",
+        "section": ["artificial intelligence", "alignment"],
+        "type": "blog",
+        "date": "October 20, 2023",
+        "title": "Booting Up Alignment Research #1",
+        "description": "Say you had a genie, firmly trapped in a bottle and awaiting your command. However you found it, you now have the ability to “have granted thy wishes three”. What would you do?",
+        "url": "blog_store/posts/booting_up_alignment/booting_up_alignment_research_1.md"
+    },
+    {
         "id": "genie-in-a-bottle",
         "section": ["artificial intelligence", "alignment"],
         "type": "blog",
