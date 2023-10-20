@@ -1,6 +1,7 @@
 <template>
   <PatchMeta :title="title" />
   <div class="container mt-4 mt-md-5 post-container">
+    <p class="date"> Published: {{ date }} </p>
     <span class="markdown-body" v-html="postHtml" />
     <button type="button" class="border btn mt-4 post-button" @click="hasHistory() ? router.go(-1) : router.push('/')">
       &laquo; Back
@@ -48,6 +49,7 @@ export default defineComponent({
     // Fetch Post markdown and compile it to html
     const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
     const { postHtml, title } = await loadPostData(postsIndex, props.id);
+    const date = postsIndex.find((post) => post.id === props.id)?.date;
 
     // Back button helper
     const hasHistory = () => window.history?.length > 2;
@@ -57,6 +59,7 @@ export default defineComponent({
       postHtml,
       router,
       title,
+      date,
     };
   },
 });
@@ -110,5 +113,12 @@ export default defineComponent({
   display: flex;
   width: fit-content;
   margin: auto;
+}
+
+.date {
+  color: $accent-light-2;
+  font-family: $font-body;
+  font-size: 0.8rem;
+  font-style: italic;
 }
 </style>
