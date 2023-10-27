@@ -4,7 +4,7 @@
     <p class="m-0 p-0 footer-text">
       Created by
       <a href="https://forgefire.dev" target="_blank" class="text-reset"
-        >Forge Fire 🔥 Software Engineering</a
+        >Forge Fire 🔥 AI Engineering</a
       >
       © {{ new Date().toDateString().slice(-4) }}
     </p>

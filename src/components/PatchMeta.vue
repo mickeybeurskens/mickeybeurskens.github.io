@@ -7,8 +7,8 @@ import { onMounted, defineComponent } from 'vue'
 
 const defaultMetas = {
   siteName: 'mickey.coffee',
-  title: 'Mickey.Coffee by Mickey Beurskens',
-  description: 'A highly specific blog about things in general, including technology, artificial intelligence and philosophy. Written by Mickey Beurskens.',
+  title: 'Mickey.Coffee',
+  description: 'A highly specific blog about things in general, including technology, artificial intelligence and philosophy.',
   previewUrl: 'https://mickey.coffee/assets/logo.c29fffec.svg',
   shareUrl: 'https://mickey.coffee',
   author: "Mickey Beurskens"
