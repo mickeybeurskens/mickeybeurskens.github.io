@@ -1,0 +1,1 @@
+This is the main page of the Booting Up Alignment Research Sequence.
