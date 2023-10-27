@@ -1,8 +1,8 @@
 <template>
-  <PatchMeta :title="title" />
+  <PatchMeta :title="metadata_title" :description="description" />
   <div class="container mt-4 mt-md-5 post-container">
     <p class="date"> Published: {{ date }} </p>
-    <span class="markdown-body" v-html="postHtml" />
+    <span class="markdown-body" v-html="postHtml" ></span>
     <button type="button" class="border btn mt-4 post-button" @click="hasHistory() ? router.go(-1) : router.push('/')">
       &laquo; Back
     </button>
@@ -50,6 +50,8 @@ export default defineComponent({
     const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
     const { postHtml, title } = await loadPostData(postsIndex, props.id);
     const date = postsIndex.find((post) => post.id === props.id)?.date;
+    const description = postsIndex.find((post) => post.id === props.id)?.description;
+    const metadata_title = postsIndex.find((post) => post.id === props.id)?.title;
 
     // Back button helper
     const hasHistory = () => window.history?.length > 2;
@@ -60,6 +62,8 @@ export default defineComponent({
       router,
       title,
       date,
+      description,
+      metadata_title,
     };
   },
 });
