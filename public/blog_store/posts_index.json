@@ -1,11 +1,20 @@
 [
     {
+        "id": "booting-up-alignment-research-2",
+        "section": ["artificial intelligence", "alignment"],
+        "type": "blog",
+        "date": "October 27, 2023",
+        "title": "Booting Up Alignment Research #2",
+        "description": "Learn with me about the concept of Artificial General Intelligence and its potentially massive consequences.",
+        "url": "blog_store/posts/booting_up_alignment/booting_up_alignment_research_2.md"
+    },
+    {
         "id": "booting-up-alignment-research-1",
         "section": ["artificial intelligence", "alignment"],
         "type": "blog",
         "date": "October 20, 2023",
         "title": "Booting Up Alignment Research #1",
-        "description": "Say you had a genie, firmly trapped in a bottle and awaiting your command. However you found it, you now have the ability to “have granted thy wishes three”. What would you do?",
+        "description": "In the “Booting Up Alignment Research” sequence I show you how I learn about the field of AI alignment.",
         "url": "blog_store/posts/booting_up_alignment/booting_up_alignment_research_1.md"
     },
     {

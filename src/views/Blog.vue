@@ -47,7 +47,7 @@ import BlogPostList from "../components/BlogPostList.vue";
 import paginate from "../utils/paginate";
 import { PostIndex } from "../types/PostIndex";
 
-const VUE_APP_POSTS_PER_PAGE = 10;
+const VUE_APP_POSTS_PER_PAGE = 50;
 
 export default defineComponent({
   components: {
