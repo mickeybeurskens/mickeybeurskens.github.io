@@ -110,7 +110,7 @@ import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
 import SubscribeButton from "../components/SubscribeButton.vue";
 import { PostIndex } from "../types/PostIndex";
-import { loadPostData } from "../utils/loadPosts";
+import { loadMarkdownHTML } from "../utils/loadMarkdown";
 
 const VUE_APP_RECENT_POSTS = 3;
 
@@ -148,7 +148,13 @@ export default defineComponent({
 
     // Load the highlight post content
     const charLimit = 1200;
-    const { postHtml, title } = await loadPostData(postsIndex, pageStatus.value.highlightPost.id, charLimit);
+    const post_id = pageStatus.value.highlightPost.id;
+    let post_url = postsIndex.find((post) => post.id === post_id)?.url;
+    if (post_url === undefined) {
+      post_url = "";
+    }
+
+    const { postHtml, title } = await loadMarkdownHTML(post_url, charLimit);
     // Filter first h1
     const h1Index = postHtml.indexOf('<h1');
     const h1EndIndex = postHtml.indexOf('</h1>');
