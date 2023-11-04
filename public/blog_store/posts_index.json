@@ -1,5 +1,14 @@
 [
     {
+        "id": "booting-up-alignment-research-3",
+        "section": ["artificial intelligence", "alignment"],
+        "type": "blog",
+        "date": "November 4, 2023",
+        "title": "Booting Up Alignment Research #3",
+        "description": "On how agents can game the systems the operate in, both the artifical agents and the natural ones.",
+        "url": "blog_store/posts/booting_up_alignment/booting_up_alignment_research_3.md"
+    },
+    {
         "id": "booting-up-alignment-research-2",
         "section": ["artificial intelligence", "alignment"],
         "type": "blog",
