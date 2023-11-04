@@ -1,0 +1,108 @@
+<template>
+  <router-link class="router" :to="`/${project.id}`">
+    <div class="project-card">
+      <!-- Text container -->
+      <div class="text-container">
+        <h3 class="project-title">{{ project.title }}</h3>
+        <p class="project-text font-italic">{{ project.description }}</p>
+        <div class="meta-data-container">
+          <p class="date mr-2">
+            {{ project.date }}
+          </p>
+          <div v-if="Array.isArray(project.section)" class="tag-container">
+            <router-link v-for="(sec, index) in project.section" :key="index" :to="`/blog/${sec}`"
+              class="tag-item">
+              <h6 class="tag">
+                #{{ sec }}
+              </h6>
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <!-- Image container -->
+      <div class="image-container">
+        <img :src="project.image" :alt="project.title" class="project-image" />
+      </div>
+    </div>
+  </router-link>
+</template>
+
+<script lang="ts">
+import { defineComponent, PropType } from 'vue';
+import { PostIndex } from '../types/PostIndex';
+
+export default defineComponent({
+  props: {
+    project: {
+      type: Object as PropType<PostIndex>,
+      required: true,
+    },
+  },
+});
+</script>
+
+<style lang="scss" scoped>
+.project-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  max-width: calc($max-reading-content-width/1);
+  background-color: $main-light;
+}
+
+.text-container {
+  flex: 1;
+}
+
+.project-image {
+  max-height: 80px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+.image-container {
+  flex: none;
+  padding-left: 1rem;
+}
+
+.project-title {
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+  font-size: 1.1rem;
+  color: $accent-dark;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.project-text {
+  color: $accent-dark;
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+
+}
+
+.router {
+  text-decoration: none;
+}
+
+.meta-data-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.date {
+  font-size: 0.7rem;
+  font-style: italic;
+  color: $accent-dark;
+  margin: 0
+}
+
+.tag {
+  font-size: 0.7rem;
+  margin: 0;
+}
+</style>

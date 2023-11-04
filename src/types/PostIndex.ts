@@ -14,5 +14,6 @@ export type PostIndex = {
   date: string;
   title: string;
   description: string;
+  image: string;
   url: string;
 }

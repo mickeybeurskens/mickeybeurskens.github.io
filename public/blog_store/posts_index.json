@@ -6,6 +6,7 @@
         "date": "November 7, 2023",
         "title": "Document Inspector Perry",
         "description": "An opensource prototype for document search and question answering with large language models.",
+        "image": "blog_store/posts/projects/document_inspector_perry.png",
         "url": "blog_store/posts/projects/document_inspector_perry.md"
     },
     {
@@ -15,6 +16,7 @@
         "date": "November 4, 2023",
         "title": "Booting Up Alignment Research #3",
         "description": "On how agents can game the systems the operate in, both the artifical agents and the natural ones.",
+        "image": "",
         "url": "blog_store/posts/booting_up_alignment/booting_up_alignment_research_3.md"
     },
     {
@@ -24,6 +26,7 @@
         "date": "October 27, 2023",
         "title": "Booting Up Alignment Research #2",
         "description": "Learn with me about the concept of Artificial General Intelligence and its potentially massive consequences.",
+        "image": "",
         "url": "blog_store/posts/booting_up_alignment/booting_up_alignment_research_2.md"
     },
     {
@@ -33,6 +36,7 @@
         "date": "October 20, 2023",
         "title": "Booting Up Alignment Research #1",
         "description": "In the “Booting Up Alignment Research” sequence I show you how I learn about the field of AI alignment.",
+        "image": "",
         "url": "blog_store/posts/booting_up_alignment/booting_up_alignment_research_1.md"
     },
     {
@@ -42,6 +46,7 @@
         "date": "September 22, 2023",
         "title": "Genie In A Bottle",
         "description": "Say you had a genie, firmly trapped in a bottle and awaiting your command. However you found it, you now have the ability to “have granted thy wishes three”. What would you do?",
+        "image": "",
         "url": "blog_store/posts/artificial_intelligence/genie_in_a_bottle.md"
     },
     {
@@ -51,6 +56,7 @@
         "date": "July 12, 2023",
         "title": "The Language Model Risk Field Guide",
         "description": "Join Carlo Lepelaars and myself as we explore the risks we think you should know about in the world of large language models and generative AI.",
+        "image": "",
         "url": "blog_store/posts/artificial_intelligence/language_model_risk_field_guide.md"
     },
     {
@@ -60,6 +66,7 @@
         "date": "March 22, 2023",
         "title": "The Risk Of Trusting AI",
         "description": "Under uncertainty we can limit our exposure to the risk, even if we cannot predict the exact probabilities involved. Perhaps we should only run unpredictable AI systems if we can guarantee our safety when those systems fail.",
+        "image": "",
         "url": "blog_store/posts/artificial_intelligence/risk_of_trusting_ai.md"
     },
     {
@@ -69,6 +76,7 @@
         "date": "March 15, 2023",
         "title": "GPT-4 - Master Conversationalist",
         "description": "I've been playing around with both GPT-3 and GPT-4, comparing them as we go, to see what all the fuss is really about. I'll try to show you that making GPT algorithms resistant to divulging unauthorized information is quite quite hard.",
+        "image": "",
         "url": "blog_store/posts/artificial_intelligence/master_conversationalist.md"
     },
     {
@@ -78,6 +86,7 @@
         "date": "March 3, 2023",
         "title": "Generative AI - A Conversation With ChatGPT",
         "description": "I've been getting a lot of questions about ChatGPT and generative AI, mainly the impact the technology will have. I decided to ask ChatGPT for some answers.",
+        "image": "",
         "url": "blog_store/posts/artificial_intelligence/chatgpt_interview.md"
     },
     {
@@ -87,6 +96,7 @@
         "date": "November 20, 2022",
         "title": "Meditations On Tinkering",
         "description": "On the power of taking into consideration that which you do not know about.",
+        "image": "",
         "url": "blog_store/posts/entrepreneurship/meditations_on_tinkering.md"
     },
     {
@@ -96,6 +106,7 @@
         "date": "November 1, 2022",
         "title": "A primer on financial independence",
         "description": "My thoughts on Financial Independence, and a quick primer into the subject.",
+        "image": "",
         "url": "blog_store/posts/finance/financial_independence_primer.md"
     },
     {
@@ -105,6 +116,7 @@
         "date": "June 20, 2022",
         "title": "Custom Models And Loss Functions In FastAI",
         "description": "Learn how to recognize handwritten digits, using a custom PyTorch model and loss function.",
+        "image": "",
         "url": "blog_store/posts/artificial_intelligence/digit_recognition.md"
     },
     {
@@ -114,6 +126,7 @@
         "date": "June 07, 2022",
         "title": "Detecting fruit using FastAI",
         "description": "If you've ever wanted your own photo based scanning device, you're on the right blog.",
+        "image": "",
         "url": "blog_store/posts/artificial_intelligence/fruit_recognition.md"
     }
 ]

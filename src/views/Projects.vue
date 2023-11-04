@@ -3,12 +3,10 @@
   <div class="container">
     <h1 class="mt-5">Projects</h1>
     <p>
-      Contains a list of projects I am working on, or have worked on in the past. 
+      A list of projects I am working on, or have worked on in the past. 
     </p>
-    {{project_posts}}
-
     <hr class="mb-4"/>
-    <h2>Projects</h2>
+    <ProjectCard v-for="project in project_posts" :key="project.id" :project="project" />
   </div>
 </template>
 
@@ -16,11 +14,13 @@
 import { defineComponent, inject, PropType } from "vue";
 import PatchMeta from "../components/PatchMeta.vue";
 import { PostIndex } from "../types/PostIndex";
+import ProjectCard from "../components/ProjectCard.vue";
 
 
 export default defineComponent({
   components: {
     PatchMeta,
+    ProjectCard,
   },
   props: {
     section: {
