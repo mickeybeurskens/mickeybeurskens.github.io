@@ -8,7 +8,7 @@ Gaming the system. Looking for the loopholes. Squeezing out that extra bit of ju
 
 You might have done it by studying the exam instead of mastering the knowledge in school, or exploited a bug in your favorite game. Yet it might surprise you that reinforcement learning agents often exhibit similar behavior. 
 
-Today we examine the theory and the practical implications of reward gaming and misspecification. How can we make sure the AI is rewarded not only for what we ask it to do, but for [what we intend it to do](https://mickey.coffee/#/genie-in-a-bottle)? Specifically, I’ll be summarizing [section 2 of the AI safety fundamentals course](https://course.aisafetyfundamentals.com/alignment?session=2). Some of this thinking applies to *any* agent, including the natural (human) ones. It seems that studying alignment also improves your knowledge of *humans*. Who would have guessed?
+We will examine the theory and the practical implications of reward gaming and misspecification. How can we make sure the AI is rewarded not only for what we ask it to do, but for [what we intend it to do](https://mickey.coffee/#/genie-in-a-bottle)? Specifically, I’ll be summarizing [section 2 of the AI safety fundamentals course](https://course.aisafetyfundamentals.com/alignment?session=2). Some of this thinking applies to *any* agent, including the natural (human) ones. It seems that studying alignment also improves your knowledge of *humans*. Who would have guessed?
 
 Before we begin though, I will leave you with these immortal words by our lord and messiah Brian, to give you strength and power in this public learning journey:
 
