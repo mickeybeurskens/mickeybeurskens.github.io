@@ -50,6 +50,7 @@ export default defineComponent({
     const navItems = {
       "Home": "/",
       "Blog": "/blog",
+      "Sequences": "/sequences",
       // "Projects": "/projects",
       // "About": "/about",
     }

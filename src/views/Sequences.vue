@@ -1,19 +1,37 @@
 <template>
-  <PatchMeta title="Sequences" description="Overview of posts related by a common theme." />
-  <div class="mb-5 px-3 px-md-4 pt-5 justify-content-center container">
-    This is the sequences page placeholder.
+  <PatchMeta title="Sequences" description="Overview of sequences of posts related by a common theme." />
+  <div class="container">
+    <h1 class="mt-5">Sequences</h1>
+    <p>
+      A sequence is a series of posts related by a common theme.
+      They tie together posts that are related but not necessarily written consecutively. 
+      I use sequences to organize my posts into a coherent narrative for your reading please.
+      Besides, it's fun to have a theme and stories work like a charm when discussing difficult topics.
+    </p>
+    <p class="footnote">
+      I used the concept of Sequences on the <a href="https://lesswrong.com/library">LessWrong Forum</a> as inspiration.
+    </p>
+    <hr class="mb-4"/>
+    <SequenceCard
+      v-for="sequence in sequencesIndex"
+      :key="sequence.id"
+      :sequence="sequence"
+    />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs, computed, inject, PropType, ref } from "vue";
 import PatchMeta from "../components/PatchMeta.vue";
+import SequenceCard from "../components/SequenceCard.vue";
 import { PostIndex } from "../types/PostIndex";
 import { SequencesIndex } from "../types/SequencesIndex";
+
 
 export default defineComponent({
   components: {
     PatchMeta,
+    SequenceCard,
   },
   props: {
     section: {
@@ -32,6 +50,7 @@ export default defineComponent({
 
     return {
       showDropdown,
+      sequencesIndex,
     };
   },
 });
@@ -46,5 +65,11 @@ export default defineComponent({
 .container {
   margin-left: auto;
   max-width: $max-reading-content-width;
+}
+
+.footnote {
+  font-size: 0.8rem;
+  font-style: italic;
+  color: $accent-dark;
 }
 </style>
