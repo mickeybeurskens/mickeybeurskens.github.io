@@ -6,6 +6,11 @@
     <h1>{{ title }}</h1>
     <hr />
     <p>{{ summary }}</p>
+
+    <h5 class="my-3 mt-4">Posts In This Sequence</h5>
+    <div class="posts-container">
+      <BlogPostList :visiblePosts="posts" />
+    </div>
   </div>
   <p class="subscribe-text mt-5">If you enjoyed this sequence, consider subscribing. You'll receive an update whenever new
     posts are published.</p>
@@ -21,12 +26,14 @@ import router from "../router";
 import { PostIndex } from "../types/PostIndex";
 import PatchMeta from "../components/PatchMeta.vue";
 import SubscribeButton from "../components/SubscribeButton.vue";
+import BlogPostList from "../components/BlogPostList.vue";
 
 
 export default defineComponent({
   components: {
     PatchMeta,
     SubscribeButton,
+    BlogPostList,
   },
   props: {
     id: {
@@ -44,13 +51,14 @@ export default defineComponent({
     const image = sequencesIndex.find((sequence) => sequence.id === props.id)?.image || "";
 
     const posts = post_ids.map((id) => postsIndex.find((post) => post.id === id));
-
+    posts.filter((post) => post !== undefined);
 
     return {
       title,
       summary,
       post_ids,
       image,
+      posts,
     };
   },
 });
@@ -86,11 +94,22 @@ export default defineComponent({
 }
 
 .sequence-image {
-  // Make this full width across the top of the page
   width: 100%;
   margin-bottom: 1rem;
   max-height: 300px;
   object-fit: cover;
-
 }
+
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+  max-width: calc($max-reading-content-width/1);
+  background-color: $main-light;
+}
+
 </style>

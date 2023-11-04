@@ -21,10 +21,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, toRefs, computed, inject, PropType, ref } from "vue";
+import { defineComponent, inject, PropType } from "vue";
 import PatchMeta from "../components/PatchMeta.vue";
 import SequenceCard from "../components/SequenceCard.vue";
-import { PostIndex } from "../types/PostIndex";
 import { SequencesIndex } from "../types/SequencesIndex";
 
 
