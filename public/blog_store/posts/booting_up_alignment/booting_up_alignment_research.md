@@ -1,0 +1,1 @@
+In the “Booting Up Alignment Research” sequence I show you how I learn about the field of AI alignment. I noticed that there are ample learning resources available, but that it remains hard to evaluate where to start and usefully spend time and effort. I hope documenting the steps can help you understand the field at lower cost or provide a good starting point.

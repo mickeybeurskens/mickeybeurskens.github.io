@@ -5,10 +5,13 @@ import axios from 'redaxios'
 import { PostIndex } from './types/PostIndex'
 import VueGtag from "vue-gtag";
 
-const dataPath = 'blog_store/posts_index.json'
+const postsDataPath = 'blog_store/posts_index.json'
+const sequencesDataPath = 'blog_store/sequences_index.json'
 
 const loadApp = async () => {
-  const { data: postsIndex } = await axios.get<PostIndex[]>(dataPath)
+  const { data: postsIndex } = await axios.get<PostIndex[]>(postsDataPath)
+  const { data: sequencesIndex } = await axios.get<PostIndex[]>(sequencesDataPath)
+
   const blogSections: Record<string, number> = postsIndex.reduce((prev, { section }) => {
     section.forEach((sec) => {
       prev[sec] = prev[sec] ? prev[sec] + 1 : 1;
@@ -22,6 +25,7 @@ const loadApp = async () => {
       config: { id: "G-ECHT80E8PH" }
     })
     .provide<PostIndex[]>('postsIndex', postsIndex)
+    .provide<PostIndex[]>('sequencesIndex', sequencesIndex)
     .provide<Record<string, number>>('blogSections', blogSections)
     .mount('#app')
 }
