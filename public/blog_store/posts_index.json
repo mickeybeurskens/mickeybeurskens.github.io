@@ -10,6 +10,16 @@
         "url": "blog_store/posts/projects/document_inspector_perry.md"
     },
     {
+        "id": "mickey-coffee-website",
+        "section": ["software engineering"],
+        "type": "project",
+        "date": "November 7, 2023",
+        "title": "The Mickey.Coffee Website",
+        "description": "The source code for this website.",
+        "image": "blog_store/posts/projects/mickey_coffee_website.svg",
+        "url": "blog_store/posts/projects/mickey_coffee_website.md"
+    },
+    {
         "id": "booting-up-alignment-research-3",
         "section": ["artificial intelligence", "alignment"],
         "type": "blog",

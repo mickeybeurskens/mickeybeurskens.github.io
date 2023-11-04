@@ -128,7 +128,8 @@ export default defineComponent({
     },
   },
   async setup(props) {
-    const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
+    let postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
+    postsIndex = postsIndex.filter((post) => post.type === "blog");
     const state = reactive({
       currentPage: 1,
       highlightPostContent: '',
