@@ -44,12 +44,9 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
     const sequencesIndex: SequencesIndex[] = inject<SequencesIndex[]>("sequencesIndex", []);
-    const showDropdown = ref(false);
 
     return {
-      showDropdown,
       sequencesIndex,
     };
   },

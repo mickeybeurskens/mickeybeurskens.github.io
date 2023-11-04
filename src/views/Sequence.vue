@@ -1,14 +1,14 @@
 <template>
   <PatchMeta :title="title" />
-  <div class="container mt-4 mt-md-5 post-container">
-    <p class="date"> Published: {{ date }} </p>
-    <span class="markdown-body" v-html="postHtml" />
-    <button type="button" class="border btn mt-4 post-button" @click="hasHistory() ? router.go(-1) : router.push('/')">
-      &laquo; Back
-    </button>
+  <img :src="image" :alt="title" class="sequence-image" />
+  <div class="container mt-3 mt-md-4 sequence-container">
+    <h3 class="sequence-sub-header">Sequence</h3>
+    <h1>{{ title }}</h1>
     <hr />
+    <p>{{ summary }}</p>
   </div>
-  <p class="subscribe-text mt-5">If you enjoyed this post, consider subscribing. You'll receive an update whenever new posts are published.</p>
+  <p class="subscribe-text mt-5">If you enjoyed this sequence, consider subscribing. You'll receive an update whenever new
+    posts are published.</p>
   <div class="center-button mt-2">
     <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" class="mx-1" />
   </div>
@@ -16,13 +16,11 @@
 
 <script lang='ts'>
 import { defineComponent, inject } from "vue";
-import { onBeforeRouteUpdate } from "vue-router";
+import { SequencesIndex } from "../types/SequencesIndex";
 import router from "../router";
 import { PostIndex } from "../types/PostIndex";
 import PatchMeta from "../components/PatchMeta.vue";
 import SubscribeButton from "../components/SubscribeButton.vue";
-import { loadPostData } from "../utils/loadPosts";
-
 
 
 export default defineComponent({
@@ -31,72 +29,44 @@ export default defineComponent({
     SubscribeButton,
   },
   props: {
-    section: {
-      type: String,
-      default: "",
-    },
     id: {
       type: String,
       default: "",
     },
   },
   async setup(props) {
-    // Hacky navigation
-    onBeforeRouteUpdate(() => {
-      location.reload();
-    });
-
-    // Fetch Post markdown and compile it to html
     const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
-    const { postHtml, title } = await loadPostData(postsIndex, props.id);
-    const date = postsIndex.find((post) => post.id === props.id)?.date;
 
-    // Back button helper
-    const hasHistory = () => window.history?.length > 2;
+    const sequencesIndex: SequencesIndex[] = inject<SequencesIndex[]>("sequencesIndex", []);
+    const title = sequencesIndex.find((sequence) => sequence.id === props.id)?.title || "";
+    const summary = sequencesIndex.find((sequence) => sequence.id === props.id)?.summary || "";
+    const post_ids = sequencesIndex.find((sequence) => sequence.id === props.id)?.post_ids || [];
+    const image = sequencesIndex.find((sequence) => sequence.id === props.id)?.image || "";
+
+    const posts = post_ids.map((id) => postsIndex.find((post) => post.id === id));
+
 
     return {
-      hasHistory,
-      postHtml,
-      router,
       title,
-      date,
+      summary,
+      post_ids,
+      image,
     };
   },
 });
 </script>
 
-<style lang="scss">
-.post-container {
+<style lang="scss" scoped>
+.sequence-container {
   max-width: $max-reading-content-width;
 }
 
-.markdown-body {
-  display: block;
-  max-width: $max-reading-content-width;
-  margin: auto;
-}
-
-.markdown-body p {
-  color: $font-color-body;
-  font-family: $font-body;
-}
-
-.post-button {
-  color: $font-color-body;
-}
-
-.markdown-body blockquote {
+.sequence-sub-header {
+  color: $main-dark;
+  font-size: 1.2rem;
+  font-weight: 300;
   font-style: italic;
-  width: 90%;
-  margin: 0.7rem auto;
-}
-
-.markdown-body h1 {
-  text-transform: capitalize;
-}
-
-.katex {
-  margin: 0 0.3rem;
+  margin-bottom: 0.1rem;
 }
 
 .subscribe-text {
@@ -115,10 +85,12 @@ export default defineComponent({
   margin: auto;
 }
 
-.date {
-  color: $accent-light-2;
-  font-family: $font-body;
-  font-size: 0.8rem;
-  font-style: italic;
+.sequence-image {
+  // Make this full width across the top of the page
+  width: 100%;
+  margin-bottom: 1rem;
+  max-height: 300px;
+  object-fit: cover;
+
 }
 </style>
