@@ -51,7 +51,7 @@ export default defineComponent({
       "Home": "/",
       "Blog": "/blog",
       "Sequences": "/sequences",
-      // "Projects": "/projects",
+      "Projects": "/projects",
       // "About": "/about",
     }
 

@@ -1,5 +1,14 @@
 [
     {
+        "id": "document-inspector-perry",
+        "section": ["software engineering"],
+        "type": "project",
+        "date": "November 7, 2023",
+        "title": "Document Inspector Perry",
+        "description": "An opensource prototype for document search and question answering with large language models.",
+        "url": "blog_store/posts/projects/document_inspector_perry.md"
+    },
+    {
         "id": "booting-up-alignment-research-3",
         "section": ["artificial intelligence", "alignment"],
         "type": "blog",
