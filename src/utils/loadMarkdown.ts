@@ -32,7 +32,7 @@ const markDownIt = new MarkdownIt({
     },
   });
 
-  export async function loadPostData(url: string, charLimit: number | null = null) {
+  export async function loadMarkdownHTML(url: string, charLimit: number | null = null) {
     const { data: fullMarkDownSource } = await axios.get(url);
   
     const markDownSource = (charLimit !== null) ? fullMarkDownSource.substring(0, charLimit) : fullMarkDownSource;

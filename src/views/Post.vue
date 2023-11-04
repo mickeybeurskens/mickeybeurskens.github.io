@@ -22,7 +22,7 @@ import { PostIndex } from "../types/PostIndex";
 import PatchMeta from "../components/PatchMeta.vue";
 import SubscribeButton from "../components/SubscribeButton.vue";
 import HTMLContentFromString from "../components/HTMLContentFromString.vue";
-import { loadPostData } from "../utils/loadPosts";
+import { loadMarkdownHTML } from "../utils/loadMarkdown";
 
 
 export default defineComponent({
@@ -54,7 +54,7 @@ export default defineComponent({
       post_url = "";
     }
 
-    const { postHtml, title } = await loadPostData(post_url);
+    const { postHtml, title } = await loadMarkdownHTML(post_url);
     const date = postsIndex.find((post) => post.id === props.id)?.date;
     const description = postsIndex.find((post) => post.id === props.id)?.description;
     const metadata_title = postsIndex.find((post) => post.id === props.id)?.title;
@@ -110,4 +110,4 @@ export default defineComponent({
   font-size: 0.8rem;
   font-style: italic;
 }
-</style>
+</style>../utils/loadMarkdown

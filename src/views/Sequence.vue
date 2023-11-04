@@ -24,7 +24,7 @@ import { defineComponent, inject, Ref, ref } from "vue";
 import { SequencesIndex } from "../types/SequencesIndex";
 import router from "../router";
 import { PostIndex } from "../types/PostIndex";
-import { loadPostData } from "../utils/loadPosts";
+import { loadMarkdownHTML } from "../utils/loadMarkdown";
 import PatchMeta from "../components/PatchMeta.vue";
 import SubscribeButton from "../components/SubscribeButton.vue";
 import BlogPostList from "../components/BlogPostList.vue";
@@ -57,7 +57,7 @@ export default defineComponent({
       sequence_url = "";
     }
 
-    const { postHtml, title } = await loadPostData(sequence_url);
+    const { postHtml, title } = await loadMarkdownHTML(sequence_url);
 
     let posts: Ref<PostIndex[]> = ref([]);
     if (post_ids.length > 0) {
@@ -130,4 +130,4 @@ export default defineComponent({
   background-color: $main-light;
 }
 
-</style>
+</style>../utils/loadMarkdown
