@@ -1,4 +1,4 @@
-*This post is co-authored by Mickey Beurskens and Carlo Lepelaars.  It is cross-post on both [Mickey’s website](https://mickey.coffee) and [Carlo’s Medium profile](https://medium.com/@carlolepelaars). More on the authors below. Enjoy the read!*
+*This post is co-authored by Mickey Beurskens and Carlo Lepelaars.  It has been cross-posted on both [Mickey’s website](https://mickey.coffee) and [Carlo’s Medium profile](https://medium.com/@carlolepelaars). More on the authors below.*
 
 # The Language Model Risk Field Guide
 
