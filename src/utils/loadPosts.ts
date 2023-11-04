@@ -32,8 +32,7 @@ const markDownIt = new MarkdownIt({
     },
   });
 
-  export async function loadPostData(postsIndex: PostIndex[], id: string, charLimit: number | null = null) {
-    const { url = "" } = postsIndex.find(({ id: postId }) => postId === id) || {};
+  export async function loadPostData(url: string, charLimit: number | null = null) {
     const { data: fullMarkDownSource } = await axios.get(url);
   
     const markDownSource = (charLimit !== null) ? fullMarkDownSource.substring(0, charLimit) : fullMarkDownSource;

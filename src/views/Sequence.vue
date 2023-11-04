@@ -5,7 +5,7 @@
     <h3 class="sequence-sub-header">Sequence</h3>
     <h1>{{ title }}</h1>
     <hr />
-    <p>{{ summary }}</p>
+    <HTMLContentFromString :htmlContent="postHtml" class="summary-text" />
 
     <h5 class="my-3 mt-4">Posts In This Sequence</h5>
     <div class="posts-container">
@@ -20,13 +20,15 @@
 </template>
 
 <script lang='ts'>
-import { defineComponent, inject } from "vue";
+import { defineComponent, inject, Ref, ref } from "vue";
 import { SequencesIndex } from "../types/SequencesIndex";
 import router from "../router";
 import { PostIndex } from "../types/PostIndex";
+import { loadPostData } from "../utils/loadPosts";
 import PatchMeta from "../components/PatchMeta.vue";
 import SubscribeButton from "../components/SubscribeButton.vue";
 import BlogPostList from "../components/BlogPostList.vue";
+import HTMLContentFromString from "../components/HTMLContentFromString.vue";
 
 
 export default defineComponent({
@@ -34,6 +36,7 @@ export default defineComponent({
     PatchMeta,
     SubscribeButton,
     BlogPostList,
+    HTMLContentFromString,
   },
   props: {
     id: {
@@ -45,20 +48,31 @@ export default defineComponent({
     const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
 
     const sequencesIndex: SequencesIndex[] = inject<SequencesIndex[]>("sequencesIndex", []);
-    const title = sequencesIndex.find((sequence) => sequence.id === props.id)?.title || "";
+    const meta_title = sequencesIndex.find((sequence) => sequence.id === props.id)?.title || "";
     const summary = sequencesIndex.find((sequence) => sequence.id === props.id)?.summary || "";
     const post_ids = sequencesIndex.find((sequence) => sequence.id === props.id)?.post_ids || [];
     const image = sequencesIndex.find((sequence) => sequence.id === props.id)?.image || "";
+    let sequence_url = sequencesIndex.find((sequence) => sequence.id === props.id)?.url;
+    if (sequence_url === undefined) {
+      sequence_url = "";
+    }
 
-    const posts = post_ids.map((id) => postsIndex.find((post) => post.id === id));
-    posts.filter((post) => post !== undefined);
+    const { postHtml, title } = await loadPostData(sequence_url);
+
+    let posts: Ref<PostIndex[]> = ref([]);
+    if (post_ids.length > 0) {
+      posts.value = post_ids
+        .map((id) => postsIndex.find((post) => post.id === id))
+        .filter((post): post is PostIndex => post !== undefined);
+    }
 
     return {
-      title,
+      title: meta_title,
       summary,
       post_ids,
       image,
-      posts,
+      posts: posts.value,
+      postHtml,
     };
   },
 });
@@ -67,6 +81,10 @@ export default defineComponent({
 <style lang="scss" scoped>
 .sequence-container {
   max-width: $max-reading-content-width;
+}
+
+.summary-text {
+  color: $accent-dark;
 }
 
 .sequence-sub-header {

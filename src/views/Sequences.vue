@@ -9,7 +9,7 @@
       Besides, it's fun to have a theme and stories work like a charm when discussing difficult topics.
     </p>
     <p class="footnote">
-      I used the concept of Sequences on the <a href="https://lesswrong.com/library">LessWrong Forum</a> as inspiration.
+      The concept of Sequences are based on the <a href="https://lesswrong.com/library">LessWrong Forum</a> sequences.
     </p>
     <hr class="mb-4"/>
     <SequenceCard
