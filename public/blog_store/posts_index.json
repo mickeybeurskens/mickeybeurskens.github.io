@@ -3,7 +3,7 @@
         "id": "booting-up-alignment-research-4",
         "section": ["artificial intelligence", "alignment"],
         "type": "blog",
-        "date": "November 4, 2023",
+        "date": "November 20, 2023",
         "title": "Booting Up Alignment Research #4",
         "description": "This post constitutes a deeper look at two more entries in the  AI safety fundamentals course: Goal misgeneralization as a failure mode and a possible technique to address the alignment of more capable agents called “task decomposition”.",
         "url": "blog_store/posts/booting_up_alignment/booting_up_alignment_research_4.md"
