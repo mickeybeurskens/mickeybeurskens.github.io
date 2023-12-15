@@ -1,5 +1,14 @@
 [
     {
+        "id": "the-value-of-the-truth",
+        "section": ["philosophy"],
+        "type": "blog",
+        "date": "December 15, 2023",
+        "title": "The Value Of The Truth",
+        "description": "If I had to choose the single most impactful, vivid lesson that my mother has ever taught me, it would be to always try and speak the truth.",
+        "url": "blog_store/posts/philosophy/the_value_of_the_truth.md"
+    },
+    {
         "id": "team-red-hacking-large-language-models",
         "section": ["ai", "language models", "cybersecurity"],
         "type": "blog",

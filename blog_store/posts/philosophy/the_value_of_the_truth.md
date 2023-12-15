@@ -1,0 +1,25 @@
+# The Value Of The Truth
+
+If I had to choose the single most impactful, vivid lesson that my mother has ever taught me, I am transported back in time to where my conscious experience was still a blur. I am not sure where it was, or what prompted the situation, but I can still hear the warmth in her voice as she told me: “Mickey, always try and speak the truth”. How fortunate that the value of speaking honestly had been gifted to me far before I could grasp its importance.
+
+To become truthful, one needs to have a will to confront those things that one least wishes to see or hear. This is straightforward enough to understand: People have likely confronted most things they *want* to be true early in their lives. Acceptance happens without much awareness or resistance. Truths that remain are either hard to encounter or challenging to bare.
+
+At some point I realized that the truth could be bitter. Later I saw truth could be tragic. I eventually had to accept that truth could be cruel. Observing truths is often burden enough, let alone thinking through the consequences and encountering the demons that lay behind it. It is here that comfortable lies beckons. It is here that thinking stops and eyes remain shut.
+
+One might object that truth is not that important, given the price to be payed: “If my life is good enough, if I and those I care about are content, why should I introduce such a nuisance into my life? I shall take no such risk! Besides, I have other more pressing things to worry about.”
+
+I highly doubt that a life that is good both can be reliably based on anything other than truth. This applies to whatever *your own definition of “good” may be.* Part of the reason rests on the accuracy of ones understanding of the world, in other words the mental *map of the world,* and how that enables a person to better reach his goals. The other part rests on the way *goals change* as a consequence of having a more accurate map.
+
+[The map is not the territory](https://www.lesswrong.com/tag/map-and-territory). There is a difference between *the world* and one’s *idea of how the world works* To appreciate this distinction it is helpful to paint a mental picture of how complex the world actually is. I like to do this by thinking about all the stars in the sky, trying to imagine how many stars must be out there, and the vastness of the void in between. There is no way for me to think about all of it at once. Reality is simply too big to fit into my mind. I recommend doing a similar exercise (feel free to take a moment). Try to notice how the limit of your map actually *feels,* mentally speaking. It is quite an interesting experience.
+
+Another way to think about this, is that if your map was perfectly accurate you would never be surprised. It is a simpler argument, certainly, and also more boring. It would not let you feel the limits of your model of reality. 
+
+An accurate map is crucial to make good decisions. A person can only change the world reliably if he has a good understanding of it, although good results may on occasion happen by accident. Speaking the truth is a way of calibrating the map of reality to reality itself. It trains the mind to build an ever better model of action and consequence. Conversely, lying trains a person to structurally ignore potentially important parts of the world. In time, one becomes what one practices. The only person in the world that can truly know if you are lying to yourself is you. There is no-one to keep you accountable but cruel reality when your map leads you astray, if it doesn’t just destroy you outright.
+
+It is also worth realizing that understanding your own values, in other words having an accurate *map of yourself* requires you to be truthful too. It is hard enough to know where values come from in the first place. Some are opaque or inaccessible to us, others explicitly contradictory. Without the striving to *see the truth in yourself* it would be impossible to figure out what you think is important. It would only add to the confusion of an already daunting task.
+
+Finally, goals themselves are *shaped by the degree of understanding of the world*. For instance, I did not start out valuing art and beauty and life for their own sake. I think I could have turned out valuing different things if my life, and thus my map, had been different. The more accurate my map, the more accurate my own values become *in relation to the real world*. Corrupting and confusing the map might result in me ending up with deluded values that I would never hold if I had confronted reality forthrightly. 
+
+So take heed, for the map is not the territory! How well you do in life depends in large parts on the accuracy of your map, and so do the very goals you value, so treat your map with care. You can do so by relentlessly practicing, speaking, and seeing the truth.
+
+I wish for you the strength to face truth courageously, and the wisdom to tend to your map carefully. Good luck.
