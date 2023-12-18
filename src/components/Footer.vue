@@ -3,8 +3,8 @@
     <router-link :to="'/'" class="text-reset"> </router-link>
     <p class="m-0 p-0 footer-text">
       Created by
-      <a href="https://forgefire.dev" target="_blank" class="text-reset"
-        >Forge Fire 🔥 AI Engineering</a
+      <a href="https://www.linkedin.com/in/mickey-beurskens/" target="_blank" class="text-reset"
+        >Mickey Beurskens ☕</a
       >
       © {{ new Date().toDateString().slice(-4) }}
     </p>
