@@ -1,5 +1,32 @@
 [
     {
+        "id": "the-value-of-the-truth",
+        "section": ["philosophy"],
+        "type": "blog",
+        "date": "December 15, 2023",
+        "title": "The Value Of The Truth",
+        "description": "If I had to choose the single most impactful, vivid lesson that my mother has ever taught me, it would be to always try and speak the truth.",
+        "url": "blog_store/posts/philosophy/the_value_of_the_truth.md"
+    },
+    {
+        "id": "team-red-hacking-large-language-models",
+        "section": ["ai", "language models", "cybersecurity"],
+        "type": "blog",
+        "date": "December 5, 2023",
+        "title": "Team Red - Hacking Large Language Models",
+        "description": "A practical and philosophical guide on how to break large language models, and what we can learn from that.",
+        "url": "blog_store/posts/artificial_intelligence/team_red_hacking_large_language_models.md"
+    },
+    {
+        "id": "booting-up-alignment-research-4",
+        "section": ["ai", "alignment"],
+        "type": "blog",
+        "date": "November 20, 2023",
+        "title": "Booting Up Alignment Research #4",
+        "description": "This post constitutes a deeper look at two more entries in the  AI safety fundamentals course: Goal misgeneralization as a failure mode and a possible technique to address the alignment of more capable agents called “task decomposition”.",
+        "url": "blog_store/posts/booting_up_alignment/booting_up_alignment_research_4.md"
+    },
+    {
         "id": "document-inspector-perry",
         "section": ["software engineering"],
         "type": "project",
@@ -21,7 +48,7 @@
     },
     {
         "id": "booting-up-alignment-research-3",
-        "section": ["artificial intelligence", "alignment"],
+        "section": ["ai", "alignment"],
         "type": "blog",
         "date": "November 4, 2023",
         "title": "Booting Up Alignment Research #3",
@@ -31,7 +58,7 @@
     },
     {
         "id": "booting-up-alignment-research-2",
-        "section": ["artificial intelligence", "alignment"],
+        "section": ["ai", "alignment"],
         "type": "blog",
         "date": "October 27, 2023",
         "title": "Booting Up Alignment Research #2",
@@ -41,7 +68,7 @@
     },
     {
         "id": "booting-up-alignment-research-1",
-        "section": ["artificial intelligence", "alignment"],
+        "section": ["ai", "alignment"],
         "type": "blog",
         "date": "October 20, 2023",
         "title": "Booting Up Alignment Research #1",
@@ -61,7 +88,7 @@
     },
     {
         "id": "language-model-risk-field-guide",
-        "section": ["artificial intelligence"],
+        "section": ["ai", "language models", "cybersecurity"],
         "type": "blog",
         "date": "July 12, 2023",
         "title": "The Language Model Risk Field Guide",
@@ -71,7 +98,7 @@
     },
     {
         "id": "risk-of-trusting-ai",
-        "section": ["artificial intelligence"],
+        "section": ["ai", "risk & uncertainty"],
         "type": "blog",
         "date": "March 22, 2023",
         "title": "The Risk Of Trusting AI",
@@ -81,7 +108,7 @@
     },
     {
         "id": "master-conversationalist",
-        "section": ["artificial intelligence"],
+        "section": ["ai", "language models"],
         "type": "blog",
         "date": "March 15, 2023",
         "title": "GPT-4 - Master Conversationalist",
@@ -91,7 +118,7 @@
     },
     {
         "id": "chatgpt-interview-generative-ai",
-        "section": ["artificial intelligence"],
+        "section": ["ai", "language models"],
         "type": "blog",
         "date": "March 3, 2023",
         "title": "Generative AI - A Conversation With ChatGPT",
@@ -101,7 +128,7 @@
     },
     {
         "id": "meditations-on-tinkering",
-        "section": ["entrepreneurship"],
+        "section": ["entrepreneurship", "risk & uncertainty"],
         "type": "blog",
         "date": "November 20, 2022",
         "title": "Meditations On Tinkering",
@@ -121,7 +148,7 @@
     },
     {
         "id": "digit-recognition",
-        "section": ["artificial intelligence"],
+        "section": ["ai", "computer vision"],
         "type": "blog",
         "date": "June 20, 2022",
         "title": "Custom Models And Loss Functions In FastAI",
@@ -131,7 +158,7 @@
     },
     {
         "id": "fruit-recognition",
-        "section": ["artificial intelligence"],
+        "section": ["ai", "computer vision"],
         "type": "blog",
         "date": "June 07, 2022",
         "title": "Detecting fruit using FastAI",
