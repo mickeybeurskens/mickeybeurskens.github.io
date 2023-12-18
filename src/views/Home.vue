@@ -17,7 +17,7 @@
           <p>
             In my working life I am an AI Engineer at my own company, <a href="https://www.forgefire.dev/">Forge Fire</a>,
             and like to write on the topic both technically and philosophically.
-            I'm particularly interested in autonomous agents and AI safety.
+            I'm particularly interested in autonomous agents and AI alignment.
           </p>
           <p>
             Outside of that I enjoy philosophy, psychology, finance, and the occasional bit of fiction.
@@ -128,7 +128,8 @@ export default defineComponent({
     },
   },
   async setup(props) {
-    const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
+    let postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
+    postsIndex = postsIndex.filter((post) => post.type === "blog");
     const state = reactive({
       currentPage: 1,
       highlightPostContent: '',
