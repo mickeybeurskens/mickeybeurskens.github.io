@@ -6,14 +6,14 @@
       A list of projects I am working on, or have worked on in the past. 
     </p>
     <hr class="mb-4"/>
-    <ProjectCard v-for="project in project_posts" :key="project.id" :project="project" />
+    <ProjectCard v-for="project in projects" :key="project.id" :project="project" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, inject, PropType } from "vue";
 import PatchMeta from "../components/PatchMeta.vue";
-import { PostIndex } from "../types/PostIndex";
+import { ProjectIndex } from "../types/ProjectIndex";
 import ProjectCard from "../components/ProjectCard.vue";
 
 
@@ -26,18 +26,14 @@ export default defineComponent({
     section: {
       type: String,
       default: "",
-    },
-    allBlogSections: {
-      type: Array as PropType<string[]>,
-      default: () => [],
-    },
+    }
   },
   setup(props) {
-    const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
-    let project_posts = postsIndex.filter((post) => post.type.includes("project"));
+    const projectIndex: ProjectIndex[] = inject<ProjectIndex[]>("projectsIndex", []);
+    let projects = projectIndex
 
     return {
-      project_posts,
+      projects,
     };
   },
 });

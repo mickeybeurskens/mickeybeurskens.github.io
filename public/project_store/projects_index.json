@@ -1,0 +1,20 @@
+[
+    {
+        "title": "Document Inspector Perry",
+        "description": "An opensource prototype for document search and question answering with large language models.",
+        "date": "November 7, 2023",
+        "section": "Open Source Software",
+        "image": "blog_store/posts/projects/document_inspector_perry.png",
+        "blog": "document-inspector-perry",
+        "url": ""
+    },
+    {
+        "title": "The Mickey.Coffee Website",
+        "description": "The source code for this website.",
+        "date": "November 7, 2023",
+        "project-section": "Open Source Software",
+        "image": "blog_store/posts/projects/mickey_coffee_website.svg",
+        "associated-blog-id": "mickey-coffee-website",
+        "external-url": ""
+    }
+]

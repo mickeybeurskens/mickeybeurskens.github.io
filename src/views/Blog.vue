@@ -7,7 +7,7 @@
       A chronological overview of all blog posts. You can filter on topic by clicking on
       the section names or by using the dropdown menu.
     </p>
-    <BlogSectionsDropdown class="my-4" :sections="allBlogSections" :showDropdown="showDropdown"
+    <BlogSectionsDropdown class="my-4" :sections="blogSections" :showDropdown="showDropdown"
       @toggleDropdown="showDropdown = !showDropdown" />
 
     <hr />
@@ -15,7 +15,7 @@
       {{ section }}
     </p>
 
-    <BlogPostList :visiblePosts="pageStatus.visiblePosts" :section="section" :allBlogSections="allBlogSections" />
+    <BlogPostList :visiblePosts="pageStatus.visiblePosts" :section="section" />
 
     <!-- PAGINATION -->
     <ul v-if="pageStatus.endPage > pageStatus.startPage" class="pagination justify-content-center mb-5 pb-5"
@@ -61,14 +61,11 @@ export default defineComponent({
     section: {
       type: String,
       default: "",
-    },
-    allBlogSections: {
-      type: Array as PropType<string[]>,
-      default: () => [],
-    },
+    }
   },
   setup(props) {
     const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
+    const blogSections = inject('blogSections', {})
     const state = reactive({
       currentPage: 1,
     });
@@ -107,6 +104,7 @@ export default defineComponent({
     return {
       ...toRefs(state),
       pageStatus,
+      blogSections,
       showDropdown,
     };
   },

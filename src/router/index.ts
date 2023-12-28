@@ -35,7 +35,7 @@ const routes: Array<RouteRecordRaw> = [
     path: '/projects',
     component: () => import(/* webpackChunkName: "sequences" */ '../views/Projects.vue'),
     props: true
-  },
+  }, 
 ]
 
 const router = createRouter({
