@@ -1,5 +1,5 @@
 <template>
-  <router-link class="router" :to="`/${project.id}`">
+  <a class="router" :href="`${project.url}`" target="_blank">
     <div class="project-card">
       <!-- Text container -->
       <div class="text-container">
@@ -20,11 +20,11 @@
         </div>
       </div>
       <!-- Image container -->
-      <div class="image-container">
+      <div v-if="project.image !== ''"  class="image-container">
         <img :src="project.image" :alt="project.title" class="project-image" />
       </div>
     </div>
-  </router-link>
+  </a>
 </template>
 
 <script lang="ts">
