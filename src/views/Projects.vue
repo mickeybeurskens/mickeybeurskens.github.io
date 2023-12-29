@@ -6,14 +6,22 @@
       A list of projects I am working on, or have worked on in the past. 
     </p>
     <hr class="mb-4"/>
-    <ProjectCard v-for="project in project_posts" :key="project.id" :project="project" />
+    <h3>Open Source Software</h3>
+    <div v-for="project in opensource" :key="project.id">
+      <ProjectCard :key="project.id" :project="project" />
+    </div>
+    <hr class="mb-4"/>
+    <h3>Talks</h3>
+    <div v-for="project in talks" :key="project.id">
+      <ProjectCard :key="project.id" :project="project" />
+    </div>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent, inject, PropType } from "vue";
 import PatchMeta from "../components/PatchMeta.vue";
-import { PostIndex } from "../types/PostIndex";
+import { ProjectIndex } from "../types/ProjectIndex";
 import ProjectCard from "../components/ProjectCard.vue";
 
 
@@ -26,18 +34,23 @@ export default defineComponent({
     section: {
       type: String,
       default: "",
-    },
-    allBlogSections: {
-      type: Array as PropType<string[]>,
-      default: () => [],
-    },
+    }
   },
   setup(props) {
-    const postsIndex: PostIndex[] = inject<PostIndex[]>("postsIndex", []);
-    let project_posts = postsIndex.filter((post) => post.type.includes("project"));
+    const projectIndex: ProjectIndex[] = inject<ProjectIndex[]>("projectsIndex", []);
+    // Sort projects on section and date so they can be displayed in order
+    const projectsByDate = projectIndex.sort((a, b) => {
+      if (a.section === b.section) {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      }
+      return a.section.localeCompare(b.section);
+    });
+    const talks = projectsByDate.filter((project) => project.section === "talks");
+    const opensource = projectsByDate.filter((project) => project.section === "opensourcesoftware");
 
     return {
-      project_posts,
+      opensource,
+      talks,
     };
   },
 });

@@ -36,11 +36,7 @@ export default defineComponent({
     section: {
       type: String,
       default: "",
-    },
-    allBlogSections: {
-      type: Array as PropType<string[]>,
-      default: () => [],
-    },
+    }
   },
   setup(props) {
     const sequencesIndex: SequencesIndex[] = inject<SequencesIndex[]>("sequencesIndex", []);

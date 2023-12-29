@@ -9,11 +9,15 @@ export default {
   props: {
     url: {
       type: String,
-      required: true
+      required: false
     },
     isExternal: {
       type: Boolean,
       default: false
+    },
+    isInternal: {
+      type: Boolean,
+      default: false,
     },
     buttonText: {
       type: String,
@@ -24,7 +28,7 @@ export default {
     navigate() {
       if (this.isExternal) {
         window.location.href = this.url;
-      } else {
+      } if (this.isInternal) {
         this.$router.push(this.url);
       }
     }

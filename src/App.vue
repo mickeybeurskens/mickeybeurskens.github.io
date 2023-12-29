@@ -1,14 +1,10 @@
 <template>
   <PatchMeta />
   <NavBar
-    :title="'Mickey.Coffee'"
-    :sections="blogSections"
-  />
+    :title="'Mickey.Coffee'" />
   <Suspense>
     <template #default>
-      <router-view 
-      :allBlogSections="blogSections"
-    />
+      <router-view />
     </template>
     <template #fallback>
       <Loader />
@@ -36,8 +32,7 @@ export default defineComponent({
     Footer
   },
   setup () {
-    const blogSections = inject('blogSections', {})
-    return { blogSections }
+    return {}
   }
 })
 </script>

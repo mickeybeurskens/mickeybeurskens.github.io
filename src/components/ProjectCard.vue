@@ -1,5 +1,5 @@
 <template>
-  <router-link class="router" :to="`/${project.id}`">
+  <a class="router" :href="`${project.url}`" target="_blank">
     <div class="project-card">
       <!-- Text container -->
       <div class="text-container">
@@ -20,21 +20,21 @@
         </div>
       </div>
       <!-- Image container -->
-      <div class="image-container">
+      <div v-if="project.image !== ''"  class="image-container">
         <img :src="project.image" :alt="project.title" class="project-image" />
       </div>
     </div>
-  </router-link>
+  </a>
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue';
-import { PostIndex } from '../types/PostIndex';
+import { ProjectIndex } from '../types/ProjectIndex';
 
 export default defineComponent({
   props: {
     project: {
-      type: Object as PropType<PostIndex>,
+      type: Object as PropType<ProjectIndex>,
       required: true,
     },
   },
@@ -73,7 +73,7 @@ export default defineComponent({
   margin-top: 0;
   margin-bottom: 0.2rem;
   font-size: 1.1rem;
-  color: $accent-dark;
+  color: $accent-light-2;
   font-weight: 600;
   font-style: italic;
 }
@@ -82,7 +82,7 @@ export default defineComponent({
   color: $accent-dark;
   margin-top: 0;
   margin-bottom: 0.4rem;
-
+  font-weight: 500;
 }
 
 .router {
@@ -97,7 +97,7 @@ export default defineComponent({
 .date {
   font-size: 0.7rem;
   font-style: italic;
-  color: $accent-dark;
+  color: $accent-light-2;
   margin: 0
 }
 
