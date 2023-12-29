@@ -1,7 +1,7 @@
 [
     {
-        "title": "Team Red - Breaking Large Language Models",
-        "description": "The source code for this website.",
+        "title": "Team Red - Hacking Large Language Models",
+        "description": "A practical and philosophical guide on how to break large language models @ PyData Eindhoven 2023",
         "date": "November 30, 2023",
         "section": "talks",
         "image": "",
@@ -22,5 +22,13 @@
         "section": "opensourcesoftware",
         "image": "project_store/projects/mickey_coffee_website.svg",
         "url": "https://github.com/mickeybeurskens/mickeybeurskens.github.io"
+    },
+    {
+        "title": "AI Demystified",
+        "description": "A gentle introduction to artificial intelligence and machine learning for material engineers @ Materials Fair Mikrocentrum Eindhoven",
+        "date": "April 30, 2022",
+        "section": "talks",
+        "image": "",
+        "url": "https://mikrocentrum.nl/en/technology/materials/"
     }
 ]
