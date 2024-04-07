@@ -13,14 +13,9 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--c-main-1-font);
 }
 
-p, a, li, span {
+p, li, span {
   font-family: $font-body;
   color: var(--c-main-1-font);
-}
-
-a:hover {
-  text-decoration: none;
-  color: var(--c-accent-1);
 }
 
 hr {
@@ -29,7 +24,18 @@ hr {
 
 /* Custom bootstrap TODO: dynamic color*/
 $theme-colors: (
-  "primary": $black-coral, 
+  "primary": $mandarin, 
+  "secondary": $lemon-chiffon, 
 );
 
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+a, a:visited {
+  text-decoration: none;
+  color: var(--c-accent-3) !important;
+}
+
+a:hover {
+  color: var(--c-accent-2) !important;
+}
+
