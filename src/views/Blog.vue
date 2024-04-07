@@ -1,7 +1,6 @@
 <template>
   <PatchMeta :title="section ? section : 'Blog posts'" />
   <div class="mb-5 px-3 px-md-4 pt-5 justify-content-center container">
-    <BlogHeader />
     <h3 class="pt-5 button-text">Blog Posts</h3>
     <p>
       A chronological overview of all blog posts. You can filter on topic by clicking on
@@ -38,7 +37,6 @@
 
 <script lang="ts">
 import { defineComponent, reactive, toRefs, computed, inject, PropType, ref } from "vue";
-import BlogHeader from "../components/BlogHeader.vue";
 import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
 import BlogSectionsDropdown from "../components/BlogSectionsDropdown.vue";
@@ -52,7 +50,6 @@ const VUE_APP_POSTS_PER_PAGE = 50;
 export default defineComponent({
   components: {
     PatchMeta,
-    BlogHeader,
     Profile,
     BlogPostList,
     BlogSectionsDropdown

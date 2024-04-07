@@ -3,7 +3,7 @@
     <SubscribeButton buttonText="Sections"/>
     <transition name="fade">
       <div v-if="showDropdown" class="dropdown-content mt-2">
-        <router-link class="menu-item mt-1" v-for="(count, section) of sections" :key="section"
+        <router-link class="menu-item m-1" v-for="(count, section) of sections" :key="section"
           :to="section === 'all' ? '/blog' : `/blog/${section}`" @click="toggleDropdown">
           {{ section }} ({{ count }})
         </router-link>
@@ -62,10 +62,17 @@ export default defineComponent({
 
 .menu-item {
   display: block;
+  color: var(--c-accent-2);
 }
 
 .dropdown-content {
   max-height: 200px;
   overflow-y: auto;
+  border: 1px solid var(--c-accent-1);
+  border-radius: 5px;
+}
+
+.background {
+  background-color: var(--c-main-2)
 }
 </style>

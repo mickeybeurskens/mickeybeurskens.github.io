@@ -19,7 +19,7 @@
         <router-link :to="`/${pageStatus.highlightPost.id}`">
           <h1>{{ pageStatus.highlightPost.title }}</h1>
         </router-link>
-        <p class="font-weight-light font-italic m-0 p-0 text-left">
+        <p class="date font-italic m-0 p-0 text-left">
           {{ pageStatus.highlightPost.date }}
         </p>
 
@@ -27,7 +27,7 @@
           class="tag-container-left mt-1 markdown-body">
           <router-link v-for="(sec, index) in pageStatus.highlightPost.section" :key="index" :to="`/blog/${sec}`"
             class="text-reset tag-item ml-0 mr-1">
-            <h6 class="m-0 p-0 text-left font-weight-bold">
+            <h6 class="m-0 p-0 text-left tag font-weight-bold">
               #{{ sec }}
             </h6>
           </router-link>
@@ -56,14 +56,14 @@
           </router-link>
 
           <!-- POST DETAILS -->
-          <p class="font-weight-light font-italic m-0 p-0" :class="!section ? 'text-right' : 'mb-3'">
+          <p class="date font-italic m-0 p-0" :class="!section ? 'text-right' : 'mb-3'">
             {{ entry.date }}
           </p>
 
           <div v-if="!section && Array.isArray(entry.section)" class="tag-container">
             <router-link v-for="(sec, index) in entry.section" :key="index" :to="`/blog/${sec}`"
               class="text-reset tag-item">
-              <h6 class="m-0 p-0 text-right font-weight-bold">
+              <h6 class="m-0 p-0 text-right tag font-weight-bold">
                 #{{ sec }}
               </h6>
             </router-link>
@@ -161,6 +161,15 @@ export default defineComponent({
   max-width: $max-reading-content-width;
 }
 
+.date {
+  color: var(--c-accent-1); 
+  font-weight: 600;
+}
+
+.tag {
+  color: var(--c-accent-2); 
+}
+
 .sign {
   font-style: italic;
   font-weight: 700;
@@ -190,7 +199,6 @@ h3 {
   max-width: $max-content-width;
   display: flex;
 }
-
 
 .posts-footer {
   margin-top: 1rem;

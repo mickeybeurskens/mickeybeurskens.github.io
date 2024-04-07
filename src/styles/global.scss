@@ -23,6 +23,10 @@ a:hover {
   color: var(--c-accent-1);
 }
 
+hr {
+  background-color: var(--c-accent-1);
+}
+
 /* Custom bootstrap TODO: dynamic color*/
 $theme-colors: (
   "primary": $black-coral, 

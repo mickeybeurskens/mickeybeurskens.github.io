@@ -11,12 +11,12 @@
 
     <!-- DATE and TAGS -->
     <div class="right-side">
-      <p class="font-weight-light blog-date font-italic ml-4 m-0 p-0">
+      <p class="blog-date font-italic ml-4 m-0 p-0">
         {{ entry.date }}
       </p>
       <div v-if="Array.isArray(entry.section)" class="tag-container m-0 p-0 ml-2">
         <router-link v-for="(sec, index) in entry.section" :key="index" :to="`/blog/${sec}`" class="text-reset tag-item">
-          <h6 class="m-0 p-0 ml-1 text-right blog-tag font-weight-bold">
+          <h6 class="m-0 p-0 ml-1 text-right blog-tag">
             #{{ sec }}
           </h6>
         </router-link>
@@ -61,10 +61,14 @@ export default defineComponent({
 
 .blog-date {
   font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--c-main-1-font);
 }
 
 .blog-tag {
   font-size: 0.6rem;
+  font-weight: 600;
+  color: var(--c-accent-2);
 }
 
 .entry-container {
