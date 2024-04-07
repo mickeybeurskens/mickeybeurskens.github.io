@@ -36,7 +36,8 @@
         <div class="highlight-post-content mt-3">
           <span class="markdown-body" v-html="highlightPostContent" />
           <p>...</p>
-          <SubscribeButton class="mt-2" :url="'/' + highlightPostUrl" buttonText="Continue Reading" />
+          <p>{{ highlightPostUrl }}</p>
+          <NavigationButton class="mt-2" :url="'/' + highlightPostUrl" buttonText="Continue Reading" />
         </div>
       </div>
 
@@ -75,7 +76,7 @@
           </p>
         </div>
         <div class="posts-footer">
-          <SubscribeButton class="mt-2" :url="'/blog'" buttonText="All Blog Posts" />
+          <NavigationButton class="mt-2" :url="'/blog'" buttonText="All Blog Posts" />
         </div>
       </div>
     </div>
@@ -88,7 +89,7 @@ import { defineComponent, reactive, toRefs, computed, inject } from "vue";
 import BlogHeader from "../components/BlogHeader.vue";
 import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
-import SubscribeButton from "../components/SubscribeButton.vue";
+import NavigationButton from "../components/NavigationButton.vue"
 import { PostIndex } from "../types/PostIndex";
 import { loadMarkdownHTML } from "../utils/loadMarkdown";
 
@@ -99,7 +100,7 @@ export default defineComponent({
     PatchMeta,
     BlogHeader,
     Profile,
-    SubscribeButton,
+    NavigationButton,
   },
   props: {
     section: {

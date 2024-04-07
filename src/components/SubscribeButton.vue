@@ -1,49 +1,31 @@
+<!-- SubscribeButton.vue -->
 <template>
-  <div @click="navigate" class="button-container btn btn-primary">
+  <BaseButton @click="subscribe">
     {{ buttonText }}
-  </div>
+  </BaseButton>
 </template>
 
 <script>
+import BaseButton from './BaseButton.vue';
+
 export default {
+  components: {
+    BaseButton
+  },
   props: {
-    url: {
-      type: String,
-      required: false
-    },
-    isExternal: {
-      type: Boolean,
-      default: false
-    },
-    isInternal: {
-      type: Boolean,
-      default: false,
-    },
     buttonText: {
       type: String,
-      default: 'Click Me'
+      default: 'Subscribe'
+    },
+    url: {
+      type: String,
+      default: ''
     }
   },
   methods: {
-    navigate() {
-      if (this.isExternal) {
-        window.location.href = this.url;
-      } if (this.isInternal) {
-        this.$router.push(this.url);
-      }
+    subscribe() {
+      window.open(this.url, '_blank').focus();
     }
   }
 };
 </script>
-
-<style scoped lang="scss">
-@import "../styles/_variables.scss";
-
-.button-container {
-  color: var(--c-main-2-font);
-  background-color: var(--c-main-2);
-  font-family: $font-body;
-}
-
-</style>
-
