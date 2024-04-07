@@ -36,7 +36,6 @@
         <div class="highlight-post-content mt-3">
           <span class="markdown-body" v-html="highlightPostContent" />
           <p>...</p>
-          <p>{{ highlightPostUrl }}</p>
           <NavigationButton class="mt-2" :url="'/' + highlightPostUrl" buttonText="Continue Reading" />
         </div>
       </div>
