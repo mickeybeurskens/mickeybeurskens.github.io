@@ -1,14 +1,14 @@
 @import "_variables.scss";
 
 $theme-dark: (
-    c-accent-1: $white,
+    c-accent-1: $ivory,
     c-accent-2: $lemon-chiffon,
     c-accent-3: $space-cadet,
     c-main-1: $black-coral,
     c-main-2: $space-cadet,
 
-    c-main-1-font: $white,
-    c-main-2-font: $white,
+    c-main-1-font: $ivory,
+    c-main-2-font: $ivory,
 );
 
 $theme-light: (
@@ -19,7 +19,7 @@ $theme-light: (
     c-main-2: $space-cadet,
 
     c-main-1-font: $space-cadet,
-    c-main-2-font: $white,
+    c-main-2-font: $ivory,
 );
 
 @mixin applyTheme($theme) {
