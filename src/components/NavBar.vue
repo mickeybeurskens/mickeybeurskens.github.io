@@ -16,7 +16,7 @@
     <div :class="`navbar-collapse ${collapseMenu ? '' : 'show'}`" id="navbarNavDropdown">
       
       <div class="navbar-nav ml-auto">
-        <div v-for="(route, name) in navItems" :key="name" class="nav-item ">
+        <div v-for="(route, name) in navItems" :key="name" class="nav-item navbar-nav-background">
           <router-link :class="`nav-link ${collapseMenu ? 'collapsed' : ''}`" :to="route" @click="collapseMenu = true">
             <span class="nav-text-format">
               {{ name }}
@@ -87,11 +87,13 @@ export default defineComponent({
 }
 
 .nav-text-format {
-  color: $white;
+  color: var(--c-main-2-font);
   font-weight: 600;
+  background-color: var(--c-main-2);
 }
 
 .nav-content {
+  background-color: var(--c-main-2);
   max-width: $max-content-width;
   margin: auto;
 }
@@ -103,10 +105,16 @@ export default defineComponent({
 
 .navbar-collapse {
   display: none;
+  background-color: var(--c-main-2);
 }
 
 .navbar-collapse.show {
   display: block;
+  background-color: var(--c-main-2);
+}
+
+.navbar-nav-background {
+  background-color: var(--c-main-2);
 }
 
 </style>

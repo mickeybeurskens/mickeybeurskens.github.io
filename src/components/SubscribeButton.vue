@@ -41,6 +41,7 @@ export default {
 
 .button-container {
   color: var(--c-main-2-font);
+  background-color: var(--c-main-2);
   font-family: $font-body;
 }
 
