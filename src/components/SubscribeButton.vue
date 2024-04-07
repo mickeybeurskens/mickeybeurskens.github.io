@@ -40,7 +40,7 @@ export default {
 @import "../styles/_variables.scss";
 
 .button-container {
-  color: $main-light;
+  color: var(--c-main-2-font);
   font-family: $font-body;
 }
 

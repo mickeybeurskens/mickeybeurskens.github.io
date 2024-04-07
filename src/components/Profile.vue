@@ -29,20 +29,20 @@
 }
 
 .profile-sub-header {
-  color: $font-color-body;
+  color: var(--c-main-1-font);
   font-size: 0.8rem;
   font-weight: 700;
 }
 
 .profile-links a {
-  color: $font-color-body;
+  color: var(--c-accent-1);
   margin: 0;
   padding: 0;
 }
 
 .profile-links a:hover {
   text-decoration: none;
-  color: $accent-light-2;
+  color: var(--c-accent-2);
 }
 
 .profile-links p {

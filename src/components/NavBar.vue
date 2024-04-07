@@ -72,10 +72,10 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .navbar-border {
-  background-color: $main-light;
+  background-color: var(--c-main-1);
   border-width: 0px;
   // border-bottom-width: 1px;
-  border-color: $accent-light;
+  border-color: var(--c-accent-1);
   border-style: solid;
   width: 97vw;
   margin: auto;
@@ -98,7 +98,7 @@ export default defineComponent({
 
 .nav-container {
   margin: auto;
-  background-color: $accent-dark;
+  background-color: var(--c-main-2);
 }
 
 .navbar-collapse {

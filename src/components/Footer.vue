@@ -26,10 +26,10 @@ export default defineComponent({
 
 <style scoped lang="scss">
 .background-footer {
-  background-color: $main-light;
+  background-color: var(--c-main-1);
   border-width: 0px;
   border-top-width: 1px;
-  border-color: $accent-light;
+  border-color: var(--c-accent-1);
   border-style: solid;
   width: 90vw;
   margin: auto;
@@ -37,7 +37,7 @@ export default defineComponent({
 }
 
 .footer-text {
-  color: $font-color-body;
+  color: var(--c-main-1-font);
   font-size: 0.8rem;
 }
 </style>

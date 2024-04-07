@@ -62,6 +62,6 @@ export default defineComponent({
 .footnote {
   font-size: 0.8rem;
   font-style: italic;
-  color: $accent-dark;
+  color: var(--c-main-1-font);
 }
 </style>

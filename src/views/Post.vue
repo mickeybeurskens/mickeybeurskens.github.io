@@ -81,7 +81,7 @@ export default defineComponent({
 }
 
 .post-button {
-  color: $font-color-body;
+  color: var(--c-main-1-font);
 }
 
 .katex {
@@ -91,11 +91,11 @@ export default defineComponent({
 .subscribe-text {
   font-family: $font-body;
   font-size: 0.8rem;
-  color: $font-color-body;
+  color: var(--c-main-1-font);
   text-align: center;
   margin-top: 1rem;
   font-style: italic;
-  color: $accent-dark;
+  color: var(--c-accent-1);
 }
 
 .center-button {
@@ -105,9 +105,9 @@ export default defineComponent({
 }
 
 .date {
-  color: $accent-light-2;
+  color: var(--c-accent-1);
   font-family: $font-body;
   font-size: 0.8rem;
   font-style: italic;
 }
-</style>../utils/loadMarkdown
+</style>

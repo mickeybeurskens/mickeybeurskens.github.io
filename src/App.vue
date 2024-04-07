@@ -1,7 +1,7 @@
 <template>
   <PatchMeta />
   <NavBar
-    :title="'Mickey.Coffee'" />
+    :title="'Mickey Beurskens'" />
   <Suspense>
     <template #default>
       <router-view />

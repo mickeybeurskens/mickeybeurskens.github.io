@@ -1,21 +1,23 @@
+@import "themes.scss";
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $font-title;
-  color: $font-color-title;
+  color: var(--c-main-1-font);
 }
 
 p, a, li, span {
   font-family: $font-body;
-  color: $font-color-body;
+  color: var(--c-main-1-font);
 }
 
 a:hover {
   text-decoration: none;
-  color: $accent-light-2;
+  color: var(--c-accent-1);
 }
 
-/* Custom bootstrap */
+/* Custom bootstrap TODO: dynamic color*/
 $theme-colors: (
-  "primary": $accent-light-2,
+  "primary": $black-coral, 
 );
 
 @import '../../node_modules/bootstrap/scss/bootstrap.scss';

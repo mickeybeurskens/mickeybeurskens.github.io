@@ -46,12 +46,12 @@ export default defineComponent({
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid var(--c-accent-1);
   border-radius: 8px;
   padding: 0.8rem;
   margin-bottom: 1rem;
   max-width: calc($max-reading-content-width/1);
-  background-color: $main-light;
+  background-color: var(--c-main-1);
 }
 
 .text-container {
@@ -73,13 +73,13 @@ export default defineComponent({
   margin-top: 0;
   margin-bottom: 0.2rem;
   font-size: 1.1rem;
-  color: $accent-light-2;
+  color: var(--c-main-1-font);
   font-weight: 600;
   font-style: italic;
 }
 
 .project-text {
-  color: $accent-dark;
+  color: var(--c-main-1-font);
   margin-top: 0;
   margin-bottom: 0.4rem;
   font-weight: 500;
@@ -97,7 +97,7 @@ export default defineComponent({
 .date {
   font-size: 0.7rem;
   font-style: italic;
-  color: $accent-light-2;
+  color: var(--c-main-1-font);
   margin: 0
 }
 

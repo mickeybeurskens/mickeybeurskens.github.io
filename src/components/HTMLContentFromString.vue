@@ -25,7 +25,7 @@ export default defineComponent({
 }
 
 .markdown-body p {
-  color: $font-color-body;
+  color: var(--c-main-1-font);
   font-family: $font-body;
 }
 

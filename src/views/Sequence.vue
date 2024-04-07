@@ -84,11 +84,11 @@ export default defineComponent({
 }
 
 .summary-text {
-  color: $accent-dark;
+  color: var(--c-main-1-font);
 }
 
 .sequence-sub-header {
-  color: $main-dark;
+  color: var(--c-main-1-font);
   font-size: 1.2rem;
   font-weight: 300;
   font-style: italic;
@@ -98,11 +98,11 @@ export default defineComponent({
 .subscribe-text {
   font-family: $font-body;
   font-size: 0.8rem;
-  color: $font-color-body;
+  color: var(--c-main-1);
   text-align: center;
   margin-top: 1rem;
   font-style: italic;
-  color: $accent-dark;
+  color: var(--c-main-1);
 }
 
 .center-button {
@@ -122,12 +122,12 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid var(--c-accent-1);
   border-radius: 8px;
   padding: 0.4rem;
   margin-bottom: 1rem;
   max-width: calc($max-reading-content-width/1);
-  background-color: $main-light;
+  background-color: var(--c-main-1);
 }
 
-</style>../utils/loadMarkdown
+</style>

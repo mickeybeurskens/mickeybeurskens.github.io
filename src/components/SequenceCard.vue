@@ -27,13 +27,13 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid var(--c-accent-1);
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
   max-width: calc($max-reading-content-width/1);
   padding: 1.4rem;
-  background-color: $main-light;
+  background-color: var(--c-main-1);
 }
 
 .sequence-image {
@@ -46,7 +46,7 @@ export default defineComponent({
 }
 
 .sequence-text {
-  color: $accent-dark;
+  color: var(--c-main-1-font);
 }
 
 .router {
