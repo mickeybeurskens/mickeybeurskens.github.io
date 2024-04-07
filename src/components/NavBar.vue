@@ -74,7 +74,7 @@ export default defineComponent({
 .navbar-border {
   background-color: $main-light;
   border-width: 0px;
-  border-bottom-width: 1px;
+  // border-bottom-width: 1px;
   border-color: $accent-light;
   border-style: solid;
   width: 97vw;

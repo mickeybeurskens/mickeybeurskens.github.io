@@ -1,10 +1,12 @@
 <template>
   <PatchMeta :title="section ? section : 'The home page!'" />
 
+  <img src="blog_store/assets/booting_up_alignment/cover_compressed.png" alt="Home banner image." class="banner-image" />
   <div class="d-flex justify-content-center">
     <!-- <Profile /> -->
     <!-- HEADER -->
     <div>
+      
       <div class="container pb-4 px-3 px-3 px-md-4 about">
         <div class="about-text">
           <!-- <h2>Unturkeyfing</h2> -->
@@ -213,4 +215,12 @@ h3 {
   max-width: $max-reading-content-width;
   margin: auto;
 }
+
+.banner-image {
+  width: 100%;
+  margin-bottom: 1rem;
+  max-height: 300px;
+  object-fit: cover;
+}
+
 </style>../utils/loadMarkdown
