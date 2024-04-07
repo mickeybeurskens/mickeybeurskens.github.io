@@ -6,27 +6,30 @@
           {{ title }}
         </span>
       </router-link>
-      
-      <button :class="`navbar-toggler ${collapseMenu ? 'collapsed' : ''}`" type="button" aria-controls="navbarNavDropdown"
-      :aria-expanded="!collapseMenu" aria-label="Toggle navigation" @click="collapseMenu = !collapseMenu">
-      <span class="navbar-toggler-icon" />
-    </button>
 
-    <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" />
-    <div :class="`navbar-collapse ${collapseMenu ? '' : 'show'}`" id="navbarNavDropdown">
-      
-      <div class="navbar-nav ml-auto">
-        <div v-for="(route, name) in navItems" :key="name" class="nav-item navbar-nav-background">
-          <router-link :class="`nav-link ${collapseMenu ? 'collapsed' : ''}`" :to="route" @click="collapseMenu = true">
-            <span class="nav-text-format">
-              {{ name }}
-            </span>
-          </router-link>
+      <button :class="`navbar-toggler ${collapseMenu ? 'collapsed' : ''}`" type="button"
+        aria-controls="navbarNavDropdown" :aria-expanded="!collapseMenu" aria-label="Toggle navigation"
+        @click="collapseMenu = !collapseMenu">
+        <span class="navbar-toggler-icon" />
+      </button>
+
+      <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" />
+      <div :class="`navbar-collapse ${collapseMenu ? '' : 'show'}`" id="navbarNavDropdown">
+
+        <div class="navbar-nav ml-auto">
+          <div v-for="(route, name) in navItems" :key="name" class="nav-item navbar-nav-background">
+            <router-link :class="`nav-link ${collapseMenu ? 'collapsed' : ''}`" :to="route"
+              @click="collapseMenu = true">
+              <span class="nav-text-format">
+                {{ name }}
+              </span>
+            </router-link>
+          </div>
         </div>
+        <ThemeSwitch />
       </div>
-    </div>
-  </nav>
-</div>
+    </nav>
+  </div>
   <div class="navbar-border" />
 </template>
 
@@ -34,11 +37,13 @@
 import { defineComponent, ref } from "vue";
 import SubscribeButton from "./SubscribeButton.vue";
 import BlogSectionsDropdown from "./BlogSectionsDropdown.vue";
+import ThemeSwitch from './ThemeSwitch.vue'
 
 export default defineComponent({
   components: {
     SubscribeButton,
-    BlogSectionsDropdown
+    BlogSectionsDropdown,
+    ThemeSwitch,
   },
   props: {
     title: {
@@ -116,5 +121,4 @@ export default defineComponent({
 .navbar-nav-background {
   background-color: var(--c-main-2);
 }
-
 </style>
