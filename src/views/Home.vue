@@ -1,7 +1,7 @@
 <template>
   <PatchMeta :title="section ? section : 'The home page!'" />
 
-  <img src="blog_store/assets/booting_up_alignment/cover_compressed.png" alt="Home banner image." class="banner-image" />
+  <img :src="bannerImage" alt="Home banner image." class="banner-image" />
   <div class="d-flex justify-content-center">
     <!-- <Profile /> -->
     <!-- HEADER -->
@@ -83,6 +83,7 @@
 </template>
 
 <script lang="ts">
+import bannerImage from "../assets/cover_compressed.png";
 import { defineComponent, reactive, toRefs, computed, inject } from "vue";
 import BlogHeader from "../components/BlogHeader.vue";
 import Profile from "../components/Profile.vue";
@@ -147,6 +148,7 @@ export default defineComponent({
     return {
       ...toRefs(state),
       pageStatus,
+      bannerImage,
     };
   },
 });
