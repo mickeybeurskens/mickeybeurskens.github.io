@@ -7,11 +7,11 @@
     <div>
       <div class="container pb-4 px-3 px-3 px-md-4 about">
         <div class="about-text">
-
+          <!-- <h2>Unturkeyfing</h2> -->
         </div>
       </div>
 
-      <hr />
+      <!-- <hr /> -->
 
       <div class="higlight-post mb-5 px-3 px-md-4 pt-3 pl-md-4">
         <router-link :to="`/${pageStatus.highlightPost.id}`">
