@@ -1,26 +1,32 @@
 <template>
-  <nav class="navbar navbar-expand-md navbar-light mb-0 navbar-text-color nav-container">
-    <router-link class="navbar-brand" :to="'/'">
-      {{ title }}
-    </router-link>
-
-    <button :class="`navbar-toggler ${collapseMenu ? 'collapsed' : ''}`" type="button" aria-controls="navbarNavDropdown"
+  <div class="nav-container">
+    <nav class="navbar navbar-expand-md navbar-light mb-0 navbar-text-color nav-content">
+      <router-link class="navbar-brand" :to="'/'">
+        <span class="nav-text-format mr-3">
+          {{ title }}
+        </span>
+      </router-link>
+      
+      <button :class="`navbar-toggler ${collapseMenu ? 'collapsed' : ''}`" type="button" aria-controls="navbarNavDropdown"
       :aria-expanded="!collapseMenu" aria-label="Toggle navigation" @click="collapseMenu = !collapseMenu">
       <span class="navbar-toggler-icon" />
     </button>
 
     <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" />
     <div :class="`navbar-collapse ${collapseMenu ? '' : 'show'}`" id="navbarNavDropdown">
-
+      
       <div class="navbar-nav ml-auto">
         <div v-for="(route, name) in navItems" :key="name" class="nav-item ">
           <router-link :class="`nav-link ${collapseMenu ? 'collapsed' : ''}`" :to="route" @click="collapseMenu = true">
-            {{ name }}
+            <span class="nav-text-format">
+              {{ name }}
+            </span>
           </router-link>
         </div>
       </div>
     </div>
   </nav>
+</div>
   <div class="navbar-border" />
 </template>
 
@@ -76,22 +82,23 @@ export default defineComponent({
   border-radius: 3px;
 }
 
-.navbar-text-color {
-  color: $font-color-body;
-}
-
-.navbar-text-color:hover {
-  color: $accent-light-2;
-  text-decoration: none;
-}
-
 .navbar-click-color:active {
   width: 100%;
 }
 
-.nav-container {
+.nav-text-format {
+  color: $white;
+  font-weight: 600;
+}
+
+.nav-content {
   max-width: $max-content-width;
   margin: auto;
+}
+
+.nav-container {
+  margin: auto;
+  background-color: $accent-dark;
 }
 
 .navbar-collapse {
