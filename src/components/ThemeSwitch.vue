@@ -33,11 +33,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    min-height: 100%;
     margin: 20px;
+    padding: 0;
     background-color: var(--c-main-2);
+    // border: 1px solid red;
   }
   
   .theme-switch {
+    // border: 1px solid red;
     position: relative;
     display: inline-block;
     width: 60px;
