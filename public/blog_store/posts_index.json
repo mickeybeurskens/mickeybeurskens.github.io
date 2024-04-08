@@ -58,7 +58,7 @@
     },
     {
         "id": "genie-in-a-bottle",
-        "section": ["alignment"],
+        "section": ["alignment", "philosophy"],
         "type": "blog",
         "date": "September 22, 2023",
         "title": "Genie In A Bottle",
@@ -78,7 +78,7 @@
     },
     {
         "id": "risk-of-trusting-ai",
-        "section": ["ai", "risk & uncertainty"],
+        "section": ["ai", "philosophy"],
         "type": "blog",
         "date": "March 22, 2023",
         "title": "The Risk Of Trusting AI",
@@ -108,7 +108,7 @@
     },
     {
         "id": "meditations-on-tinkering",
-        "section": ["entrepreneurship", "risk & uncertainty"],
+        "section": ["entrepreneurship", "philosophy"],
         "type": "blog",
         "date": "November 20, 2022",
         "title": "Meditations On Tinkering",
@@ -128,7 +128,7 @@
     },
     {
         "id": "digit-recognition",
-        "section": ["ai", "computer vision"],
+        "section": ["ai", "computer vision", "technical"],
         "type": "blog",
         "date": "June 20, 2022",
         "title": "Custom Models And Loss Functions In FastAI",
@@ -138,7 +138,7 @@
     },
     {
         "id": "fruit-recognition",
-        "section": ["ai", "computer vision"],
+        "section": ["ai", "computer vision", "technical"],
         "type": "blog",
         "date": "June 07, 2022",
         "title": "Detecting fruit using FastAI",
