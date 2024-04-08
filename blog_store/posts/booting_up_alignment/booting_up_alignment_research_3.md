@@ -1,8 +1,6 @@
-> In the “Booting Up Alignment Research” sequence I show you how I learn about the field of AI alignment.
->
-> I noticed that there are ample learning resources available, but that it remains hard to evaluate where to start and usefully spend time and effort. I hope documenting the steps can help you understand the field at lower cost or provide a good starting point. Welcome!
+> Part of the [Alignment Research](/#/sequence/booting-up-alignment-research/) sequence.
 
-# Booting Up Alignment Research #3
+# On How Agents Game Systems
 
 Gaming the system. Looking for the loopholes. Squeezing out that extra bit of juice. 
 

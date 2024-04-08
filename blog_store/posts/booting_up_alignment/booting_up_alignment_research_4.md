@@ -1,10 +1,8 @@
-> In the “Booting Up Alignment Research” sequence I show you how I learn about the field of AI alignment.
->
-> I noticed that there are ample learning resources available, but that it remains hard to evaluate where to start and usefully spend time and effort. I hope documenting the steps can help you understand the field at lower cost or provide a good starting point. Welcome!
+> Part of the [Alignment Research](/#/sequence/booting-up-alignment-research/) sequence.
 
-# Booting Up Alignment Research #4
+# Goal Misgeneralization And Task Decomposition
 
-The previous post covered reward misspecification and instrumental convergence as ways in which artificial agents might exhibit behavior not intended by its designer. Yet there are more ways to Rome. This post constitutes a deeper look at two more entries in the  [AI safety fundamentals course](https://course.aisafetyfundamentals.com/alignment): Goal misgeneralization as a failure mode and a possible technique to address the alignment of more capable agents called “task decomposition”. I will take some time here to discuss both concepts before going through the commentary on the reading material.
+The previous post covered reward misspecification and instrumental convergence as ways in which artificial agents might exhibit behavior not intended by its designer. This post constitutes a deeper look at two more entries in the  [AI safety fundamentals course](https://course.aisafetyfundamentals.com/alignment): Goal misgeneralization as a failure mode and a possible technique to address the alignment of more capable agents called “task decomposition”. I will take some time here to discuss both concepts before going through the commentary on the reading material.
 
 Goal misgeneralization differs from reward misspecification in the sense that the rewards are now well-specified, but the data distribution of the deployment environment of an agent is outside the training distribution. To me it feels a bit like “incompetence”. As an example, consider an agent in a video game that is rewarded for picking up a coin. Suppose that the training set always contains a coin on the very end of the level. Thus, the agent learns that the strategy “move to the end of the level” optimizes the reward during training. Imagine the horror as the agent runs right by a coin in the middle of the level, never completing the level as a consequence.
 

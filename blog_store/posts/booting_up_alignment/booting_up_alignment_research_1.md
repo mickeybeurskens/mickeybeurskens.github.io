@@ -1,10 +1,6 @@
+> Part of the [Alignment Research](/#/sequence/booting-up-alignment-research/) sequence.
 
-
-> In the “Booting Up Alignment Research” sequence I show you how I learn about the field of AI alignment.
->
-> I noticed that there are ample learning resources available, but that it remains hard to evaluate where to start and usefully spend time and effort. I hope documenting the steps can help you understand the field at lower cost or provide a good starting point. Welcome!
-
-# Booting Up Alignment Research #1
+# Booting Up Alignment Research
 
 This sequence of posts might be interesting to you if you are drawn to the technicalities of Artificial Intelligence (AI) alignment or are worried about the existential risk (x-risk) that AI may pose. For those of you that are not familiar with these ideas, I should clarify what I mean by “alignment”. I consider alignment the encouraging of “good” behavior and limiting of “bad” behavior of autonomous agents. You will find that alignment is often discussed in the context of AI safety, where it might mean “aligning AI agents that are as smart, or smarter than, humans”.
 

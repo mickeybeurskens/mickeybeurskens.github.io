@@ -1,1 +1,0 @@
-import{e as n,_ as t,o,c as r}from"./index.b46dc7c1.js";const s=n({props:{htmlContent:{type:String,default:""}}}),_=["innerHTML"];function a(e,p,c,d,i,l){return o(),r("span",{class:"markdown-body",innerHTML:e.htmlContent},null,8,_)}var f=t(s,[["render",a],["__scopeId","data-v-febd010e"]]);export{f as H};
