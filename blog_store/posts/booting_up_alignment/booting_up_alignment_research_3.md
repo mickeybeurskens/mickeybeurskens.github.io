@@ -1,7 +1,5 @@
 > Part of the [Alignment Research](/#/sequence/booting-up-alignment-research/) sequence.
 
-# On How Agents Game Systems
-
 Gaming the system. Looking for the loopholes. Squeezing out that extra bit of juice. 
 
 You might have done it by studying the exam instead of mastering the knowledge in school, or exploited a bug in your favorite game. Yet it might surprise you that reinforcement learning agents often exhibit similar behavior. 

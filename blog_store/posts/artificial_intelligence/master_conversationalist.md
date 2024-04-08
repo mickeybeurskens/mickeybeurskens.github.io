@@ -1,5 +1,3 @@
-# GPT-4 - Master Conversationalist
-
 As the sun set on the small village of Brightwood, the air was thick with anticipation. The townsfolk knew what was coming - they had seen it before. The mist was a portent of danger, a warning that something was stirring in the forest beyond.
 
 The villagers hurried to finish their work before nightfall, casting nervous glances at the mist as it crept closer. They knew that those who ventured into the forest after dark rarely returned.

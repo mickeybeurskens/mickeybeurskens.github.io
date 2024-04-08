@@ -1,5 +1,3 @@
-# The Value Of The Truth
-
 If I had to choose the single most impactful, vivid lesson that my mother has ever taught me, I am transported back in time to where my conscious experience was still a blur. I am not sure where it was, or what prompted the situation, but I can still hear the warmth in her voice as she told me: “Mickey, always try and speak the truth”. How fortunate that the value of speaking honestly had been gifted to me far before I could grasp its importance.
 
 To become truthful, one needs to have a will to confront those things that one least wishes to see or hear. This is straightforward enough to understand: People have likely confronted most things they *want* to be true early in their lives. Acceptance happens without much awareness or resistance. Truths that remain are either hard to encounter or challenging to bare.

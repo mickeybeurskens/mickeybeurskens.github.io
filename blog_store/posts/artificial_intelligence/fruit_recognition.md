@@ -1,5 +1,3 @@
-# Over Engineered: Fruit Recognition Using FastAI!
-
 Have you ever wondered what that piece of fruit is you encountered during your walk through the woods? You could pick up a book or even use google to get your answer, but why bother when your problems can be solved with Artificial Intelligence? Yes that's right, I'll be over engineering the heck out of this problem and I'll take you along for the ride. Let's get to it.
 
 ## Recognizing The Problem

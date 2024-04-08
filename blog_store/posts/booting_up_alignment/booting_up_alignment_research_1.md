@@ -1,7 +1,5 @@
 > Part of the [Alignment Research](/#/sequence/booting-up-alignment-research/) sequence.
 
-# Booting Up Alignment Research
-
 This sequence of posts might be interesting to you if you are drawn to the technicalities of Artificial Intelligence (AI) alignment or are worried about the existential risk (x-risk) that AI may pose. For those of you that are not familiar with these ideas, I should clarify what I mean by “alignment”. I consider alignment the encouraging of “good” behavior and limiting of “bad” behavior of autonomous agents. You will find that alignment is often discussed in the context of AI safety, where it might mean “aligning AI agents that are as smart, or smarter than, humans”.
 
 There is much debate going on in the AI research world regarding how likely that is to happen, when it might happen and what the consequences might be. I personally think that we (humans) are not ready to face an intelligent agent on that level with out current (alignment) technology. I also think the range of default outcomes, where we do not take the challenge of aligning AI more seriously than we do now, is probably horrible and possibly world ending. This may sound dramatic or “out there”. Researchers with a much better track record than me like [Yann Lecun](https://en.wikipedia.org/wiki/Yann_LeCun), Chief AI Scientist at Meta (Facebook), certainly think I am wrong. Others like [Geoffrey Hinton](https://en.wikipedia.org/wiki/Geoffrey_Hinton), another titan of the field, sound the alarm (Hinton even quit his job at Google over this). 

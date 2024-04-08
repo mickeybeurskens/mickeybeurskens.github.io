@@ -1,7 +1,5 @@
 > Part of the [Alignment Research](/#/sequence/booting-up-alignment-research/) sequence.
 
-# Negative Consequences Of Artificial General Intelligence
-
 Continuing with the [AI safety fundamentals course, part 1](https://course.aisafetyfundamentals.com/alignment?session=1). This part of the course is about the definition of Artificial General Intelligence and why it can pose serious risk. 
 
 Many of the sources are only partial reading. A full reading would probably be insightful, but I feel the goal of this part of the course is to provide an overview. The additional material contains great extra reading too. There are “flashcards” available for each source if you would like to use those. I will limit myself to the core reading and will not use the flash-cards. It is not my goal to exactly reproduce material, but explore concepts in AI alignment. 
