@@ -1,5 +1,3 @@
-# Genie In A Bottle
-
 Say you had a genie, firmly trapped in a bottle and awaiting your command. Perhaps you found it in some sandy, long forgotten cave. Maybe it was always in your attic, camouflaged by a protective layer of dust. Whatever the reason, you now have the ability to *“have granted thy wishes three”*. This information was conveniently streamed into your mind the moment you touched the bottle. You also know that it is absolutely impossible to wish for more wishes. If the resulting wish grants you the ability to wish again, the bottle will vanish in a sigh of disappointment, leaving you not only without any further wishes, but with a sizable feeling of embarrassment. What would you do?
 
 The genie is not omnipotent. It has to go out into the world and actually *make your wish happen*. As such it is impossible to wish for things nature does not allow, and granting your wish takes time. It is about a strong as a human adult and can fly. Some wishes may take impractically long, so as a bonus feature the bottle can give you a rough estimate of how long a wish might take to fulfill.

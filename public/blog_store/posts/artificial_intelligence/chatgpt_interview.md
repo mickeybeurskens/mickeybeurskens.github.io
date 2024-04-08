@@ -1,5 +1,3 @@
-# Generative AI - A Conversation With ChatGPT
-
 So most of you have probably heard of this whole [revolution in AI](https://openai.com/blog/chatgpt) thing that has been going on (or you probably wouldn't be here, dear reader, perusing this post). In my professional life (yes I make time for that as well) I currently get a lot of questions about how ChatGPT and similar generative text technologies will impact the world of business and will CHANGE EVERYTHING AND HOW CAN I USE THIS WITHOUT SUBMITTING TO THE AI OVERLORDS HELP?!
 
 ahem.

@@ -19,19 +19,10 @@
         <router-link :to="`/${pageStatus.highlightPost.id}`">
           <h1>{{ pageStatus.highlightPost.title }}</h1>
         </router-link>
-        <p class="date font-italic m-0 p-0 text-left">
-          {{ pageStatus.highlightPost.date }}
-        </p>
-
-        <div v-if="!section && Array.isArray(pageStatus.highlightPost.section)"
-          class="tag-container-left mt-1 markdown-body">
-          <router-link v-for="(sec, index) in pageStatus.highlightPost.section" :key="index" :to="`/blog/${sec}`"
-            class="text-reset tag-item ml-0 mr-1">
-            <h6 class="m-0 p-0 text-left tag font-weight-bold">
-              #{{ sec }}
-            </h6>
-          </router-link>
-        </div>
+        <PostHighlight 
+          :date=pageStatus.highlightPost.date
+          :tags=pageStatus.highlightPost.section
+        />
 
         <div class="highlight-post-content mt-3">
           <span class="markdown-body" v-html="highlightPostContent" />
@@ -88,6 +79,7 @@ import BlogHeader from "../components/BlogHeader.vue";
 import Profile from "../components/Profile.vue";
 import PatchMeta from "../components/PatchMeta.vue";
 import NavigationButton from "../components/NavigationButton.vue"
+import PostHighlight from "../components/PostHighlight.vue"
 import { PostIndex } from "../types/PostIndex";
 import { loadMarkdownHTML } from "../utils/loadMarkdown";
 
@@ -99,6 +91,7 @@ export default defineComponent({
     BlogHeader,
     Profile,
     NavigationButton,
+    PostHighlight,
   },
   props: {
     section: {

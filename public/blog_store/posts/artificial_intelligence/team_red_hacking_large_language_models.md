@@ -1,5 +1,3 @@
-# Team Red - Hacking Large Language Models
-
 > A practical and philosophical guide on how to break large language models, and what we can learn from that.
 
 About half a year ago I wondered: “Language models are progressing with leaps and bounds. I can see how a more advanced model would be highly useful to answer my questions or perform search tasks on my behalf. But once I entrust it with my secrets, will it be able to keep them”? As it turns out, [getting “restricted” information out of language models was quite straightforward](https://embracethered.com/blog/posts/2023/google-bard-data-exfiltration/) then, and remains so now. I will argue here that they can be tricked, manipulated and broken with a modest amount of technical knowledge and some tinkering.

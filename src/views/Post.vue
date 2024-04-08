@@ -1,14 +1,21 @@
 <template>
   <PatchMeta :title="metadata_title" :description="description" />
-  <div class="container mt-4 mt-md-5 post-container">
-    <p class="date"> Published: {{ date }} </p>
+  <div class="container mt-3 mt-md-3 post-container">
+    <h2 class="title">{{ metadata_title }}</h2>
+    <PostHighlight 
+          :date=date
+          :tags=tags
+          :class="`mb-4`"
+    />
+    <hr />
     <HTMLContentFromString :htmlContent="postHtml" />
     <button type="button" class="border btn mt-4 post-button" @click="hasHistory() ? router.go(-1) : router.push('/')">
       &laquo; Back
     </button>
     <hr />
   </div>
-  <p class="subscribe-text mt-5">If you enjoyed this post, consider subscribing. You'll receive an update whenever new posts are published.</p>
+  <p class="subscribe-text mt-5">If you enjoyed this post, consider subscribing. You'll receive an update whenever new
+    posts are published.</p>
   <div class="center-button mt-2">
     <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" class="mx-1" />
   </div>
@@ -22,6 +29,7 @@ import { PostIndex } from "../types/PostIndex";
 import PatchMeta from "../components/PatchMeta.vue";
 import SubscribeButton from "../components/SubscribeButton.vue";
 import HTMLContentFromString from "../components/HTMLContentFromString.vue";
+import PostHighlight from "../components/PostHighlight.vue";
 import { loadMarkdownHTML } from "../utils/loadMarkdown";
 
 
@@ -29,8 +37,9 @@ export default defineComponent({
   components: {
     PatchMeta,
     SubscribeButton,
-    HTMLContentFromString
-},
+    HTMLContentFromString,
+    PostHighlight,
+  },
   props: {
     section: {
       type: String,
@@ -58,6 +67,7 @@ export default defineComponent({
     const date = postsIndex.find((post) => post.id === props.id)?.date;
     const description = postsIndex.find((post) => post.id === props.id)?.description;
     const metadata_title = postsIndex.find((post) => post.id === props.id)?.title;
+    const tags = postsIndex.find((post) => post.id === props.id)?.section;
 
     // Back button helper
     const hasHistory = () => window.history?.length > 2;
@@ -70,6 +80,7 @@ export default defineComponent({
       date,
       description,
       metadata_title,
+      tags,
     };
   },
 });
@@ -109,5 +120,9 @@ export default defineComponent({
   font-family: $font-body;
   font-size: 0.8rem;
   font-style: italic;
+}
+
+.title {
+  font-weight: 700;
 }
 </style>

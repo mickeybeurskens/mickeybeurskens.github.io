@@ -1,5 +1,3 @@
-# Handwritten Digit Recognition With FastAI
-
 Here we are again MNIST. It's been many moons since I last saw you. How have you been? Remember the time we struggled? Remember all the pure Python loops and crazy coding standards? I felt that is was high time to set the record straight. Let's do this one more time and do it right!
 
 All sillyness aside it's nice to revisit old problems every now and again. It's been a long time since I first solved this problem and [learned about neural networks](http://neuralnetworksanddeeplearning.com/) in the process. Now we have new shiny tools like [fastai](https://docs.fast.ai/) to solve this problem in a jiffy. We'll also see how to implement a custom PyTorch model, create our own loss function and evaluate the performance to some degree. Go time.

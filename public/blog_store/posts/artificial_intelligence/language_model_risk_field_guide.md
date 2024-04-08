@@ -1,7 +1,5 @@
 *This post is co-authored by Mickey Beurskens and Carlo Lepelaars.  It has been cross-posted on both [Mickey’s website](https://mickey.coffee) and [Carlo’s Medium profile](https://medium.com/@carlolepelaars). More on the authors below.*
 
-# The Language Model Risk Field Guide
-
 Medicine becomes poison when applied incorrectly. In order to distinguish the two, mankind has diligently worked to both name and classify the risks of medicine since ancient times. Since we would like for large language models to remain mostly a medicine, we decided to attempt the composition of a common parlance and classification for large language model risk. Welcome, connoisseur of the dark arts, to our incomplete attempt at discussing the large language model shadow side. You will be treated to an exotic range of creative mayhem in the world of large language models, including but certainly not limited to:
 
 - **********************************************************Misuse and misunderstandings.**********************************************************
