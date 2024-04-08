@@ -7,7 +7,7 @@
         </span>
       </router-link>
 
-      <button :class="`navbar-toggler ${collapseMenu ? 'collapsed' : ''}`" type="button"
+      <button :class="`navbar-toggler icon-style ${collapseMenu ? 'collapsed' : ''}`" type="button"
         aria-controls="navbarNavDropdown" :aria-expanded="!collapseMenu" aria-label="Toggle navigation"
         @click="collapseMenu = !collapseMenu">
         <span class="navbar-toggler-icon" />
@@ -120,5 +120,9 @@ export default defineComponent({
 
 .navbar-nav-background {
   background-color: var(--c-main-2);
+}
+
+.icon-style {
+  background-color: var(--c-accent-2);
 }
 </style>
