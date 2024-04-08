@@ -32,9 +32,9 @@
   .theme-switch-wrapper {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
     min-height: 100%;
-    margin: 20px;
+    margin: 20px 0;
     padding: 0;
     background-color: var(--c-main-2);
     // border: 1px solid red;
@@ -46,13 +46,13 @@
     display: inline-block;
     width: 60px;
     height: 34px; 
-  
+    
     & input {
       opacity: 0;
       width: 0;
       height: 0;
     }
-  
+    
     .slider {
       position: absolute;
       cursor: pointer;
@@ -60,7 +60,7 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background-color: $white; // Adjust to your light theme accent color
+      background-color: var(--c-main-1);
       transition: .4s;
       border-radius: 34px;
   

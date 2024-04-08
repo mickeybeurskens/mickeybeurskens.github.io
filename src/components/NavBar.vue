@@ -14,9 +14,9 @@
       </button>
 
       <div :class="`navbar-collapse ${collapseMenu ? '' : 'show'}`" id="navbarNavDropdown">
-        <SubscribeButton :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" />
+        <SubscribeButton :class="`sub-button-style mt-2 mb-4`" :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" />
 
-        <div class="navbar-nav ml-auto">
+        <div class="navbar-nav ml-auto mr-4">
           <div v-for="(route, name) in navItems" :key="name" class="nav-item navbar-nav-background">
             <router-link :class="`nav-link ${collapseMenu ? 'collapsed' : ''}`" :to="route"
               @click="collapseMenu = true">
@@ -123,6 +123,11 @@ export default defineComponent({
 }
 
 .icon-style {
-  background-color: var(--c-accent-2);
+  background-color: var(--c-main-2-font);
+}
+
+.sub-button-style{
+  border: 2px solid var(--c-main-2-font);
+  font-weight: 600;
 }
 </style>
