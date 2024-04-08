@@ -37,15 +37,15 @@
     margin: 20px 0;
     padding: 0;
     background-color: var(--c-main-2);
-    // border: 1px solid red;
   }
   
   .theme-switch {
-    // border: 1px solid red;
     position: relative;
     display: inline-block;
     width: 60px;
     height: 34px; 
+    padding: 0;
+    margin: 0;
     
     & input {
       opacity: 0;
