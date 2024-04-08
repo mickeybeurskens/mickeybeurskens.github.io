@@ -14,7 +14,7 @@
       </button>
 
       <div :class="`navbar-collapse ${collapseMenu ? '' : 'show'}`" id="navbarNavDropdown">
-        <SubscribeButton :class="`sub-button-style mt-2 mb-4`" :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" />
+        <SubscribeButton :class="`sub-button-style my-2`" :url="'http://eepurl.com/ic1xGn'" :isExternal="true" buttonText="Subscribe" />
 
         <div class="navbar-nav ml-auto mr-4">
           <div v-for="(route, name) in navItems" :key="name" class="nav-item navbar-nav-background">
