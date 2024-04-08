@@ -11,9 +11,11 @@
 
     <!-- DATE and TAGS -->
     <div class="right-side">
-      <p class="blog-date font-italic ml-4 m-0 p-0">
-        {{ entry.date }}
-      </p>
+      <div class="date-container">
+        <p class="blog-date font-italic ml-4 m-0 p-0">
+          {{ entry.date }}
+        </p>
+      </div>
       <div v-if="Array.isArray(entry.section)" class="tag-container m-0 p-0 ml-2">
         <router-link v-for="(sec, index) in entry.section" :key="index" :to="`/blog/${sec}`" class="text-reset tag-item">
           <h6 class="m-0 p-0 ml-1 text-right blog-tag">
@@ -50,9 +52,14 @@ export default defineComponent({
 }
 
 .tag-container {
+  flex: 0 1 60%; 
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
+}
+
+.date-container {
+  flex: 0 1 40%; 
 }
 
 .tag-item {
@@ -74,6 +81,7 @@ export default defineComponent({
 .entry-container {
   display: flex;
   align-items: baseline;
+  justify-content: space-between; 
 }
 
 .entry-container .right-side {
@@ -84,5 +92,13 @@ export default defineComponent({
 
 .left-side {
   display: flex;
+  flex: 0 1 40%;
 }
+
+.right-side {
+    flex: 0 1 60%; 
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
 </style>
