@@ -1,10 +1,6 @@
+> Part of the [Alignment Research](/#/sequence/booting-up-alignment-research/) sequence.
 
-
-> In the “Booting Up Alignment Research” sequence I show you how I learn about the field of AI alignment.
->
-> I noticed that there are ample learning resources available, but that it remains hard to evaluate where to start and usefully spend time and effort. I hope documenting the steps can help you understand the field at lower cost or provide a good starting point. Welcome!
-
-# Booting Up Alignment Research #2
+# Negative Consequences Of Artificial General Intelligence
 
 Continuing with the [AI safety fundamentals course, part 1](https://course.aisafetyfundamentals.com/alignment?session=1). This part of the course is about the definition of Artificial General Intelligence and why it can pose serious risk. 
 
