@@ -21,7 +21,7 @@
           to mitigate the problems. 
         </p>
         <p>
-          Other times I just write about anything that catches my attention. You might find blogs on design,
+          Other times I just write about anything that catches my attention. You might find writing on design,
           video games, music, finance or psychology. 
         </p>
         <p>
