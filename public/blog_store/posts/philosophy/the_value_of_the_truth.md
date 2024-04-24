@@ -1,4 +1,4 @@
-My mother always told me that I should never lie. Although that turned out to be a pain, I think she was right.
+My mother told me that I should never lie. Although that turned out to be a pain, I think she was right.
 
 To become truthful, one needs to have a will to confront those things that one least wishes to see or hear. This is straightforward enough to understand: I think most people confront most things they *want* to be true easily. Acceptance happens without much awareness or resistance. Truths that remain are either hard to encounter or challenging to bare.
 
