@@ -1,5 +1,5 @@
 <template>
-  <div class="text-center mt-5 py-2 background-footer">
+  <div class="text-center py-2 background-footer mt-5">
     <router-link :to="'/'" class="text-reset"> </router-link>
     <p class="m-0 p-0 footer-text">
       Created by
