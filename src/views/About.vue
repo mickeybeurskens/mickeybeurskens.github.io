@@ -18,7 +18,7 @@
         <p>
           If you have already read some of my writing, you will know that I also think a lot about
           AI risk and safety in particular. I try to get a grip on the major problems that we might face in the long term, and what we might to
-          to mitigate the problems. 
+          mitigate the problems. 
         </p>
         <p>
           Other times I just write about anything that catches my attention. You might find writing on design,
