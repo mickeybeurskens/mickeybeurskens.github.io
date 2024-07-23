@@ -10,7 +10,7 @@
     },
     {
         "id": "team-red-hacking-large-language-models",
-        "section": ["ai", "language models", "cybersecurity"],
+        "section": ["ai", "language models", "cybersecurity", "technical"],
         "type": "blog",
         "date": "December 5, 2023",
         "title": "Team Red - Hacking Large Language Models",
@@ -68,7 +68,7 @@
     },
     {
         "id": "language-model-risk-field-guide",
-        "section": ["ai", "language models", "cybersecurity"],
+        "section": ["ai", "language models", "cybersecurity", "technical"],
         "type": "blog",
         "date": "July 12, 2023",
         "title": "The Language Model Risk Field Guide",
