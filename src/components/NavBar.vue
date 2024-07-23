@@ -59,8 +59,7 @@ export default defineComponent({
     const showDropdown = ref(false);
     const collapseMenu = ref(true);
     const navItems = {
-      "Home": "/",
-      "Blog": "/blog",
+      "Blog": "/",
       "Sequences": "/sequences",
       "Projects": "/projects",
       "About": "/about",

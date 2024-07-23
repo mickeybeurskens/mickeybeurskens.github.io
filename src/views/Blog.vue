@@ -1,9 +1,9 @@
 <template>
   <PatchMeta :title="section ? section : 'Blog posts'" />
   <div class="mb-5 px-3 px-md-4 pt-5 justify-content-center container">
-    <h3 class="pt-5 button-text">Blog Posts</h3>
+    <h1 class="button-text">Essays</h1>
     <p>
-      A chronological overview of all blog posts. You can filter on topic by clicking on
+      A chronological overview of my writing. You can filter on topic by clicking on
       the section names or by using the dropdown menu.
     </p>
     <BlogSectionsDropdown class="my-4" :sections="blogSections" :showDropdown="showDropdown"
