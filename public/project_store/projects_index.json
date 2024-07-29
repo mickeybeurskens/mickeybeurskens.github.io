@@ -1,5 +1,13 @@
 [
     {
+        "title": "Guess The Password - LLM Guardrail Game",
+        "description": "An open source game to test LLM guardrail techniques.",
+        "date": "July 29, 2024",
+        "section": "opensourcesoftware",
+        "image": "project_store/projects/guessthepassword.svg",
+        "url": "https://github.com/mickeybeurskens/guess-the-password"
+    },
+    {
         "title": "Team Red - Hacking Large Language Models",
         "description": "A practical and philosophical guide on how to break large language models @ PyData Eindhoven 2023",
         "date": "November 30, 2023",
