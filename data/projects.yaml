@@ -1,0 +1,23 @@
+opensource:
+  - title: "Guess The Password - LLM Guardrail Game"
+    description: "An open source game to test LLM guardrail techniques."
+    date: "July 29, 2024"
+    link: "#"
+  - title: "Document Inspector Perry"
+    description: "An opensource prototype for document search and question answering with large language models."
+    date: "November 7, 2023"
+    link: "#"
+  - title: "The Mickey.Coffee Website"
+    description: "The source code for this website."
+    date: "November 7, 2023"
+    link: "#"
+
+talks:
+  - title: "Team Red - Hacking Large Language Models"
+    description: "A practical and philosophical guide on how to break large language models @ PyData Eindhoven 2023"
+    date: "November 30, 2023"
+    link: "#"
+  - title: "AI Demystified"
+    description: "A gentle introduction to artificial intelligence and machine learning for material engineers @ Materials Fair Mikrocentrum Eindhoven"
+    date: "April 30, 2022"
+    link: "#"
