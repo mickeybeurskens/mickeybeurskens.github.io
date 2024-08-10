@@ -5,8 +5,7 @@
 
    [params]
      color = "wheat"
-     twitter = "your-twitter-handle"
-     github = "your-github-handle"
+     github = "mickeybeurskens"
 
    [menu]
      [[menu.main]]
