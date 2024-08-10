@@ -1,0 +1,133 @@
+/* Place custom css here. */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 2em;
+  }
+  
+  .project-tile {
+    border: 1px solid var(--tw-prose-hr, #e5e5e5);
+    border-radius: 12px;
+    padding: 24px;
+    background-color: var(--bg, #ffffff);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .project-tile h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.2em;
+    color: var(--tw-prose-headings, #171717);
+  }
+  
+  .project-tile p {
+    font-size: 0.9em;
+    color: var(--tw-prose-body, #404040);
+    margin-bottom: 16px;
+  }
+  
+  .project-tile .date {
+    font-style: italic;
+    color: var(--tw-prose-captions, #737373);
+    font-size: 0.8em;
+    margin-bottom: 16px;
+  }
+  
+  .project-tile .link {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--tw-prose-links, #171717);
+    color: var(--bg, #ffffff);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .project-tile .link:hover {
+    background-color: var(--tw-prose-bold, #171717);
+  }
+  
+  .talks-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .talks-list a {
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .talk-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 12px 12px 0;
+    border-bottom: 1px solid var(--tw-prose-hr, #e5e5e5);
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .talk-item:last-child {
+    border-bottom: none;
+  }
+  
+  .talk-item:hover {
+    padding-left: 12px;
+  }
+  
+  .talk-item h3 {
+    margin: 0;
+    font-size: 1em;
+    color: var(--tw-prose-headings, #171717);
+  }
+  
+  .talk-item .date {
+    font-style: italic;
+    color: var(--tw-prose-captions, #737373);
+    font-size: 0.9em;
+  }
+  
+  /* Dark mode adjustments */
+  .dark .project-tile {
+    background-color: var(--tw-prose-invert-pre-bg, rgb(0 0 0 / 50%));
+    color: var(--tw-prose-invert-body, #d4d4d4);
+  }
+  
+  .dark .project-tile h3 {
+    color: var(--tw-prose-invert-headings, #fff);
+  }
+  
+  .dark .project-tile p {
+    color: var(--tw-prose-invert-body, #d4d4d4);
+  }
+  
+  .dark .project-tile .date {
+    color: var(--tw-prose-invert-captions, #a3a3a3);
+  }
+  
+  .dark .project-tile .link {
+    background-color: var(--tw-prose-invert-links, #fff);
+    color: var(--tw-prose-invert-pre-bg, rgb(0 0 0 / 50%));
+  }
+  
+  .dark .project-tile .link:hover {
+    background-color: var(--tw-prose-invert-bold, #fff);
+  }
+  
+  .dark .talk-item {
+    border-bottom-color: var(--tw-prose-invert-hr, #404040);
+  }
+  
+  .dark .talk-item:hover {
+    background-color: var(--tw-prose-invert-quote-borders, #262626);
+  }
+  
+  .dark .talk-item h3 {
+    color: var(--tw-prose-invert-headings, #fff);
+  }
+  
+  .dark .talk-item .date {
+    color: var(--tw-prose-invert-captions, #a3a3a3);
+  }
