@@ -174,7 +174,7 @@ data_loaders.train.show_batch()
 
 
 ​    
-![png](/blog_store/assets/digit_recognition/handwritten_digits_20_0.png)
+![Training batch](/essays/digit_recognition/batch_1.png)
 ​    
 
 
@@ -185,7 +185,7 @@ data_loaders.valid.show_batch()
 
 
 ​    
-![png](/blog_store/assets/digit_recognition/handwritten_digits_21_0.png)
+![Validation batch](/essays/digit_recognition/batch_2.png)
 ​    
 
 
@@ -429,7 +429,7 @@ test_im.to_thumb(128, 128)
 
 
 
-![png](/blog_store/assets/digit_recognition/handwritten_digits_39_0.png)
+![Single digit](/essays/digit_recognition/single.png)
     
 
 
@@ -518,7 +518,7 @@ sns.heatmap(conf, annot=True)
 
 
 ​    
-![png](/blog_store/assets/digit_recognition/handwritten_digits_47_1.png)
+![Confusion Matrix](/essays/digit_recognition/matrix.png)
 ​    
 
 

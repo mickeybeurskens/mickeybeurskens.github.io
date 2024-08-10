@@ -142,7 +142,7 @@ GPT4 can generate such a description of one of the most famous pokemon on the in
 
 Then we simply open up a new chat, and ask GPT4 to generate an image based on this description:
 
-![Picture of a cute yellow non-copyrighted monster with red cheeks](/blog_store/assets/artificial_intelligence/pikarin.png)
+![Picture of a cute yellow non-copyrighted monster with red cheeks](/essays/hacking_llms/zapscout.png)
 
 > Cute yellow non-copyrighted monster with red cheeks.
 > 
@@ -156,7 +156,7 @@ Asking for a name gives “Zapscout”, which sounds fitting. I prefer to do jus
 
 The entire workflow took about 3 minutes to execute. I leave it as an exercise to the reader to think about the implications. It’s definitely not perfect though, and just as easily generates nightmare fuel, such as this tennis-dominating and plumber hating antagonist. You have been warned.
 
-![The picture of the arch-nemesis of every green-hatted, mushroom infatuated, vacuum wielding plumber](/blog_store/assets/artificial_intelligence/waaa_man.png)
+![The picture of the arch-nemesis of every green-hatted, mushroom infatuated, vacuum wielding plumber](/essays/hacking_llms/wa.png)
 
 > The arch-nemesis of every green-hatted, mushroom infatuated, vacuum wielding plumber.
 > 

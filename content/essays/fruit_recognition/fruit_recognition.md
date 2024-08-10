@@ -48,7 +48,7 @@ im = Image.open(image_path/'cherry/Image_1.jpg')
 im.to_thumb(128,128)
 ```
 
-![png](blog_store/assets/fruit_recognition/fruit_recognition_post_4_0.png)
+![Cherry](/essays/fruit_recognition/cherry.png)
     
 
 Well that looks a lot like cherries if you ask me. It's likely that this dataset still contains unsuitable images. Rather then looking through all of them though, we can use the model later on to detect images with a low confidence. That way we do not have to look at every image explicitly to clean the dataset. It's much more resource efficient!
@@ -121,7 +121,7 @@ data_loaders.valid.show_batch(max_n=10, nrows=2)
 
 
 ​    
-![png](blog_store/assets/fruit_recognition/fruit_recognition_post_14_0.png)
+![Validation batch](/essays/fruit_recognition/val_batch.png)
 ​    
 
 
@@ -207,7 +207,7 @@ interp.plot_confusion_matrix()
 ```
 
 
-![png](blog_store/assets/fruit_recognition/fruit_recognition_post_18_4.png)
+![Confusion matrix](/essays/fruit_recognition/conf_matrix.png)
     
 
 
@@ -219,7 +219,7 @@ interp.plot_top_losses(5, nrows=1)
 ```
 
 
-![png](blog_store/assets/fruit_recognition/fruit_recognition_post_20_2.png)
+![png](/essays/fruit_recognition/top_losses.png)
     
 
 
@@ -232,7 +232,7 @@ img.to_thumb(128, 128)
 ```
 
 
-![png](blog_store/assets/fruit_recognition/fruit_recognition_post_22_0.png)
+![png](/essays/fruit_recognition/cherry_final.png)
     
 
 
