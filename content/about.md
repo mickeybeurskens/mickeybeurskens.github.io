@@ -8,7 +8,7 @@ Welcome, dear reader.
 
 On this website I write about topics that I care about.
 
-Born and raised a Dutchman, [I work as an entrepreneur and artificial intelligence engineer](https://www.forgefire.dev) at my own company. There I spend my time figuring out if AI can solve a certain problems, do research, build prototypes and generally expand my knowledge on the subject.
+Born and raised a Dutchman, [I work as an entrepreneur and artificial intelligence engineer](https://www.forgefire.dev) at my own company. There I spend my time figuring out how AI can be used to solve problems, doing research, building prototypes and generally expanding my knowledge on the subject.
 
 I also tend to think a lot about AI and its impact on society. Building safe AI is insanely difficuly, and so we will face some major challenges in the coming years. I try to get a grip on the major problems that we might face in the long term, what we might do to mitigate the risks and how we might expose the opportunities.
 
