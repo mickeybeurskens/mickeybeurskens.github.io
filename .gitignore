@@ -1,0 +1,37 @@
+# Hugo default output directory
+/public/
+
+# Hugo cache directory
+/resources/_gen/
+
+# Temporary lock file while building
+/.hugo_build.lock
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Node modules (if you're using any Node.js-based tools)
+node_modules/
+
+# Log files
+*.log
+
+# Executable may be added to repository
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# Temporary files
+*.tmp
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# If you're using Netlify
+.netlify

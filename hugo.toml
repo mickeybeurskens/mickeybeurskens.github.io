@@ -1,0 +1,21 @@
+   baseURL = "https://mickey.coffee/"
+   languageCode = "en-us"
+   title = "Mickey Beurskens"
+   theme = "paper"
+
+   [params]
+     color = "wheat"
+     twitter = "your-twitter-handle"
+     github = "your-github-handle"
+
+   [menu]
+     [[menu.main]]
+       identifier = "about"
+       name = "About"
+       url = "/about/"
+       weight = 10
+     [[menu.main]]
+       identifier = "essays"
+       name = "Essays"
+       url = "/essays/"
+       weight = 20
