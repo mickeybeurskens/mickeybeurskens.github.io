@@ -14,6 +14,6 @@ My content is mostly meant to be accessible to everyone, but once in a while I w
 
 Although my focus has been on AI, I write about other topics as I see fit.
 
-I hope you will enjoy the your stay. Thank you for reading my work.
+I hope you will enjoy your stay. Thank you for reading my work.
 
 _Mickey Beurskens_ 
