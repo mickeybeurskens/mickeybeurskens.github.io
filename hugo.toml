@@ -16,7 +16,7 @@
      [[menu.main]]
        identifier = "essays"
        name = "Essays"
-       url = "/essays/"
+       url = "/"
        weight = 20
      [[menu.main]]
        identifier = "projects"
