@@ -4,9 +4,6 @@ date = 2023-03-22
 draft = false
 +++
 
-
-*We should really limit our exposure to the risk of Artificial Intelligence. We should only run systems leveraging AI if we can guarantee our safety when those systems fail.*
-
 "It is "the future". Our AI systems have finally achieved it: Super Human Intelligence. By some miracle we have ended up at this junction, with a system fully under our control that can match our brightest, but can do so much more quickly and with near infinite copies of itself. If we harness it well it will certainly propel humanity straight towards the next phase, transcending limitations that up until now we could only conceptualize as unsurmountable. But how can we know with certainty that our hyper talented and knowledgeable assistant will not lead us astray. How can we verify that its "intentions" are pure? We know for a fact it is smarter than any of us, because we built it that way. Have we created the world's most competent plotter? The most convincing liar?..."
 
 "How did we get into this mess?"
