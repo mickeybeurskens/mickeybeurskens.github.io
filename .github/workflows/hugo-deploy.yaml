@@ -48,9 +48,11 @@ jobs:
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}"
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-artifact@v4
         with:
+          name: github-pages
           path: ./public
+          if-no-files-found: error
 
   deploy:
     environment:
