@@ -22,7 +22,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.131.0
+      HUGO_VERSION: 0.121.0
     steps:
       - name: Install Hugo CLI
         run: |
@@ -44,4 +44,19 @@ jobs:
         run: |
           hugo \
             --minify \
-            --baseURL
+            --baseURL "${{ steps.pages.outputs.base_url }}"
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: ./public
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
