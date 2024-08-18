@@ -1,7 +1,7 @@
 +++
 title = 'About This Website'
 date = 2024-08-10T21:47:14+02:00
-draft = true
+draft = false
 +++
 
 Welcome, dear reader.
