@@ -1,12 +1,5 @@
-# Mickey.Coffee ☕️
-Welcome to the digital brew of thoughts, projects, and musings by Mickey Beurskens.
+# Mickey Beurskens Blog ☕️
 ## About This Blog
-This blog covers topics like:
-
-- AI and its societal impact
-- Tech entrepreneurship 
-- Philosophy of technology
-
 Built with:
 - [Hugo](https://gohugo.io/) static site generator
 - [Paper theme](https://github.com/nanxiaobei/hugo-paper)
