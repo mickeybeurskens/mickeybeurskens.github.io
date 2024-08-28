@@ -4,6 +4,8 @@ date = 2024-08-10T21:47:14+02:00
 draft = false
 +++
 
+![AI Generated Image of Mickey](/about/mickey.png)
+
 Welcome, dear reader.
 
 Born and raised a Dutchman, [I work as an entrepreneur and artificial intelligence engineer](https://www.forgefire.dev) at my own company. There I spend my time figuring out how AI can be used to solve problems, doing research, building prototypes and generally expanding my knowledge on the subject.
@@ -16,4 +18,4 @@ Although my focus has been on AI, I write about other topics as I see fit.
 
 I hope you will enjoy your stay. Thank you for reading my work.
 
-_Mickey Beurskens_ 
+*__Mickey Beurskens__* 
