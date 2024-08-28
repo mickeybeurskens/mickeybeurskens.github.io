@@ -1,33 +1,14 @@
 {{ define "main" }}
 <article>
   <header>
-    <h1>{{ .Title }}</h1>
+    <h1>Projects And Resources</h1>
+    <p>This page provides an overview of my open-source projects, talks and resources that I generally regard as useful.</p>
   </header>
 
-  <section>
-    <h2>Open Source Software</h2>
-    <div class="project-grid">
-      {{ range .Site.Data.projects.opensource }}
-        <div class="project-tile">
-          <h3>{{ .title }}</h3>
-          <p>{{ .description }}</p>
-          <p class="date">{{ .date }}</p>
-          <a href="{{ .link }}" class="link">View Project</a>
-        </div>
-      {{ end }}
-    </div>
-
-    <h2>Talks</h2>
-    <ul class="talks-list">
-      {{ range .Site.Data.projects.talks }}
-      <a href="{{ .link }}" class="link">
-        <li class="talk-item">
-          <h3>{{ .title }}</h3>
-          <span class="date">{{ .date }}</span>
-        </li>
-      </a>
-      {{ end }}
-    </ul>
+  <section class="projects-section">
+    {{ $readmePath := "content/projects/README.md" }}
+    {{ $readme := readFile $readmePath }}
+    {{ $readme | markdownify }}
   </section>
 </article>
 {{ end }}
