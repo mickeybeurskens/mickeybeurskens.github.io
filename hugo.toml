@@ -6,6 +6,8 @@
    [params]
      color = "wheat"
      github = "mickeybeurskens"
+     twitter = "mickeybeurskens"
+     linkedin = "mickeybeurskens"
 
    [menu]
      [[menu.main]]
