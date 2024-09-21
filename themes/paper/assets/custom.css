@@ -47,48 +47,48 @@
   .project-tile .link:hover {
     background-color: var(--tw-prose-bold, #171717);
   }
-  
-  .talks-list {
+
+  .essay-list {
     list-style-type: none;
     padding: 0;
     margin: 0;
   }
 
-  .talks-list a {
+  .essay-list a {
     text-decoration: none;
     padding: 0;
     margin: 0;
   }
 
-  .talk-item {
+  .essay-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 12px 12px 0;
+    padding: 0px 0px 0px 0;
     border-bottom: 1px solid var(--tw-prose-hr, #e5e5e5);
     transition: background-color 0.2s ease-in-out;
   }
   
-  .talk-item:last-child {
+  .essay-item:last-child {
     border-bottom: none;
   }
   
-  .talk-item:hover {
+  .essay-item:hover {
     padding-left: 12px;
   }
   
-  .talk-item h3 {
+  .essay-item h3 {
     margin: 0;
     font-size: 1em;
     color: var(--tw-prose-headings, #171717);
   }
   
-  .talk-item .date {
+  .essay-item .date {
     font-style: italic;
     color: var(--tw-prose-captions, #737373);
     font-size: 0.9em;
   }
-  
+
   /* Dark mode adjustments */
   .dark .project-tile {
     background-color: var(--tw-prose-invert-pre-bg, rgb(0 0 0 / 50%));
@@ -116,18 +116,18 @@
     background-color: var(--tw-prose-invert-bold, #fff);
   }
   
-  .dark .talk-item {
+  .dark .essay-item {
     border-bottom-color: var(--tw-prose-invert-hr, #404040);
   }
   
-  .dark .talk-item:hover {
+  .dark .essay-item:hover {
     background-color: var(--tw-prose-invert-quote-borders, #262626);
   }
   
-  .dark .talk-item h3 {
+  .dark .essay-item h3 {
     color: var(--tw-prose-invert-headings, #fff);
   }
   
-  .dark .talk-item .date {
+  .dark .essay-item .date {
     color: var(--tw-prose-invert-captions, #a3a3a3);
   }

@@ -5,10 +5,10 @@
   </header>
 
   <section>
-    <ul class="talks-list">
+    <ul class="essay-list">
       {{ range where .Site.RegularPages "Type" "essays" }}
       <a href="{{ .Permalink }}" class="link">
-        <li class="talk-item">
+        <li class="essay-item">
           <h3>{{ .Title | title }}</h3>
           <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
         </li>
