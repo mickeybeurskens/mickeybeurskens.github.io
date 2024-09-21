@@ -62,10 +62,10 @@
 
   .essay-item {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    align-items: flex-end;
     padding: 0px 0px 0px 0;
-    border-bottom: 1px solid var(--tw-prose-hr, #e5e5e5);
     transition: background-color 0.2s ease-in-out;
   }
   
@@ -86,7 +86,8 @@
   .essay-item .date {
     font-style: italic;
     color: var(--tw-prose-captions, #737373);
-    font-size: 0.9em;
+    padding: 0px;
+    font-size: 0.7em;
   }
 
   /* Dark mode adjustments */
