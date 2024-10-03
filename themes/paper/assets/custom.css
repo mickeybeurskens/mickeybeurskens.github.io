@@ -132,3 +132,87 @@
   .dark .essay-item .date {
     color: var(--tw-prose-invert-captions, #a3a3a3);
   }
+
+  .about-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .profile-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  
+  .profile-image {
+    flex: 0 0 150px;
+    margin-right: 2rem;
+  }
+  
+  .rounded-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .profile-info {
+    flex: 1;
+  }
+  
+  .profile-info h1 {
+    margin-bottom: 0;
+  }
+  
+  .specializations {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .specialization {
+    display: inline-block;
+    font-style: italic;
+    color: #8d8d8d;
+  }
+  
+  .specialization:not(:last-child)::after {
+    content: "-";
+    margin-left: 0.4rem;
+  }
+  
+  .social-icons a {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .about-content {
+    line-height: 1.6;
+  }
+  
+  .about-content h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .social-icons a {
+    text-decoration: none;
+    margin-right: 1rem;
+  }
+  
+  .icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: var(--url);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  /* Dark mode adjustments */
+  .dark .icon {
+    filter: invert(1) brightness(2);
+  }

@@ -1,10 +1,9 @@
 +++
 title = 'About This Website'
+layout = "about"
 date = 2024-08-10T21:47:14+02:00
 draft = false
 +++
-
-![AI Generated Image of Mickey](/about/mickey.png)
 
 Welcome, dear reader.
 
