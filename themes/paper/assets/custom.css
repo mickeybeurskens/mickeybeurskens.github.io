@@ -136,7 +136,7 @@
   .about-page {
     max-width: 800px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 0;
   }
   
   .profile-section {
@@ -155,10 +155,12 @@
     height: 150px;
     border-radius: 50%;
     object-fit: cover;
+    margin: 0;
   }
   
   .profile-info {
     flex: 1;
+
   }
   
   .profile-info h1 {
@@ -216,3 +218,56 @@
   .dark .icon {
     filter: invert(1) brightness(2);
   }
+
+  /* ... (previous styles remain the same) ... */
+
+/* Profile section */
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-image-container {
+  flex: 0 0 150px;
+  margin-right: 2rem;
+}
+
+.rounded-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+/* Responsive styles for mobile */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-image-container {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+
+  .profile-info {
+    width: 100%;
+  }
+
+  .specializations {
+    justify-content: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
+/* ... (rest of the styles remain the same) ... */
