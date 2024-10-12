@@ -198,6 +198,53 @@
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
+  
+  .about-page th {
+    padding-left: 0;
+  }
+
+  .about-page td {
+    vertical-align: middle;
+    padding: 0.8rem 0;
+    padding-right: 3rem;
+    font-size: 0.9rem;
+  }
+  
+  .about-page td:first-child {
+    padding: 0;
+  }
+
+  .about-page td:last-child {
+    font-size: 0.8rem;
+    font-style: italic;
+  }
+
+  .about-page table img {
+    width: 15em;
+    margin-top: 0.8rem;
+    margin-bottom: 0.8rem;
+    padding-right: 2rem;
+    object-fit: contain;
+  }
+
+  .about-page table a {
+    text-decoration: none;
+    color: darkred;
+    font-weight: 600;
+  }
+
+  .dark .about-page table a {
+    color: darkturquoise;
+  }
+
+  @media (max-width: 768px) {
+    .about-page table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+  }
 
   .social-icons a {
     text-decoration: none;
