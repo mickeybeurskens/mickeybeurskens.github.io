@@ -24,3 +24,8 @@
        name = "Projects"
        url = "/projects/"
        weight = 30
+     [[menu.main]]
+       identifier = "resume"
+       name = "Resume"
+       url = "/resume/"
+       weight = 40
