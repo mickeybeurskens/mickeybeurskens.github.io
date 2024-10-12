@@ -220,7 +220,7 @@
   }
 
   .about-page table img {
-    width: 15em;
+    max-width: 7em;
     margin-top: 0.8rem;
     margin-bottom: 0.8rem;
     padding-right: 2rem;
