@@ -1,7 +1,22 @@
 {{ define "main" }}
 <article>
+  {{ partial "profile.html" (dict 
+  "name" "Mickey Beurskens"
+  "image" "/mickey.png"
+  "specializations" (slice "AI Engineer" "Tinkerer" "Shouting At Clouds")
+  "socials" (slice 
+      (dict 
+          "url" "https://github.com/mickeybeurskens" 
+          "icon" "./github.svg"
+      )
+      (dict 
+          "url" "https://x.com/mickeybeurskens" 
+          "icon" "./twitter.svg"
+      )
+  )
+  )}}
   <header>
-    <h1>Projects And Resources</h1>
+    <h1>Resources</h1>
     <p style="margin: 0px; padding: 0px;">This page provides an overview of my open-source projects, talks and resources that I generally regard as useful. </p>
     <a href="https://github.com/mickeybeurskens/mickeybeurskens/blob/main/README.md" class="github-link" style="font-size: 70%; margin: 0px; padding: 0px;">View this page on GitHub</a>
   </header>

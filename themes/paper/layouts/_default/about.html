@@ -1,28 +1,22 @@
 {{ define "main" }}
 <article class="about-page">
-  <div class="profile-section">
-    <div class="profile-image-container">
-      <img src="/mickey.png" alt="Mickey Beurskens" class="rounded-image">
+    {{ partial "profile.html" (dict 
+        "name" "Mickey Beurskens"
+        "image" "/mickey.png"
+        "specializations" (slice "AI Engineer" "Tinkerer" "Shouting At Clouds")
+        "socials" (slice 
+            (dict 
+                "url" "https://github.com/mickeybeurskens" 
+                "icon" "./github.svg"
+            )
+            (dict 
+                "url" "https://x.com/mickeybeurskens" 
+                "icon" "./twitter.svg"
+            )
+        )
+    )}}
+    <div class="about-content">
+        {{ .Content }}
     </div>
-    <div class="profile-info">
-      <h1>Mickey Beurskens</h1>
-      <p class="specializations">
-        <span class="specialization">AI Engineer</span>
-        <span class="specialization">Tinkerer</span>
-        <span class="specialization">Shouting At Clouds</span>
-      </p>
-      <div class="social-icons">
-        <a href="https://github.com/mickeybeurskens" target="_blank" rel="noopener noreferrer">
-          <span class="icon" style="--url: url(./github.svg)"></span>
-        </a>
-        <a href="https://x.com/mickeybeurskens" target="_blank" rel="noopener noreferrer">
-          <span class="icon" style="--url: url(./twitter.svg)"></span>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div class="about-content">
-    {{ .Content }}
-  </div>
 </article>
 {{ end }}

@@ -1,20 +1,18 @@
 {{ define "main" }}
-<article>
-  <header>
-    <h1>Essays</h1>
-  </header>
-
-  <section>
-    <ul class="essay-list">
-      {{ range where .Site.RegularPages "Type" "essays" }}
-      <a href="{{ .Permalink }}" class="link">
-        <li class="essay-item">
-          <h3>{{ .Title | title }}</h3>
-          <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
-        </li>
-      </a>
-      {{ end }}
-    </ul>
-  </section>
-</article>
+  {{ partial "profile.html" (dict 
+  "name" "Mickey Beurskens"
+  "image" "/mickey.png"
+  "specializations" (slice "AI Engineer" "Tinkerer" "Shouting At Clouds")
+  "socials" (slice 
+      (dict 
+          "url" "https://github.com/mickeybeurskens" 
+          "icon" "./github.svg"
+      )
+      (dict 
+          "url" "https://x.com/mickeybeurskens" 
+          "icon" "./twitter.svg"
+      )
+  )
+  )}}
+  {{ partial "essays.html" (dict "Site" .Site "title" "Essays") }}
 {{ end }}
