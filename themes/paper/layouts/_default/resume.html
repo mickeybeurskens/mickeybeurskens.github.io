@@ -1,5 +1,77 @@
 {{ define "main" }}
 <article class="resume-page">
-    resumepage
+    <style>
+        .dark .resume-page table img {
+            filter: grayscale(100%) invert(1) brightness(1.5);
+        }
+
+        .resume-page th {
+            padding-left: 0;
+            text-align: start;
+        }
+
+        .resume-page td {
+            vertical-align: middle;
+            padding: 0.8rem 0;
+            padding-right: 3rem;
+            font-size: 0.9rem;
+        }
+        
+        .resume-page td:first-child {
+            padding: 0;
+        }
+
+        .resume-page td:last-child {
+            font-size: 0.8rem;
+            font-style: italic;
+        }
+
+        .resume-page table img {
+            filter: grayscale(100%);
+            max-width: 7em;
+            margin-top: 0.8rem;
+            margin-bottom: 0.8rem;
+            padding-right: 2rem;
+            object-fit: contain;
+        }
+
+        .resume-page table a {
+            text-decoration: none;
+            color: darkred;
+            font-weight: 600;
+        }
+
+        .dark .resume-page table a {
+            color: rgb(253, 144, 42);
+        }
+
+        @media (max-width: 768px) {
+            .resume-page table td {
+                font-size: 0.7rem;
+            }
+
+            .resume-page table {
+            display: block;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            }
+        }
+    </style>
+    {{ partial "profile.html" (dict 
+        "name" "Mickey Beurskens"
+        "image" "/mickey.png"
+        "specializations" (slice "AI Engineer" "Tinkerer" "Shouting At Clouds")
+        "socials" (slice 
+            (dict 
+                "url" "https://github.com/mickeybeurskens" 
+                "icon" "./github.svg"
+            )
+            (dict 
+                "url" "https://x.com/mickeybeurskens" 
+                "icon" "./twitter.svg"
+            )
+        )
+    )}}
+    {{ .Content }}
 </article>
 {{ end }}

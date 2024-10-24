@@ -1,0 +1,17 @@
+<article>
+    <header>
+        <h1>{{ if .Title }}{{ .Title }}{{ else }}Essays{{ end }}</h1>
+    </header>
+    <section>
+        <ul class="essay-list">
+            {{ range where .Site.RegularPages "Type" "essays" }}
+            <a href="{{ .Permalink }}" class="link">
+                <li class="essay-item">
+                    <h3>{{ .Title | title }}</h3>
+                    <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+                </li>
+            </a>
+            {{ end }}
+        </ul>
+    </section>
+</article>

@@ -1,272 +1,238 @@
 /* Place custom css here. */
+
+/* Profile */
+
+.profile-info h1{
+  font-size: 2rem;
+}
+
+.profile-info p span{
+  font-size: 1.1rem;
+}
+
+/* Profile End */
+
 .project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 24px;
-    margin-bottom: 2em;
-  }
-  
-  .project-tile {
-    border: 1px solid var(--tw-prose-hr, #e5e5e5);
-    border-radius: 12px;
-    padding: 24px;
-    background-color: var(--bg, #ffffff);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-tile h3 {
-    margin-top: 0;
-    margin-bottom: 12px;
-    font-size: 1.2em;
-    color: var(--tw-prose-headings, #171717);
-  }
-  
-  .project-tile p {
-    font-size: 0.9em;
-    color: var(--tw-prose-body, #404040);
-    margin-bottom: 16px;
-  }
-  
-  .project-tile .date {
-    font-style: italic;
-    color: var(--tw-prose-captions, #737373);
-    font-size: 0.8em;
-    margin-bottom: 16px;
-  }
-  
-  .project-tile .link {
-    display: inline-block;
-    padding: 8px 16px;
-    background-color: var(--tw-prose-links, #171717);
-    color: var(--bg, #ffffff);
-    text-decoration: none;
-    border-radius: 6px;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .project-tile .link:hover {
-    background-color: var(--tw-prose-bold, #171717);
-  }
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 2em;
+}
 
-  .essay-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+.project-tile {
+  border: 1px solid var(--tw-prose-hr, #e5e5e5);
+  border-radius: 12px;
+  padding: 24px;
+  background-color: var(--bg, #ffffff);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-  .essay-list a {
-    text-decoration: none;
-    padding: 0;
-    margin: 0;
-  }
+.project-tile h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-size: 1.2em;
+  color: var(--tw-prose-headings, #171717);
+}
 
-  .essay-item {
-    display: flex;
-    justify-content: flex-start;
-    gap: 15px;
-    align-items: flex-end;
-    padding: 0px 0px 0px 0;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .essay-item:last-child {
-    border-bottom: none;
-  }
-  
-  .essay-item:hover {
-    padding-left: 12px;
-  }
-  
-  .essay-item h3 {
-    margin: 0;
-    font-size: 1em;
-    color: var(--tw-prose-headings, #171717);
-  }
-  
-  .essay-item .date {
-    font-style: italic;
-    color: var(--tw-prose-captions, #737373);
-    padding: 0px;
-    font-size: 0.7em;
-  }
+.project-tile p {
+  font-size: 0.9em;
+  color: var(--tw-prose-body, #404040);
+  margin-bottom: 16px;
+}
 
-  /* Dark mode adjustments */
-  .dark .project-tile {
-    background-color: var(--tw-prose-invert-pre-bg, rgb(0 0 0 / 50%));
-    color: var(--tw-prose-invert-body, #d4d4d4);
-  }
-  
-  .dark .project-tile h3 {
-    color: var(--tw-prose-invert-headings, #fff);
-  }
-  
-  .dark .project-tile p {
-    color: var(--tw-prose-invert-body, #d4d4d4);
-  }
-  
-  .dark .project-tile .date {
-    color: var(--tw-prose-invert-captions, #a3a3a3);
-  }
-  
-  .dark .project-tile .link {
-    background-color: var(--tw-prose-invert-links, #fff);
-    color: var(--tw-prose-invert-pre-bg, rgb(0 0 0 / 50%));
-  }
-  
-  .dark .project-tile .link:hover {
-    background-color: var(--tw-prose-invert-bold, #fff);
-  }
-  
-  .dark .essay-item {
-    border-bottom-color: var(--tw-prose-invert-hr, #404040);
-  }
-  
-  .dark .essay-item:hover {
-    background-color: var(--tw-prose-invert-quote-borders, #262626);
-  }
-  
-  .dark .essay-item h3 {
-    color: var(--tw-prose-invert-headings, #fff);
-  }
-  
-  .dark .essay-item .date {
-    color: var(--tw-prose-invert-captions, #a3a3a3);
-  }
+.project-tile .date {
+  font-style: italic;
+  color: var(--tw-prose-captions, #737373);
+  font-size: 0.8em;
+  margin-bottom: 16px;
+}
 
-  .about-page {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0;
-  }
-  
-  .profile-section {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2rem;
-  }
-  
-  .profile-image {
-    flex: 0 0 150px;
-    margin-right: 2rem;
-  }
-  
-  .rounded-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin: 0;
-  }
-  
-  .profile-info {
-    flex: 1;
+.project-tile .link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: var(--tw-prose-links, #171717);
+  color: var(--bg, #ffffff);
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s ease-in-out;
+}
 
-  }
-  
-  .profile-info h1 {
-    margin-bottom: 0;
-  }
-  
-  .specializations {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .specialization {
-    display: inline-block;
-    font-style: italic;
-    color: #8d8d8d;
-  }
-  
-  .specialization:not(:last-child)::after {
-    content: "-";
-    margin-left: 0.4rem;
-  }
-  
-  .social-icons a {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    color: #333;
-    text-decoration: none;
-  }
-  
-  .about-content {
-    line-height: 1.6;
-  }
-  
-  .about-content h2 {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .about-page th {
-    padding-left: 0;
-  }
+.project-tile .link:hover {
+  background-color: var(--tw-prose-bold, #171717);
+}
 
-  .about-page td {
-    vertical-align: middle;
-    padding: 0.8rem 0;
-    padding-right: 3rem;
-    font-size: 0.9rem;
-  }
-  
-  .about-page td:first-child {
-    padding: 0;
-  }
+.essay-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .about-page td:last-child {
-    font-size: 0.8rem;
-    font-style: italic;
-  }
+.essay-list a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
 
-  .about-page table img {
-    max-width: 7em;
-    margin-top: 0.8rem;
-    margin-bottom: 0.8rem;
-    padding-right: 2rem;
-    object-fit: contain;
-  }
+.essay-item {
+  display: flex;
+  justify-content: flex-start;
+  gap: 15px;
+  align-items: flex-end;
+  padding: 0px 0px 0px 0;
+  transition: background-color 0.2s ease-in-out;
+}
 
-  .about-page table a {
-    text-decoration: none;
-    color: darkred;
-    font-weight: 600;
-  }
+.essay-item:last-child {
+  border-bottom: none;
+}
 
-  .dark .about-page table a {
-    color: darkturquoise;
-  }
+.essay-item:hover {
+  padding-left: 12px;
+}
 
-  @media (max-width: 768px) {
-    .about-page table {
-      display: block;
-      overflow-x: auto;
-      white-space: nowrap;
-      -webkit-overflow-scrolling: touch;
-    }
-  }
+.essay-item h3 {
+  margin: 0;
+  font-size: 1em;
+  color: var(--tw-prose-headings, #171717);
+}
 
-  .social-icons a {
-    text-decoration: none;
-    margin-right: 1rem;
-  }
-  
-  .icon {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-image: var(--url);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  
-  /* Dark mode adjustments */
-  .dark .icon {
-    filter: invert(1) brightness(2);
-  }
+.essay-item .date {
+  font-style: italic;
+  color: var(--tw-prose-captions, #737373);
+  padding: 0px;
+  font-size: 0.7em;
+}
 
-  /* ... (previous styles remain the same) ... */
+/* Dark mode adjustments */
+.dark .project-tile {
+  background-color: var(--tw-prose-invert-pre-bg, rgb(0 0 0 / 50%));
+  color: var(--tw-prose-invert-body, #d4d4d4);
+}
+
+.dark .project-tile h3 {
+  color: var(--tw-prose-invert-headings, #fff);
+}
+
+.dark .project-tile p {
+  color: var(--tw-prose-invert-body, #d4d4d4);
+}
+
+.dark .project-tile .date {
+  color: var(--tw-prose-invert-captions, #a3a3a3);
+}
+
+.dark .project-tile .link {
+  background-color: var(--tw-prose-invert-links, #fff);
+  color: var(--tw-prose-invert-pre-bg, rgb(0 0 0 / 50%));
+}
+
+.dark .project-tile .link:hover {
+  background-color: var(--tw-prose-invert-bold, #fff);
+}
+
+.dark .essay-item {
+  border-bottom-color: var(--tw-prose-invert-hr, #404040);
+}
+
+.dark .essay-item:hover {
+  background-color: var(--tw-prose-invert-quote-borders, #262626);
+}
+
+.dark .essay-item h3 {
+  color: var(--tw-prose-invert-headings, #fff);
+}
+
+.dark .essay-item .date {
+  color: var(--tw-prose-invert-captions, #a3a3a3);
+}
+
+.about-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.profile-image {
+  flex: 0 0 150px;
+  margin-right: 2rem;
+}
+
+.rounded-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0;
+}
+
+.profile-info {
+  flex: 1;
+
+}
+
+.profile-info h1 {
+  margin-bottom: 0;
+}
+
+.specializations {
+  margin: 0;
+  padding: 0;
+}
+
+.specialization {
+  display: inline-block;
+  font-style: italic;
+  color: #8d8d8d;
+}
+
+.specialization:not(:last-child)::after {
+  content: "-";
+  margin-left: 0.4rem;
+}
+
+.social-icons a {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  color: #333;
+  text-decoration: none;
+}
+
+.about-content {
+  line-height: 1.6;
+}
+
+.about-content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.social-icons a {
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-image: var(--url);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Dark mode adjustments */
+.dark .icon {
+  filter: invert(1) brightness(2);
+}
+
+/* ... (previous styles remain the same) ... */
 
 /* Profile section */
 .profile-section {
@@ -316,5 +282,3 @@
     justify-content: center;
   }
 }
-
-/* ... (rest of the styles remain the same) ... */
