@@ -20,9 +20,9 @@
        url = "/"
        weight = 20
      [[menu.main]]
-       identifier = "projects"
-       name = "Projects"
-       url = "/projects/"
+       identifier = "learn"
+       name = "Learn"
+       url = "/learn/"
        weight = 30
      [[menu.main]]
        identifier = "resume"

@@ -4,7 +4,18 @@ layout = "about"
 draft = false
 +++
 
-I've mainly been active in technology and entrepreneurship. More details below.
+I've mainly been active in technology and entrepreneurship. You can find out more about the projects I've been involved with and other relevant professional information here.
+
+## Open Source
+
+- __[Guess The Password 🗝️](https://github.com/mickeybeurskens/guess-the-password):__ A guessing game used to explore large language model guardrailing concepts.
+- __[This Website 📖](https://github.com/mickeybeurskens/mickeybeurskens.github.io):__ The source code for this website, written in Hugo.
+- __[Perry Doc Search 🕵](https://github.com/mickeybeurskens/perry-doc-search):__ An early large language model based PDF document search prototype. 
+
+## Public Speaking
+
+- __[Team Red - Hacking Large Language Models](https://www.youtube.com/watch?v=F-UGqGsQvhc):__ At PyData Eindhoven - _2023, 30th of November_
+- __[AI Demystified](https://mikrocentrum.nl/en/technology/materials/)__: At the Materials Fair convention - _2022, 30th of April_
 
 ## Work EXP
 
@@ -33,3 +44,9 @@ I've mainly been active in technology and entrepreneurship. More details below.
 | ![FruitPunch AI](/images/logos/fruitpunch.png) | [FruitPunch AI](https://www.fruitpunch.ai) | Co-Founder | Sep 2018 - Dec 2018, Eindhoven, NL |
 | ![Hwarang](/images/logos/hwarang.png) | [Hwarang Yangban](https://www.hwarang-yangban.com/) | Martial Arts Instructor | Sep 2013 - Aug 2018 |
 | ![Budo Ryu](/images/logos/budoryu.png) | [Budo Ryu Sports](https://budoryusports.nl/) | Martial Arts Instructor | Sep 2013 - Aug 2018 |
+
+---
+
+#### Contact
+
+_If you'd like to get in touch, you can email me at __info__ @ __forgefire__ dot __dev___
