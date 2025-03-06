@@ -1,9 +1,9 @@
 {{ define "main" }}
 
 <article>
-  <header class="mb-14">
+  <header class="mb-6">
     <h1 class="!my-0 pb-2.5">{{ .Title }}</h1>
-
+    
     {{ if ne .Type "page" }}
     <div class="text-xs antialiased opacity-60">
       {{ if .Date }}
@@ -17,9 +17,11 @@
       {{ end }}
     </div>
     {{ end }}
+
+    {{ partial "subscribe.html" . }}
   </header>
 
-  <section>{{ .Content }}</section>
+  <section>{{ .Content }}</section>  
 
   <!-- Post Tags -->
   {{ if .Params.tags }}
