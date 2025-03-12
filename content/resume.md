@@ -6,13 +6,18 @@ draft = false
 
 ## About My Career
 
-In my professional life I have been active as an engineer and entrepreneur. I've been formally trained as a mechanical engineer with a focus on robotics at the Eindhoven University of Technology. In parallel I've been exploring AI techniques since roughly 2018, starting with a research internship at Tech United, and then expanding by founding AI student team Serpentine. I managed to combine both skills in a role as AI engineer at VBTI working on robotics in the agriculture sector after graduation. Now I work as an independent AI engineering contractor.
+
+
+I am a Dutch PhD student researching Safe Artificial Intelligence at Eindhoven University of Technology. My work focuses on responsible AI development, specifically on reinforcement learning systems dealing with uncertainty, an area I consider largely unsolved. Other than that I have been active as an engineer and entrepreneur (and still do contracting work occasionally). 
+
+I've been formally trained as a mechanical engineer with a focus on robotics at the Eindhoven University of Technology. In parallel I've been exploring AI techniques since roughly 2018, starting with a research internship at Tech United, and then expanding by founding AI student team Serpentine. I managed to combine both skills in a role as AI engineer at VBTI working on robotics in the agriculture sector after graduation. 
 
 ## Work EXP
 
 |  | Company | Role | Dates |
 |------|---------|------|-------|
-| ![Forge Fire](/images/logos/forgefire-gr.svg) | [Forge Fire AI Engineering](https://forgefire.dev) | AI Engineer & Owner | Jan 2022 - Present, Eindhoven (Remote), NL |
+| ![TU/e](/images/logos/tue-gr.png) | [TU/e](https://www.tue.nl/en/research) | PhD Candidate Artificial Intelligence @ Eindhoven University of Technology | Mar 2025 -  Present, Eindhoven, NL |
+| ![Forge Fire](/images/logos/forgefire-gr.svg) | [Forge Fire AI Engineering](https://forgefire.dev) | AI Engineer & Owner | Jan 2022 - Present, Eindhoven, NL |
 | ![VBTI](/images/logos/vbti-gr.png) | [VBTI](https://www.vbti.nl) | Artificial Intelligence Engineer | Jan 2021 - Jan 2022, Eindhoven, NL |
 | ![Dimenco](/images/logos/dimenco-gr.png) | [Dimenco](https://www.dimenco.eu) | Embedded Software Engineer | Jul 2019 - Mar 2020, Eindhoven, NL |
 | ![UMass](/images/logos/umass-gr.png) | [University of Massachusetts Amherst](https://www.umass.edu) | Robotics Research Intern | Feb 2019 - May 2019, Massachusetts, US |
@@ -24,6 +29,7 @@ In my professional life I have been active as an engineer and entrepreneur. I've
 
 |  | Institution | Degree | Field | Dates |
 |------|-------------|--------|-------|-------|
+| ![TU/e](/images/logos/tue-gr.png) | [Eindhoven University of Technology](https://www.tue.nl) | PhD Artificial Intelligence | Mathematics and Computer Science  | 2025 - Present |
 | ![TU/e](/images/logos/tue-gr.png) | [Eindhoven University of Technology](https://www.tue.nl) | Master of Science | Mechanical Engineering - Systems And Control | 2016 - 2020 |
 | ![TU/e](/images/logos/tue-gr.png) | [Eindhoven University of Technology](https://www.tue.nl) | Bachelor of Science | Mechanical Engineering | 2013 - 2016 |
 
